@@ -47,4 +47,24 @@ nav {
     .blog article .brief {
       font-size: 1.2rem; }
 
+/* Single Page
+ */
+.single-article .hero {
+  padding: 3rem 0;
+  text-align: center; }
+  .single-article .hero .title {
+    font-size: 3rem; }
+.single-article .content {
+  position: relative; }
+  .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p {
+    width: 70%;
+    margin: 1rem auto; }
+  .single-article .content p {
+    font-size: 1.5rem; }
+  .single-article .content p img {
+    position: absolute;
+    width: 100%;
+    max-height: 500px;
+    left: 0; }
+
 /*# sourceMappingURL=app.css.map */
