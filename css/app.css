@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0; }
 
+a, a:link, a:hover, a:active {
+  text-decoration: none; }
+
 .container {
   width: 1170px;
   padding: 0 15px;
@@ -31,5 +34,17 @@ nav {
         font-size: 1.2rem;
         margin: 0 20px;
         line-height: 50px; }
+
+/* blog */
+.blog {
+  display: flex; }
+  .blog article {
+    width: calc(100%/3);
+    margin: 0 1%; }
+    .blog article .title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem; }
+    .blog article .brief {
+      font-size: 1.2rem; }
 
 /*# sourceMappingURL=app.css.map */
