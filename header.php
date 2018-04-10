@@ -14,7 +14,7 @@
             <div class="container">
                 <nav>
                     <a href="#" class="logo">
-                    <img src="http://via.placeholder.com/100x50">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg">
                     </a>
                     <?php display_menu() ?>
                 </nav>
