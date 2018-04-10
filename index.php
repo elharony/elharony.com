@@ -5,18 +5,26 @@
   <div class="container">
     <!-- blog -->
     <section class="blog">
+
+<?php
+// The Loop
+if ( have_posts() ) {
+  while (have_posts()) {
+    the_post();
+?>
         <article>
-        <h3 class="title"><a href="#">Article Heading</a></h3>
-        <p class="brief"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit molestie egestas. Proin blandit, felis at rhoncus commodo, neque nulla molestie lorem, quis consectetur mauris eros efficitur felis. Aliquam pretium quis eros id condimentum.</p>
+            <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+            <p class="brief"><?php the_excerpt() ?></p>
         </article>
-        <article>
-        <h3 class="title"><a href="#">Article Heading</a></h3>
-        <p class="brief"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit molestie egestas. Proin blandit, felis at rhoncus commodo, neque nulla molestie lorem, quis consectetur mauris eros efficitur felis. Aliquam pretium quis eros id condimentum.</p>
-        </article>
-        <article>
-        <h3 class="title"><a href="#">Article Heading</a></h3>
-        <p class="brief"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit molestie egestas. Proin blandit, felis at rhoncus commodo, neque nulla molestie lorem, quis consectetur mauris eros efficitur felis. Aliquam pretium quis eros id condimentum.</p>
-        </article>
+
+<?php
+} // end while
+
+    } else {
+    echo "<h4>Sorry, no posts available.</h4>";
+    } // end if
+?>
+
     </section>
   </div>
 </main>
