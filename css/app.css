@@ -30,27 +30,32 @@ h6 {
 
 header {
   background: #fff; }
-
-nav {
-  margin: 0 auto;
-  text-align: center; }
-  nav .logo {
-    margin-right: 20px;
-    height: 50px;
-    display: inline-block;
-    float: left; }
-    nav .logo img {
+  header nav {
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center; }
+    header nav .logo {
+      margin-right: 20px;
+      height: 50px;
+      display: inline-block;
+      float: left; }
+    header nav img {
       width: 100%;
       height: 100%; }
-  nav .menu-links {
-    display: inline-block; }
-    nav .menu-links li {
+    header nav .menu-links {
       display: inline-block; }
-      nav .menu-links li a {
-        display: block;
-        font-size: 1.2rem;
+      header nav .menu-links li {
+        display: inline-block;
         margin: 0 20px;
         line-height: 50px; }
+      header nav .menu-links a {
+        display: block;
+        font-size: 1.2rem;
+        color: #000;
+        border-bottom: 2px solid transparent;
+        transition: all 300ms ease; }
+        header nav .menu-links a:hover {
+          border-color: #000; }
 
 /* blog */
 .blog {
