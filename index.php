@@ -32,8 +32,10 @@ if ( have_posts() ) {
     the_post();
 ?>
         <article>
-            <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-            <p class="brief"><?php the_excerpt() ?></p>
+            <div class="inner">
+                <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                <div class="brief"><?php the_excerpt() ?></div>
+            </div>
         </article>
 
 <?php
