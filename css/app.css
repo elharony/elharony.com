@@ -70,8 +70,9 @@ header {
 /* intro */
 .intro {
   position: relative;
-  height: 800px;
-  background: url(../img/Yahya-Elharony-Banner.jpg);
+  height: 700px;
+  background-image: url(../img/Yahya-Elharony-Banner.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-size: cover; }
   .intro .overlay {
@@ -88,9 +89,8 @@ header {
     color: #fff;
     text-align: center;
     z-index: 99; }
-    .intro .inner .name {
-      font-size: 4rem;
-      margin-bottom: 2rem; }
+    .intro .inner .hello img {
+      border: 1px solid #fff; }
     .intro .inner .details {
       font-size: 2rem; }
   @media all and (min-width: 670px) {
