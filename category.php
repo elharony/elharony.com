@@ -26,7 +26,16 @@ get_header(); ?>
 			<?php
 					// Start the Loop.
 			while ( have_posts() ) :
-                the_post();
+				the_post();
+
+// Get Categories as Links
+$categories = get_the_category();
+$separator = ' - ';
+$output = '';
+if ( ! empty( $categories ) ) {
+    foreach( $categories as $category ) {
+        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+    }
             ?>
                 
                 <article>
@@ -38,6 +47,8 @@ get_header(); ?>
                 </article>
 
             <?php
+			} // end categories condition
+
 					endwhile;
 	
 				else :
