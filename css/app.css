@@ -103,7 +103,7 @@ header {
     left: 0;
     background: rgba(0, 0, 0, 0.04); }
   .intro .inner {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 10%;
     color: #fff;
