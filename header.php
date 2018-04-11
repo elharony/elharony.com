@@ -13,7 +13,7 @@
         <header>
             <div class="container">
                 <nav>
-                    <a href="#" class="logo">
+                    <a href="<?php bloginfo("url"); ?>" class="logo">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg">
                     </a>
                     <?php display_menu() ?>
