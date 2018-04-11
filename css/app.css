@@ -110,6 +110,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 96%;
+  max-width: 1200px;
   margin: 0 auto; }
   .blog article {
     width: 100%; }
