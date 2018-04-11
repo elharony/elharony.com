@@ -23,6 +23,16 @@ h5 {
 h6 {
   font-size: 1rem; }
 
+.hero {
+  padding: 3rem 0;
+  text-align: center;
+  background: #000;
+  color: #fff; }
+
+.section-title {
+  width: 100%;
+  text-indent: 5px; }
+
 .container {
   margin: 0 auto; }
   @media all and (min-width: 670px) {
@@ -138,9 +148,6 @@ header {
 
 /* Single Page
  */
-.single-article .hero {
-  padding: 3rem 0;
-  text-align: center; }
 .single-article .content {
   position: relative; }
   .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p {
