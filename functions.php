@@ -5,6 +5,7 @@
  */
 function add_styles() {
   wp_enqueue_style("main-css", get_template_directory_uri() . "/css/app.css");
+  wp_enqueue_style("font--open-sans", "https://fonts.googleapis.com/css?family=Open+Sans");
 }
 
 
