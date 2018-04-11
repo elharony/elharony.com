@@ -27,20 +27,33 @@
 if ( have_posts() ) {
   while (have_posts()) {
     the_post();
+
+// Get Categories as Links
+$categories = get_the_category();
+$separator = ' - ';
+$output = '';
+if ( ! empty( $categories ) ) {
+    foreach( $categories as $category ) {
+        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+
 ?>
         <article>
             <div class="inner">
+                <div class="info"><span class="category"><?php echo trim( $output, $separator ) ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
                 <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
                 <div class="brief"><?php the_excerpt() ?></div>
             </div>
         </article>
 
 <?php
-} // end while
+    }
+} // end categories condition
+
+} // end post loop
 
     } else {
     echo "<h4>Sorry, no posts available.</h4>";
-    } // end if
+    } // end post condition
 ?>
 
     </section>
