@@ -8,15 +8,15 @@ the_post();
 
 
 <main class="single-article">
-    <div class="container">
-        <section class="hero">
-            <h1 class="title"><?php the_title(); ?></h1>
-        </section>
+    <section class="hero">
+        <h1 class="title"><?php the_title(); ?></h1>
+    </section>
 
-        <article class="content">
+    <article class="content">
+        <div class="container">
             <?php the_content(); ?>
-        </article>
-    </div>
+        </div>
+    </article>
 </main>
 
 <?php get_footer(); ?>
