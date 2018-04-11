@@ -8,6 +8,20 @@ function add_styles() {
 }
 
 
+function add_scripts() {
+
+  wp_enqueue_script("jquery");
+  wp_enqueue_script("main-script", get_template_directory_uri() . "/js/app.js", array(), "", true);
+
+  // // Conditional Scripts [ Web Compatibility ]
+  // wp_enqueue_script("html5shiv", get_template_directory_uri() . "/js/html5shiv.min.js");
+  // wp_script_add_data("html5shiv", "conditional", "lt IE 9");
+  // wp_enqueue_script("respond", get_template_directory_uri() . "/js/respond.min.js");
+  // wp_script_add_data("respond", "conditional", "lt IE 9");
+
+}
+
+
 /*
  * Menu
  * 
@@ -33,13 +47,11 @@ function display_menu() {
 
 
 
-
-
-
 /*
  * Hooks
  */
 add_action("wp_enqueue_scripts", "add_styles");
+add_action("wp_enqueue_scripts", "add_scripts");
 add_action("init", "add_custom_menu");
 
 ?>
