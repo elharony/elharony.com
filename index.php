@@ -1,8 +1,22 @@
 <?php get_header(); ?>
 
 
+<!-- intro -->
+<section class="intro">
+    <div class="overlay"></div>
+    <div class="inner">
+        <h2 class="name">I'm Yahya Elharony</h2>
+        <p class="details">I am interested in <span id="dynamicText"></span></p>
+    </div>
+</section>
+
+
 <main>
+
+
   <div class="container">
+    
+
     <!-- blog -->
     <section class="blog">
 

@@ -67,6 +67,36 @@ header {
         width: 80%;
         text-align: right; } }
 
+/* intro */
+.intro {
+  position: relative;
+  height: 800px;
+  background: url(../img/Yahya-Elharony-Banner.jpg);
+  background-position: center;
+  background-size: cover; }
+  .intro .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 155, 0.4); }
+  .intro .inner {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    color: #fff;
+    text-align: center;
+    z-index: 99; }
+    .intro .inner .name {
+      font-size: 4rem;
+      margin-bottom: 2rem; }
+    .intro .inner .details {
+      font-size: 2rem; }
+  @media all and (min-width: 670px) {
+    .intro .info, .intro .photo {
+      width: 50%; } }
+
 /* blog */
 .blog {
   display: flex;
