@@ -44,7 +44,21 @@ function display_menu() {
 }
 
 
+/*
+ * Limit the excerpt length
+ * Change the style of the read more; The default is […]
+*/
 
+function change_excerpt_length($length) {
+  return 60;
+}
+
+function change_excerpt_more($more) {
+  return " ...";
+}
+  
+add_filter("excerpt_length", "change_excerpt_length"); 				
+add_filter("excerpt_more", "change_excerpt_more"); 					
 
 
 /*
@@ -53,5 +67,7 @@ function display_menu() {
 add_action("wp_enqueue_scripts", "add_styles");
 add_action("wp_enqueue_scripts", "add_scripts");
 add_action("init", "add_custom_menu");
+add_filter("excerpt_length", "change_excerpt_length");
+
 
 ?>
