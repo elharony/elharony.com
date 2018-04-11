@@ -42,7 +42,7 @@ get_header(); ?>
 	
 				else :
 					// If no content, include the "No posts found" template.
-					
+					echo "<h4>Sorry, no posts available.</h4>";
 				endif;
 			?>
 	</section>
