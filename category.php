@@ -1,11 +1,18 @@
 <?php
 get_header(); ?>
 
+<main>
+<section class="hero">
+    <div class="container">
+        <h1 class="title">View All <?php echo single_cat_title( '', false ); ?> Articles:</h1>
+    </div>
+</section>
 <section class="blog">
+    <h2 class="section-title"></h2>
 			<?php if ( have_posts() ) : ?>
 
 			<!-- <header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
+				<h1 class="archive-title"><?php // printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
 
 				<?php
 					// Show an optional term description.
@@ -39,8 +46,7 @@ get_header(); ?>
 				endif;
 			?>
 	</section>
+</main>
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
 get_footer();
