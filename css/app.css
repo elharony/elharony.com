@@ -104,20 +104,25 @@ header {
     .intro .info, .intro .photo {
       width: 50%; } }
 
+/* 0 15px 15px -15px #2C3E50, bottom only 0 0 0 2px #e8e8e8 */
 /* blog */
 .blog {
   display: flex;
   flex-wrap: wrap; }
   .blog article {
-    width: 100%;
-    margin: 1%;
-    padding: 0.5rem;
-    box-sizing: border-box; }
-    .blog article .title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem; }
-    .blog article .brief {
-      font-size: 1.2rem; }
+    width: 100%; }
+    .blog article .inner {
+      padding: 0.5rem;
+      box-shadow: 0 0 20px 2px #ececec;
+      margin: 2%;
+      transition: all 300ms ease-in-out; }
+      .blog article .inner .title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem; }
+      .blog article .inner .brief {
+        font-size: 1.2rem; }
+      .blog article .inner:hover {
+        box-shadow: 0 0 20px 2px #ececec, 0 15px 20px -15px #2C3E50; }
   @media all and (min-width: 670px) {
     .blog article {
       width: 50%;
