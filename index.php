@@ -17,9 +17,6 @@
 
 
 <main>
-
-
-  <div class="container">
     
 
     <!-- blog -->
@@ -47,7 +44,6 @@ if ( have_posts() ) {
 ?>
 
     </section>
-  </div>
 </main>
 
 

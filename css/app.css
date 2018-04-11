@@ -108,7 +108,9 @@ header {
 /* blog */
 .blog {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 96%;
+  margin: 0 auto; }
   .blog article {
     width: 100%; }
     .blog article .inner {
