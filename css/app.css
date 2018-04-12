@@ -138,6 +138,9 @@ header {
       .blog article .inner .title {
         font-size: 2rem;
         margin-bottom: 0.5rem; }
+        .blog article .inner .title a {
+          color: #000;
+          text-shadow: 1px 1px 2px #777; }
       .blog article .inner .brief {
         font-size: 1.2rem; }
       .blog article .inner:hover {
