@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 
-<!-- intro -->
-<section class="intro">
+<!-- hero -->
+<section class="hero">
     <div class="overlay"></div>
     <div class="inner">
         <h2 class="hello">

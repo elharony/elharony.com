@@ -88,34 +88,34 @@ header {
         width: 80%;
         text-align: right; } }
 
-/* intro */
-.intro {
+/* hero */
+.hero {
   position: relative;
   height: 700px;
   background-image: url(../img/Yahya-Elharony-Banner.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  .intro .overlay {
+  .hero .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.04); }
-  .intro .inner {
+  .hero .inner {
     position: fixed;
     width: 100%;
     top: 10%;
     color: #fff;
     text-align: center;
     z-index: 99; }
-    .intro .inner .hello img {
+    .hero .inner .hello img {
       border: 1px solid #fff; }
-    .intro .inner .details {
+    .hero .inner .details {
       font-size: 2rem; }
   @media all and (min-width: 670px) {
-    .intro .info, .intro .photo {
+    .hero .info, .hero .photo {
       width: 50%; } }
 
 /* 0 15px 15px -15px #2C3E50, bottom only 0 0 0 2px #e8e8e8 */
