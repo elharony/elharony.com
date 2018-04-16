@@ -21,6 +21,7 @@
 
     <!-- blog -->
     <section class="blog">
+        <h2 class="section-title">Recent Articles</h2>
 
 <?php
 // The Loop
