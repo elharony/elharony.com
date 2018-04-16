@@ -42,7 +42,7 @@ if ( ! empty( $categories ) ) {
             <div class="inner">
                 <div class="info"><span class="category"><?php echo trim( $output, $separator ) ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
                 <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                <div class="brief"><?php the_excerpt() ?></div>
+                <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
             </div>
         </article>
 
