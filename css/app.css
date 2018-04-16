@@ -12,7 +12,7 @@ h1 {
   font-size: 3rem; }
 
 h2 {
-  font-size: 2rem; }
+  font-size: 2.5rem; }
 
 h3 {
   font-size: 1.75rem; }
@@ -34,7 +34,9 @@ h6 {
 
 .section-title {
   width: 100%;
-  text-indent: 5px; }
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1%; }
 
 .container {
   position: relative;
@@ -137,11 +139,9 @@ header {
       .blog article .inner .info {
         margin-bottom: 0.5rem; }
       .blog article .inner .title {
-        font-size: 2rem;
         margin-bottom: 0.5rem; }
         .blog article .inner .title a {
-          color: #000;
-          text-shadow: 1px 1px 2px #777; }
+          color: #000; }
       .blog article .inner .brief {
         font-size: 1.2rem; }
       .blog article .inner:hover {
