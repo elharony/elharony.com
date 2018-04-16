@@ -132,9 +132,10 @@ header
   article
     width: 100%
     .inner
-      padding: 0.5rem
+      height: 120px
+      padding: 1rem
       box-shadow: 0 0 20px 2px #ececec
-      margin: 2%
+      margin: 0 4% 4%
       transition: all 300ms ease-in-out
       .info
         margin-bottom: 0.5rem
@@ -152,7 +153,11 @@ header
     article
       width: 50%
       margin: 1% 0
-  @media all and (min-width: 860px)
+  @media all and (min-width: 670px) and (max-width: 712px)
+    article
+      .inner
+        height: 150px
+  @media all and (min-width: 1050px)
     article
       width: calc(100%/3)
 
