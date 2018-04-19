@@ -164,6 +164,12 @@ header {
   .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p {
     width: 70%;
     margin: 1rem auto; }
+  .single-article .content h2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 87px;
+    background: #ffffff;
+    z-index: 99; }
   .single-article .content p {
     font-size: 1.4rem; }
   .single-article .content .EnlighterJSWrapper {
