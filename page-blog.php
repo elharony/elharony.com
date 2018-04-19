@@ -12,7 +12,7 @@ get_header(); ?>
 <?php
 
 $posts_args = array(
-'posts_per_page' => 2,
+'posts_per_page' => 10,
 'orderby' => 'most_recent'
 );
 
