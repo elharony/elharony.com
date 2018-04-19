@@ -1,22 +1,21 @@
 <?php get_header(); ?>
 
 
-<!-- hero -->
-<section class="hero">
-    <div class="overlay"></div>
-    <div class="inner">
-        <h2 class="hello">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/H.png" title="H Letter in Hieroglyphic" alt="H Letter in Hieroglyphic">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/E.png" title="E Letter in Hieroglyphic" alt="E Letter in Hieroglyphic">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="L Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="L Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/O.png" title="O Letter in Hieroglyphic" alt="O Letter in Hieroglyphic">
-        </h2>
-    </div>
-</section>
+<main class="homepage">
 
-
-<main>
+    <!-- hero -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="inner">
+            <h2 class="hello">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/H.png" title="H Letter in Hieroglyphic" alt="H Letter in Hieroglyphic">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/E.png" title="E Letter in Hieroglyphic" alt="E Letter in Hieroglyphic">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="L Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="L Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/O.png" title="O Letter in Hieroglyphic" alt="O Letter in Hieroglyphic">
+            </h2>
+        </div>
+    </section>
     
 
     <!-- blog -->
