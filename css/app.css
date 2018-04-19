@@ -91,33 +91,33 @@ header {
         text-align: right; } }
 
 /* hero */
-.homepage .hero {
+.page-home .hero {
   position: relative;
   height: 700px;
   background-image: url(../img/Yahya-Elharony-Banner.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  .homepage .hero .overlay {
+  .page-home .hero .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.04); }
-  .homepage .hero .inner {
+  .page-home .hero .inner {
     position: fixed;
     width: 100%;
     top: 10%;
     color: #fff;
     text-align: center;
     z-index: 99; }
-    .homepage .hero .inner .hello img {
+    .page-home .hero .inner .hello img {
       border: 1px solid #fff; }
-    .homepage .hero .inner .details {
+    .page-home .hero .inner .details {
       font-size: 2rem; }
   @media all and (min-width: 670px) {
-    .homepage .hero .info, .homepage .hero .photo {
+    .page-home .hero .info, .page-home .hero .photo {
       width: 50%; } }
 
 /* 0 15px 15px -15px #2C3E50, bottom only 0 0 0 2px #e8e8e8 */
