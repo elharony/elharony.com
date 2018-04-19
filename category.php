@@ -4,11 +4,11 @@ get_header(); ?>
 <main>
 <section class="hero">
     <div class="container">
-        <h1 class="title">View All <?php echo single_cat_title( '', false ); ?> Articles:</h1>
+        <h1 class="title">View All <?php echo single_cat_title( '', false ); ?> Articles</h1>
     </div>
 </section>
 <section class="blog">
-    <h2 class="section-title"></h2>
+	<div class="flex-container container">
 			<?php if ( have_posts() ) : ?>
 
 			<!-- <header class="archive-header">
@@ -56,6 +56,7 @@ if ( ! empty( $categories ) ) {
 					echo "<h4>Sorry, no posts available.</h4>";
 				endif;
 			?>
+		</div>
 	</section>
 </main>
 

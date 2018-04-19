@@ -7,10 +7,11 @@ get_header(); ?>
             <h1 class="title">Check All Articles</h1>
         </div>
     </section>
+
+    <!-- blog -->
     <section class="blog">
-
+        <div class="flex-container container">
 <?php
-
 $posts_args = array(
 'posts_per_page' => 10,
 'orderby' => 'most_recent'
@@ -22,16 +23,13 @@ if ( have_posts() ) {
      while ( $the_posts->have_posts() ) {
        $the_posts->the_post();
 ?>
-
-
-<article>
-    <div class="inner">
-        <div class="info"><span class="category"><?php the_category(' - '); ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
-        <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-        <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
-    </div>
-</article>
-
+        <article>
+            <div class="inner">
+                <div class="info"><span class="category"><?php the_category(' - '); ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
+                <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
+            </div>
+        </article>
 
 <?php
     } // end while
@@ -42,6 +40,7 @@ if ( have_posts() ) {
 wp_reset_postdata();
 
 ?>
+        </div>
 
 	</section>
 </main>

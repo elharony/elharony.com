@@ -27,6 +27,7 @@ h6
 
 .hero
   padding: 3rem 0
+  margin-bottom: 2rem
   text-align: center
   background: $color-main
   color: $color-secondary
@@ -46,7 +47,11 @@ h6
     width: 840px
   @media all and (min-width: 1200px)
     width: 1180px
- 
+
+.flex-container
+  display: flex
+  flex-wrap: wrap
+
 body
   padding-top: 87px
 
@@ -91,6 +96,7 @@ header
 /* hero */
 .page-home
   .hero
+    margin-bottom: 0
     position: relative
     height: 700px
     background-image: url(../img/Yahya-Elharony-Banner.jpg)
@@ -127,11 +133,7 @@ header
 
 /* blog */
 .blog
-  display: flex
-  flex-wrap: wrap
-  width: 96%
-  max-width: 1200px
-  margin: 0 auto
+  background: #fcfcfc
   article
     width: 100%
     .inner

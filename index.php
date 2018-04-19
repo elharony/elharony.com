@@ -21,6 +21,7 @@
     <!-- blog -->
     <section class="blog">
         <h2 class="section-title">Recent Articles</h2>
+        <div class="flex-container container">
 
 <?php
 // The Loop
@@ -44,7 +45,7 @@ if ( have_posts() ) {
     echo "<h4>Sorry, no posts available.</h4>";
     } // end post condition
 ?>
-
+        </div>
     </section>
 </main>
 
