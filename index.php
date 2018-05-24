@@ -16,12 +16,13 @@
             </h2>
         </div>
     </section>
-    
 
     <!-- blog -->
     <section class="blog">
-        <h2 class="section-title">Recent Articles</h2>
-        <div class="flex-container container">
+        <div class="container">
+            <h2 class="section-title">Recent Articles</h2>
+            <div class="masonry">
+        
 
 <?php
 // The Loop
@@ -29,13 +30,13 @@ if ( have_posts() ) {
   while (have_posts()) {
     the_post();
 ?>
-        <article>
-            <div class="inner">
-                <div class="info"><span class="category"><?php the_category(' - '); ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
-                <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
-            </div>
-        </article>
+            <article>
+                <div class="inner">
+                    <div class="info"></i><span class="category"><?php the_category(' - '); ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
+                    <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                    <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
+                </div>
+            </article>
 
 <?php
    
@@ -45,6 +46,7 @@ if ( have_posts() ) {
     echo "<h4>Sorry, no posts available.</h4>";
     } // end post condition
 ?>
+            </div>
         </div>
     </section>
 </main>

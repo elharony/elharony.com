@@ -9,22 +9,28 @@ a, a:link, a:hover, a:active {
   text-decoration: none; }
 
 h1 {
-  font-size: 3rem; }
+  font-size: 2rem;
+  line-height: 2.25rem; }
 
 h2 {
-  font-size: 2.5rem; }
+  font-size: 1.75rem;
+  line-height: 2rem; }
 
 h3 {
-  font-size: 1.75rem; }
+  font-size: 1.5rem;
+  line-height: 1.75rem; }
 
 h4 {
-  font-size: 1.5rem; }
+  font-size: 1.25rem;
+  line-height: 1.5rem; }
 
 h5 {
-  font-size: 1.25rem; }
+  font-size: 1rem;
+  line-height: 1.25rem; }
 
 h6 {
-  font-size: 1rem; }
+  font-size: 0.75rem;
+  line-height: 1rem; }
 
 .hero {
   padding: 3rem 0;
@@ -130,34 +136,37 @@ header {
 /* blog */
 .blog {
   background: #fcfcfc; }
-  .blog article {
-    width: 100%; }
-    .blog article .inner {
-      height: 120px;
-      padding: 1rem;
-      box-shadow: 0 0 20px 2px #ececec;
-      margin: 0 4% 4%;
-      transition: all 300ms ease-in-out; }
-      .blog article .inner .info {
-        margin-bottom: 0.5rem; }
-      .blog article .inner .title {
-        margin-bottom: 0.5rem; }
-        .blog article .inner .title a {
-          color: #000; }
-      .blog article .inner .brief {
-        font-size: 1.2rem; }
-      .blog article .inner:hover {
-        box-shadow: 0 0 20px 2px #ececec, 0 15px 20px -15px #2C3E50; }
-  @media all and (min-width: 670px) {
-    .blog article {
-      width: 50%;
-      margin: 1% 0; } }
-  @media all and (min-width: 670px) and (max-width: 712px) {
-    .blog article .inner {
-      height: 150px; } }
-  @media all and (min-width: 1050px) {
-    .blog article {
-      width: calc(100%/3); } }
+  .blog .section-title {
+    margin: 2rem 0; }
+  .blog .masonry {
+    column-count: 1;
+    column-gap: 1em; }
+    .blog .masonry article {
+      width: 100%;
+      display: inline-block;
+      margin: 0 0 1em; }
+      .blog .masonry article .inner {
+        padding: 1rem;
+        box-shadow: 0 0 20px 2px #ececec;
+        margin: 0 4% 4%;
+        transition: all 300ms ease-in-out; }
+        .blog .masonry article .inner .info {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem; }
+        .blog .masonry article .inner .title {
+          margin-bottom: 0.5rem; }
+          .blog .masonry article .inner .title a {
+            color: #000; }
+        .blog .masonry article .inner .brief {
+          font-size: 1.2rem; }
+        .blog .masonry article .inner:hover {
+          box-shadow: 0 0 20px 2px #ececec, 0 15px 20px -15px #2C3E50; }
+    @media all and (min-width: 670px) {
+      .blog .masonry {
+        column-count: 2; } }
+    @media all and (min-width: 1050px) {
+      .blog .masonry {
+        column-count: 3; } }
 
 /* Single Page
  */
