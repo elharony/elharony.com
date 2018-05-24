@@ -33,7 +33,7 @@ if ( have_posts() ) {
             <article>
                 <div class="inner">
                     <div class="info"></i><span class="category"><?php the_category(' - '); ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
-                    <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                    <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
                     <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
                 </div>
             </article>
