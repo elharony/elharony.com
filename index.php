@@ -45,7 +45,10 @@
     <!-- blog -->
     <section class="blog">
         <div class="container">
-            <h2 class="section-title">Recent Articles</h2>
+            <h2 class="section-title">
+            Blog
+            <span class="watermark">Articles</span>
+            </h2>
             <div class="masonry">
         
 

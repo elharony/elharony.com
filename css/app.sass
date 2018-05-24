@@ -42,8 +42,16 @@ img
 	width: 100%
 	font-size: 2.5rem
 	text-align: center
-	margin-bottom: 2rem
+	margin-bottom: 4rem
 	text-transform: uppercase
+	.watermark
+		font-size: 5rem
+		font-weight: bold
+		opacity: 0.05
+		position: absolute
+		transform: translateX(-50%)
+		left: 50%
+		text-transform: uppercase
 
 .container
 	position: relative
@@ -246,14 +254,6 @@ header
 
 		.section-title
 			margin: 2rem 0 4.5rem
-			.watermark
-				font-size: 5rem
-				font-weight: bold
-				opacity: 0.05
-				position: absolute
-				transform: translateX(-50%)
-				left: 50%
-				text-transform: uppercase
 
 		.info, .image
 			width: 100%
@@ -292,10 +292,8 @@ header
 
 /* blog */
 .blog
+	padding: 4rem 0
 	background: #fcfcfc
-
-	.section-title
-		margin: 2rem 0
 		
 	.masonry
 		column-count: 1
