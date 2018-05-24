@@ -109,7 +109,8 @@ header {
         display: none; }
       header nav .toggle-menu .open-menu, header nav .toggle-menu .close-menu {
         font-size: 25px;
-        line-height: 55px; }
+        line-height: 55px;
+        cursor: pointer; }
     header nav .menu-links {
       width: 100%;
       position: fixed;
