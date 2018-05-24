@@ -199,21 +199,47 @@ header {
  */
 .single-article .content {
   position: relative; }
-  .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p {
+  .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p, .single-article .content blockquote, .single-article .content ul, .single-article .content ol {
     width: 70%;
     margin: 1rem auto; }
   .single-article .content h2 {
     position: -webkit-sticky;
     position: sticky;
+    padding: 2rem 0;
+    margin: 0 auto;
     top: 87px;
     background: #ffffff;
     z-index: 99; }
-  .single-article .content p {
-    font-size: 1.4rem; }
+  .single-article .content p, .single-article .content li {
+    font-size: 1.3rem; }
+  .single-article .content blockquote {
+    border-left: 3px solid #000;
+    font-style: italic;
+    margin: 2rem auto;
+    padding-left: 1.5rem;
+    box-sizing: border-box; }
+    .single-article .content blockquote p {
+      width: 100%; }
+  .single-article .content ul, .single-article .content ol {
+    padding-left: 2.5rem;
+    box-sizing: border-box; }
+    .single-article .content ul li, .single-article .content ol li {
+      padding-left: 0.5rem; }
+  .single-article .content ul ul, .single-article .content ol ol {
+    width: 100%; }
   .single-article .content .EnlighterJSWrapper {
     width: 70%;
-    margin: 1rem auto;
-    padding: 1rem; }
+    margin: 0 auto; }
+    .single-article .content .EnlighterJSWrapper ol {
+      width: 100%;
+      padding-left: 0.5rem; }
+      .single-article .content .EnlighterJSWrapper ol li {
+        padding: 0.3rem 0.5rem; }
+    .single-article .content .EnlighterJSWrapper .EnlighterJSToolbar {
+      top: 1px;
+      right: 1px; }
+      .single-article .content .EnlighterJSWrapper .EnlighterJSToolbar .EnlighterJSInfoButton {
+        display: none; }
     .single-article .content .EnlighterJSWrapper li {
       font-family: Courier New;
       font-size: 1.1rem;

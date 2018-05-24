@@ -120,7 +120,7 @@ header
 
 		.menu-links
 			width: 100%
-			
+
 			li
 				display: inline-block
 				margin: 0 15px
@@ -233,24 +233,66 @@ header
 	.content
 		position: relative
 
-		h2,h3,h4,h5,h6,p
+		// Center all content
+		h2, h3, h4, h5, h6, p, blockquote, ul, ol
 			width: 70%
 			margin: 1rem auto
 
+		// Sticky Header
 		h2
 			position: -webkit-sticky
 			position: sticky
+			padding: 2rem 0
+			margin: 0 auto
 			top: 87px
 			background: #ffffff
 			z-index: 99
 
-		p
-			font-size: 1.4rem
+		// Normal Text
+		p, li
+			font-size: 1.3rem
 
+		// Quote
+		blockquote
+			border-left: 3px solid $color-black
+			font-style: italic
+			margin: 2rem auto
+			padding-left: 1.5rem
+			box-sizing: border-box
+
+			p
+				width: 100%
+
+		// Regular Lists
+		ul, ol
+			padding-left: 2.5rem
+			box-sizing: border-box
+			
+			li
+				padding-left: 0.5rem
+
+		// Nested Lists
+		ul ul, ol ol
+			width: 100%
+
+		// Code Highlighter
 		.EnlighterJSWrapper
 			width: 70%
-			margin: 1rem auto
-			padding: 1rem
+			margin: 0 auto
+
+			ol
+				width: 100%
+				padding-left: 0.5rem
+
+				li
+					padding: 0.3rem 0.5rem
+
+			.EnlighterJSToolbar
+				top: 1px
+				right: 1px
+
+				.EnlighterJSInfoButton
+					display: none
 
 			li
 				font-family: Courier New
@@ -261,8 +303,9 @@ header
 				span
 					font-family: Courier New
 					font-size: 1.1rem
-		p img
 
+		// Image
+		p img
 			width: 100%
 			height: auto
 			max-height: 500px
