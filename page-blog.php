@@ -10,7 +10,8 @@ get_header(); ?>
 
     <!-- blog -->
     <section class="blog">
-        <div class="flex-container container">
+        <div class="container">
+            <div class="masonry">
 <?php
 $posts_args = array(
 'posts_per_page' => 10,
@@ -40,8 +41,8 @@ if ( have_posts() ) {
 wp_reset_postdata();
 
 ?>
+            </div>
         </div>
-
 	</section>
 </main>
 

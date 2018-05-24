@@ -8,7 +8,8 @@ get_header(); ?>
     </div>
 </section>
 <section class="blog">
-	<div class="flex-container container">
+	<div class="container">
+		<div class="masonry">
 			<?php if ( have_posts() ) : ?>
 
 			<!-- <header class="archive-header">
@@ -56,6 +57,8 @@ if ( ! empty( $categories ) ) {
 					echo "<h4>Sorry, no posts available.</h4>";
 				endif;
 			?>
+			
+			</div>
 		</div>
 	</section>
 </main>
