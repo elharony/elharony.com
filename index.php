@@ -17,6 +17,31 @@
         </div>
     </section>
 
+    <!-- about -->
+    <section class="about">
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me!
+                <span class="watermark">About</span>
+            </h2>
+
+            <div class="flex-container">
+                <div class="image">
+                    <img src="https://avatars1.githubusercontent.com/u/16986422?s=460&v=4" alt="">
+                </div>
+                <div class="info">
+                    <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam optio quam nihil odit architecto harum illum atque! Itaque aliquid eius accusamus, officia modi qui. Quos obcaecati rerum explicabo culpa at, quaerat minima dolores odio aliquam provident minus possimus nulla asperiores.</p>
+                    <a href="https://www.elharony.com/resume.png" class="resume btn">Download Resume</a>
+                    <!-- <a href="" class="hire btn-reversed">Hire Me</a> -->
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+
     <!-- blog -->
     <section class="blog">
         <div class="container">
