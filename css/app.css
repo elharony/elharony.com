@@ -151,7 +151,7 @@ header {
 .page-home .hero {
   margin-bottom: 0;
   position: relative;
-  height: 700px;
+  height: 500px;
   background-image: url(../img/Yahya-Elharony-Banner.jpg);
   background-attachment: fixed;
   background-position: center;
@@ -166,7 +166,7 @@ header {
   .page-home .hero .inner {
     position: fixed;
     width: 100%;
-    top: 10%;
+    top: 12%;
     color: #fff;
     text-align: center;
     z-index: 99; }
@@ -174,9 +174,9 @@ header {
       border: 1px solid #fff; }
     .page-home .hero .inner .details {
       font-size: 2rem; }
-  @media all and (min-width: 670px) {
-    .page-home .hero .info, .page-home .hero .photo {
-      width: 50%; } }
+  @media all and (min-width: 391px) {
+    .page-home .hero .inner {
+      top: 17.5%; } }
 
 /* 0 15px 15px -15px #2C3E50, bottom only 0 0 0 2px #e8e8e8 */
 /* blog */
