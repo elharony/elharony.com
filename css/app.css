@@ -188,9 +188,10 @@ header {
     column-count: 1;
     column-gap: 1em; }
     .blog .masonry article {
-      width: 100%;
-      display: inline-block;
-      margin: 0 0 1em; }
+      margin: 0 0 1em;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid; }
       .blog .masonry article .inner {
         padding: 1rem;
         box-shadow: 0 0 20px 2px #ececec;

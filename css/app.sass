@@ -218,9 +218,10 @@ header
 		column-gap: 1em
 
 		article
-			width: 100%
-			display: inline-block
 			margin: 0 0 1em
+			-webkit-column-break-inside: avoid
+			page-break-inside: avoid
+			break-inside: avoid
 
 			.inner
 				padding: 1rem
