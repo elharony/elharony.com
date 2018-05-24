@@ -16,6 +16,10 @@
                     <a href="<?php bloginfo("url"); ?>" class="logo">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg">
                     </a>
+                    <div class="toggle-menu">
+                        <a href="#" class="open-menu"><i class="fas fa-bars"></i></a>
+                        <a href="#" class="close-menu"><i class="fas fa-times"></i></a>
+                    </div>
                     <?php display_menu() ?>
                 </nav>
             </div>
