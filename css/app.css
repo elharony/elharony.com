@@ -271,8 +271,11 @@ header {
     width: 100%;
     height: auto;
     max-height: 500px; }
-@media all and (min-width: 667px) {
-  .single-article h2, .single-article h3, .single-article h4, .single-article h5, .single-article h6, .single-article p, .single-article blockquote, .single-article ul, .single-article ol, .single-article .EnlighterJSWrapper {
-    width: 70%; } }
+  @media all and (min-width: 667px) {
+    .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p, .single-article .content blockquote, .single-article .content ul, .single-article .content ol, .single-article .content .EnlighterJSWrapper {
+      width: 70%; } }
+.single-article .related-articles {
+  margin-top: 2rem;
+  border: 1px solid #eee; }
 
 /*# sourceMappingURL=app.css.map */
