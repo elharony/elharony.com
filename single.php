@@ -9,7 +9,13 @@ the_post();
 
 <main class="single-article">
     <section class="hero">
-        <h1 class="title"><?php the_title(); ?></h1>
+        <div class="container">
+            <h1 class="title"><?php the_title(); ?></h1>
+            <ul class="article-info">
+                <li><?php the_category(' - '); ?></li>
+                <li><time><?php the_time('F j, Y'); ?></time></li>
+            </ul>
+        </div>
     </section>
 
     <article class="content">
@@ -17,6 +23,7 @@ the_post();
             <?php the_content(); ?>
         </div>
     </article>
+
 </main>
 
 <?php get_footer(); ?>
