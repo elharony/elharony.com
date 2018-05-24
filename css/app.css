@@ -114,7 +114,7 @@ header {
     header nav .menu-links {
       width: 100%;
       position: fixed;
-      top: 109px;
+      top: 88px;
       left: -100%;
       background: #fff;
       transition: all 300ms ease; }
