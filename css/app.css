@@ -191,7 +191,8 @@ header {
   background-image: url(../img/Yahya-Elharony-Banner.jpg);
   background-attachment: fixed;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  z-index: -1; }
   .page-home .hero .overlay {
     position: absolute;
     width: 100%;
@@ -205,7 +206,7 @@ header {
     top: 12%;
     color: #fff;
     text-align: center;
-    z-index: 99; }
+    z-index: 0; }
     .page-home .hero .inner .hello img {
       border: 1px solid #fff; }
     .page-home .hero .inner .details {
@@ -214,6 +215,8 @@ header {
     .page-home .hero .inner {
       top: 17.5%; } }
 .page-home .about {
+  position: relative;
+  background: #fff;
   padding: 2rem 0; }
   .page-home .about .section-title {
     margin: 2rem 0 4.5rem; }
