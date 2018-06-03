@@ -18,6 +18,16 @@ the_post();
         </div>
     </section>
 
+    <div class="article-controls">
+        <div class="container">
+            <div class="reading-mode">
+                <button class="auto-scrolling-on show btn" title="Start Reading Mode"><i class="fas fa-book-open"></i></button>
+                <button class="auto-scrolling-off hide btn" title="Back to Normal"><i class="fas fa-eye"></i></button>
+            </div>
+        </div>
+    </div>
+    
+
     <article class="content">
         <div class="container">
             <?php the_content(); ?>
