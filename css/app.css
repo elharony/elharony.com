@@ -200,7 +200,7 @@ header {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  z-index: -1; }
+  z-index: 0; }
   .page-home .hero .overlay {
     position: absolute;
     width: 100%;
@@ -256,11 +256,12 @@ header {
     .page-home .about .info .details {
       padding-top: 6rem; } }
 
-/* 0 15px 15px -15px #2C3E50, bottom only 0 0 0 2px #e8e8e8 */
 /* blog */
 .blog {
+  position: relative;
   padding: 4rem 0;
-  background: #fcfcfc; }
+  background: #fcfcfc;
+  z-index: 0; }
   .blog .masonry {
     column-count: 1;
     column-gap: 1em; }
