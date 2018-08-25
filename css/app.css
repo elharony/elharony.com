@@ -374,19 +374,46 @@ header {
 /* Footer
  */
 footer {
-  text-align: center;
   background: #fff; }
-  footer .contact {
+  footer .contact-form {
+    padding: 15px;
+    margin-bottom: 2em; }
+    footer .contact-form .nf-before-form-content .nf-form-fields-required {
+      display: none; }
+    footer .contact-form .nf-error .ninja-forms-field {
+      border: 0;
+      border-bottom: 2px solid #e80000; }
+    footer .contact-form label {
+      font-size: 1.1em; }
+    footer .contact-form input:not([type="button"]), footer .contact-form select, footer .contact-form textarea {
+      font-size: 17px;
+      padding: 0.2em;
+      color: #666666;
+      border: 0;
+      border-bottom: 2px solid #e7e7e7; }
+      footer .contact-form input:not([type="button"]):focus, footer .contact-form input:not([type="button"]):active, footer .contact-form select:focus, footer .contact-form select:active, footer .contact-form textarea:focus, footer .contact-form textarea:active {
+        outline: 0;
+        border-bottom: 2px dotted #444444; }
+    footer .contact-form textarea {
+      height: 100px;
+      resize: vertical; }
+    @media all and (max-width: 667px) {
+      footer .contact-form .one-half {
+        width: 100%;
+        margin-left: 0; } }
+  footer .contact-links {
+    text-align: center;
     margin-bottom: 1rem; }
-    footer .contact li {
+    footer .contact-links li {
       list-style: none;
       display: block;
       font-size: 1.5rem; }
-      footer .contact li a {
+      footer .contact-links li a {
         color: #000; }
-        footer .contact li a i {
+        footer .contact-links li a i {
           margin: 0.5rem; }
   footer .copyrights {
+    text-align: center;
     padding: 1rem 0; }
 
 /*# sourceMappingURL=app.css.map */

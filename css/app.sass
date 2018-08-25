@@ -472,10 +472,44 @@ header
  * Footer
  */
 footer
-	text-align: center
 	background: $color-white
+
+	.contact-form
+		padding: 15px
+		margin-bottom: 2em
+		.nf-before-form-content
+			.nf-form-fields-required
+				display: none
+
+		.nf-error .ninja-forms-field
+			border: 0
+			border-bottom: 2px solid #e80000
+
+		label
+			font-size: 1.1em
+
+		input:not([type="button"]), select, textarea
+			font-size: 17px
+			padding: 0.2em
+			color: #666666
+			border: 0
+			border-bottom: 2px solid #e7e7e7
+
+			&:focus, &:active
+				outline: 0
+				border-bottom: 2px dotted #444444
+
+		textarea
+			height: 100px
+			resize: vertical
+
+		@media all and (max-width: 667px)
+			.one-half
+				width: 100%
+				margin-left: 0
 	
-	.contact
+	.contact-links
+		text-align: center
 		margin-bottom: 1rem
 		li
 			list-style: none
@@ -487,4 +521,5 @@ footer
 					margin: 0.5rem
 
 	.copyrights
+		text-align: center
 		padding: 1rem 0
