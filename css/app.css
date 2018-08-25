@@ -280,6 +280,35 @@ header {
       .blog .masonry {
         column-count: 3; } }
 
+/* Contact Page
+ */
+.contact-form {
+  padding: 15px;
+  margin-bottom: 2em; }
+  .contact-form .nf-before-form-content .nf-form-fields-required {
+    display: none; }
+  .contact-form .nf-error .ninja-forms-field {
+    border: 0;
+    border-bottom: 2px solid #e80000; }
+  .contact-form label {
+    font-size: 1.1em; }
+  .contact-form input:not([type="button"]), .contact-form select, .contact-form textarea {
+    font-size: 17px;
+    padding: 0.2em;
+    color: #666666;
+    border: 0;
+    border-bottom: 2px solid #e7e7e7; }
+    .contact-form input:not([type="button"]):focus, .contact-form input:not([type="button"]):active, .contact-form select:focus, .contact-form select:active, .contact-form textarea:focus, .contact-form textarea:active {
+      outline: 0;
+      border-bottom: 2px dotted #444444; }
+  .contact-form textarea {
+    height: 100px !important;
+    resize: vertical; }
+  @media all and (max-width: 667px) {
+    .contact-form .one-half {
+      width: 100% !important;
+      margin-left: 0 !important; } }
+
 /* Single Page
  */
 .single-article .article-controls {
@@ -375,32 +404,6 @@ header {
  */
 footer {
   background: #fff; }
-  footer .contact-form {
-    padding: 15px;
-    margin-bottom: 2em; }
-    footer .contact-form .nf-before-form-content .nf-form-fields-required {
-      display: none; }
-    footer .contact-form .nf-error .ninja-forms-field {
-      border: 0;
-      border-bottom: 2px solid #e80000; }
-    footer .contact-form label {
-      font-size: 1.1em; }
-    footer .contact-form input:not([type="button"]), footer .contact-form select, footer .contact-form textarea {
-      font-size: 17px;
-      padding: 0.2em;
-      color: #666666;
-      border: 0;
-      border-bottom: 2px solid #e7e7e7; }
-      footer .contact-form input:not([type="button"]):focus, footer .contact-form input:not([type="button"]):active, footer .contact-form select:focus, footer .contact-form select:active, footer .contact-form textarea:focus, footer .contact-form textarea:active {
-        outline: 0;
-        border-bottom: 2px dotted #444444; }
-    footer .contact-form textarea {
-      height: 100px;
-      resize: vertical; }
-    @media all and (max-width: 667px) {
-      footer .contact-form .one-half {
-        width: 100%;
-        margin-left: 0; } }
   footer .contact-links {
     text-align: center;
     margin-bottom: 1rem; }
