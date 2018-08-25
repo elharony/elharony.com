@@ -7,7 +7,10 @@
     <section class="hero">
         <div class="overlay"></div>
         <div class="inner">
-            <h2 class="hello">
+            <h2 class="hello-text">
+            Hello in Hieroglyphic!
+            </h2>
+            <h2 class="hello-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/H.png" title="H Letter in Hieroglyphic" alt="H Letter in Hieroglyphic">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/E.png" title="E Letter in Hieroglyphic" alt="E Letter in Hieroglyphic">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="L Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">

@@ -3,7 +3,7 @@
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6, p, div, span, li {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Josefin Sans", sans-serif; }
 
 a, a:link, a:hover, a:active {
   text-decoration: none; }
@@ -38,11 +38,13 @@ img {
 .section-title {
   width: 100%;
   font-size: 2.5rem;
+  font-family: "Audiowide";
   text-align: center;
   margin-bottom: 4rem;
   text-transform: uppercase; }
   .section-title .watermark {
     font-size: 5rem;
+    font-family: "Audiowide";
     font-weight: bold;
     opacity: 0.05;
     position: absolute;
@@ -74,6 +76,7 @@ body {
   background: #000;
   border: 2px solid #000;
   font-size: 0.8rem;
+  font-family: "Audiowide";
   padding: 1rem;
   margin: 0 1rem;
   display: inline-block;
@@ -95,7 +98,9 @@ body {
 .hero {
   padding: 3rem 0;
   margin-bottom: 2rem;
+  font-family: "Audiowide";
   text-align: center;
+  text-transform: uppercase;
   background: #fcfcfc;
   box-shadow: 0px 1px 8px 1px #eaeaea; }
   .hero .title {
@@ -108,6 +113,7 @@ body {
     .hero .article-info li {
       position: relative;
       display: inline-block;
+      font-size: 0.9rem;
       list-style: none;
       margin: 0 1rem; }
       .hero .article-info li a {
@@ -119,7 +125,7 @@ body {
         width: 5px;
         height: 5px;
         left: -1.1rem;
-        top: 0.55rem;
+        top: 0.25rem;
         border-radius: 50%;
         background: #333333; }
       .hero .article-info li:first-of-type:before {
@@ -160,6 +166,7 @@ header {
       header nav .menu-links a {
         display: block;
         font-size: 1.2rem;
+        font-family: "Audiowide";
         color: #000;
         border-bottom: 2px solid transparent;
         transition: all 300ms ease; }
@@ -208,7 +215,12 @@ header {
     color: #fff;
     text-align: center;
     z-index: 0; }
-    .page-home .hero .inner .hello img {
+    .page-home .hero .inner .hello-text {
+      font-size: 2rem;
+      font-family: "Audiowide";
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.2rem; }
+    .page-home .hero .inner .hello-img img {
       border: 1px solid #fff; }
     .page-home .hero .inner .details {
       font-size: 2rem; }
@@ -351,12 +363,14 @@ header {
     box-sizing: border-box;
     z-index: 99; }
   .single-article .content p, .single-article .content li {
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    line-height: 1.7rem; }
   .single-article .content blockquote {
-    border-left: 3px solid #000;
     font-style: italic;
     margin: 2rem auto;
-    padding-left: 1.5rem;
+    padding: 0.5rem;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 0 10px 1px #e4e4e4;
     box-sizing: border-box; }
     .single-article .content blockquote p {
       width: 100%; }
@@ -416,6 +430,7 @@ footer {
         footer .contact-links li a i {
           margin: 0.5rem; }
   footer .copyrights {
+    font-family: "Audiowide";
     text-align: center;
     padding: 1rem 0; }
 

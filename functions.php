@@ -6,7 +6,7 @@
 function add_styles() {
   wp_enqueue_style("main-css", get_template_directory_uri() . "/css/app.css");
   wp_enqueue_style("fontawesome", "https://use.fontawesome.com/releases/v5.0.13/css/all.css");
-  wp_enqueue_style("font--open-sans", "https://fonts.googleapis.com/css?family=Open+Sans");
+  wp_enqueue_style("fonts", "https://fonts.googleapis.com/css?family=Audiowide|Josefin+Sans");
 }
 
 
