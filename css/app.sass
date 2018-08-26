@@ -284,11 +284,10 @@ header
 				width: 90%
 				margin: 0 auto
 				font-size: 1.3rem
+				line-height: 1.7rem
 
 			.btn
 				margin-top: 2rem
-
-
 
 		@media all and (min-width: 667px)
 			.info, .image
@@ -354,7 +353,14 @@ header
 				
 		@media all and (min-width: 1050px)
 			column-count: 3
-				
+
+/*
+ * Blog Page
+ */
+.page-blog
+	.blog
+		padding-top: 0
+
 /*
  * Contact Page
  */
@@ -404,12 +410,13 @@ header
 		.reading-mode
 			
 			.auto-scrolling-on, .auto-scrolling-off
-				position: absolute
+				position: fixed
 				width: 40px
 				height: 40px
 				padding: 0.45rem
 				font-size: 1.25rem
 				line-height: 1.5rem
+				z-index: 99
 
 			.hide
 				left: -10%
@@ -419,7 +426,14 @@ header
 				left: 0
 				opacity: 1
 
-
+		@media all and (max-width: 480px)
+			.auto-scrolling-on, .auto-scrolling-off
+				width: 25px !important
+				height: 25px !important
+				font-size: 0.7rem !important
+				line-height: 0 !important
+				i
+					margin: -1px 0 0 -3px
 		@media all and (min-width: 1050px)
 			left: 10%
 		@media all and (min-width: 1400px)

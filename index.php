@@ -25,8 +25,8 @@
         <div class="container">
 
             <h2 class="section-title">
-                About Me!
-                <span class="watermark">About</span>
+                About
+                <span class="watermark">Elharony</span>
             </h2>
 
             <div class="flex-container">
@@ -34,9 +34,9 @@
                     <img src="https://avatars1.githubusercontent.com/u/16986422?s=460&v=4" alt="">
                 </div>
                 <div class="info">
-                    <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam optio quam nihil odit architecto harum illum atque! Itaque aliquid eius accusamus, officia modi qui. Quos obcaecati rerum explicabo culpa at, quaerat minima dolores odio aliquam provident minus possimus nulla asperiores.</p>
-                    <a href="https://www.elharony.com/resume.png" class="resume btn">Download Resume</a>
-                    <!-- <a href="" class="hire btn-reversed">Hire Me</a> -->
+                    <p class="details">Yahya isn't a coder. He is a unique mixture; A Developer, Volunteer, Leader, Young Entrepreneur, Photography, and Blockchain enthusiastic. <br>He is always looking for new skills to be acquired, people to be helped and challenges to be accepted!</p>
+                    <a href="https://www.elharony.com/resume.pdf" class="resume btn">Download Resume</a>
+                    <a href="<?php echo get_template_directory_uri(); ?>/contact" class="hire btn-reversed">Hire Me</a>
                 </div>
             </div>
             
