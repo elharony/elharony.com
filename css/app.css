@@ -38,12 +38,13 @@ img {
 .section-title {
   width: 100%;
   font-size: 2.5rem;
+  line-height: 2.5rem;
   font-family: "Audiowide";
   text-align: center;
   margin-bottom: 4rem;
   text-transform: uppercase; }
   .section-title .watermark {
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: "Audiowide";
     font-weight: bold;
     opacity: 0.05;
@@ -115,7 +116,8 @@ body {
       display: inline-block;
       font-size: 0.9rem;
       list-style: none;
-      margin: 0 1rem; }
+      margin: 0 1rem;
+      text-transform: none; }
       .hero .article-info li a {
         color: #000;
         text-decoration: underline; }
@@ -156,9 +158,9 @@ header {
     header nav .menu-links {
       width: 100%;
       position: fixed;
-      top: 88px;
+      top: 86px;
       left: -100%;
-      background: #fff;
+      background: #fcfcfc;
       transition: all 300ms ease; }
       header nav .menu-links li {
         display: block;
@@ -224,6 +226,9 @@ header {
       border: 1px solid #fff; }
     .page-home .hero .inner .details {
       font-size: 2rem; }
+    @media all and (max-width: 667px) {
+      .page-home .hero .inner {
+        position: absolute; } }
   @media all and (min-width: 391px) {
     .page-home .hero .inner {
       top: 17.5%; } }
