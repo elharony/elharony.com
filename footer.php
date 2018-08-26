@@ -12,7 +12,7 @@
                         <a href="https://www.facebook.com/elharony"><i class="fab fa-facebook fa-fw"></i></a>
                     </li>
                 </ul>
-                <p class="copyrights">All copyrights reserved &copy; 2018</p>
+                <p class="copyrights">Beta Version - All copyrights reserved &copy; 2018</p>
             </div>
         </footer>
      
