@@ -21,7 +21,7 @@
     </section>
 
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
 
             <h2 class="section-title">
