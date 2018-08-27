@@ -31,7 +31,7 @@
 
             <div class="flex-container">
                 <div class="image">
-                    <img src="https://avatars1.githubusercontent.com/u/16986422?s=460&v=4" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony-About.jpg" alt="Yahya Elharony">
                 </div>
                 <div class="info">
                     <p class="details">Yahya isn't a coder. He is a unique mixture; A Developer, Volunteer, Leader, Young Entrepreneur, Photography, and Blockchain enthusiastic. <br>He is always looking for new skills to be acquired, people to be helped and challenges to be accepted!</p>
