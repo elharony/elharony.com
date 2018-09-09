@@ -1,6 +1,12 @@
 <?php
 
 /*
+ * Theme Support
+ */
+add_theme_support("post-thumbnails");
+
+
+/*
  * add_styles
  */
 function add_styles() {
@@ -51,6 +57,47 @@ function display_menu() {
 
 
 /*
+ * custom_post_type_testimonials
+ *
+ * Create new Custom Page for the "Testimonials"
+ *
+ * @params: NO
+ * @return: NO
+ */
+function custom_post_type_testimonials() {
+
+  // Labels
+ $labels = array(
+   'name' => "Testimonials",
+   'singular_name' => "testimonials",
+   'menu_name' => 'Testimonials',
+   'add_new' => "Add Testimonial",
+   'add_new_item' => "Add New Testimonial",
+   'edit_item' => "Edit Testimonial",
+   'new_item' => "New Testimonial",
+   'view_item' => "View Testimonial",
+   'all_items' => "View all",
+   'search_items' => __("Search Testimonials"),
+   'not_found' =>  __("No Testimonials Found"),
+   'not_found_in_trash' => __("No Testimonials Found in Trash"),
+   'parent_item_colon' => ''
+ );
+
+ // Register post type
+ register_post_type('testimonials' , array(
+   'labels' => $labels,
+   'public' => true,
+   'has_archive' => false,
+   'menu_icon' => 'dashicons-book',
+   'rewrite' => false,
+   'supports' => array('title', 'editor', 'thumbnail')
+ ) );
+}
+
+
+
+
+/*
  * Limit the excerpt length
  * Change the style of the read more; The default is […]
 */
@@ -73,6 +120,7 @@ add_filter("excerpt_more", "change_excerpt_more");
 add_action("wp_enqueue_scripts", "add_styles");
 add_action("wp_enqueue_scripts", "add_scripts");
 add_action("init", "add_custom_menu");
+add_action( 'init', 'custom_post_type_testimonials', 0 );
 add_filter("excerpt_length", "change_excerpt_length");
 
 
