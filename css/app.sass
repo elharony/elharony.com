@@ -97,7 +97,7 @@ body
 		background: $color-black
 		color: $color-white
 
-
+    
 
 // The `hero` applies for each `single` page
 .hero
@@ -357,6 +357,66 @@ header
 				
 		@media all and (min-width: 1050px)
 			column-count: 3
+
+
+/* Testimonials */
+.testimonials
+	position: relative
+	padding: 4rem 0
+	background: #f1f7f8
+	z-index: 0
+	.section-title
+		margin-bottom: 2rem
+	.swiper-container
+		width: 100%
+		.swiper-slide
+			width: 375px
+			background: transparent
+			margin-bottom: 2rem
+			.inner
+				padding: 1rem
+				opacity: 0.5
+				transition: all .3s ease-out
+				.review
+					position: relative
+					font-size: 1.3rem
+					line-height: 1.4rem
+					margin: 2rem 0
+					padding: 2rem
+					border-radius: 1rem
+					background-color: #ddecf6
+					transition: all .3s ease-out
+					&:after
+						position: absolute
+						content: ""
+						border: 15px solid #ddecf6
+						bottom: -30px
+						border-right-color: transparent
+						border-left-color: transparent
+						border-bottom-color: transparent
+				.client
+					text-align: center
+					.name, .company
+						line-height: 1.75rem
+					.name
+						font-family: "Audiowide"
+						font-style: italic
+					.company
+						font-weight: normal
+		.swiper-slide-active
+			background: transparent
+			.inner
+				opacity: 1
+				.review
+					background-color: $color-white
+					box-shadow: 12.5px 21.7px 60px rgba(0, 0, 1, 0.25)
+					&:after
+						border: 15px solid $color-white
+						border-right-color: transparent
+						border-left-color: transparent
+						border-bottom-color: transparent
+						
+
 
 /*
  * Blog Page

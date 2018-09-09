@@ -303,6 +303,63 @@ header {
       .blog .masonry {
         column-count: 3; } }
 
+/* Testimonials */
+.testimonials {
+  position: relative;
+  padding: 4rem 0;
+  background: #f1f7f8;
+  z-index: 0; }
+  .testimonials .section-title {
+    margin-bottom: 2rem; }
+  .testimonials .swiper-container {
+    width: 100%; }
+    .testimonials .swiper-container .swiper-slide {
+      width: 375px;
+      background: transparent;
+      margin-bottom: 2rem; }
+      .testimonials .swiper-container .swiper-slide .inner {
+        padding: 1rem;
+        opacity: 0.5;
+        transition: all 0.3s ease-out; }
+        .testimonials .swiper-container .swiper-slide .inner .review {
+          position: relative;
+          font-size: 1.3rem;
+          line-height: 1.4rem;
+          margin: 2rem 0;
+          padding: 2rem;
+          border-radius: 1rem;
+          background-color: #ddecf6;
+          transition: all 0.3s ease-out; }
+          .testimonials .swiper-container .swiper-slide .inner .review:after {
+            position: absolute;
+            content: "";
+            border: 15px solid #ddecf6;
+            bottom: -30px;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: transparent; }
+        .testimonials .swiper-container .swiper-slide .inner .client {
+          text-align: center; }
+          .testimonials .swiper-container .swiper-slide .inner .client .name, .testimonials .swiper-container .swiper-slide .inner .client .company {
+            line-height: 1.75rem; }
+          .testimonials .swiper-container .swiper-slide .inner .client .name {
+            font-family: "Audiowide";
+            font-style: italic; }
+          .testimonials .swiper-container .swiper-slide .inner .client .company {
+            font-weight: normal; }
+    .testimonials .swiper-container .swiper-slide-active {
+      background: transparent; }
+      .testimonials .swiper-container .swiper-slide-active .inner {
+        opacity: 1; }
+        .testimonials .swiper-container .swiper-slide-active .inner .review {
+          background-color: #fff;
+          box-shadow: 12.5px 21.7px 60px rgba(0, 0, 1, 0.25); }
+          .testimonials .swiper-container .swiper-slide-active .inner .review:after {
+            border: 15px solid #fff;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: transparent; }
+
 /* Blog Page
  */
 .page-blog .blog {
