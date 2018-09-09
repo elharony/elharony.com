@@ -15,7 +15,31 @@
                 <p class="copyrights">Beta Version - All copyrights reserved &copy; 2018</p>
             </div>
         </footer>
+
+        
      
      <?php wp_footer(); ?>
+
+<script>
+        
+/*
+* Swiper Slider
+*/
+var swiper = new Swiper('.swiper-container', {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows : true,
+    },
+    pagination: {
+    el: '.swiper-pagination',
+    },
+});           
+</script>
+
     </body>
 </html>
