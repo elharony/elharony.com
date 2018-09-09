@@ -82,6 +82,11 @@ if ( have_posts() ) {
     </section>
 
 
+
+
+
+
+
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
@@ -92,43 +97,70 @@ if ( have_posts() ) {
 
             <!-- Swiper -->
             <div class="swiper-container">
+                
+
+<?php
+$args = array(
+  'post_type'   => 'testimonials',
+  'post_status' => 'publish',
+  'orderby' => 'rand',
+  'posts_per_page' => -1
+);
+ 
+$testimonials = new WP_Query( $args );
+if( $testimonials->have_posts() ) :
+
+?>
                 <div class="swiper-wrapper">
+
+
+<?php
+    while( $testimonials->have_posts() ) :
+    $testimonials->the_post();
+?>
+        
+        
                     <div class="swiper-slide">
                         <div class="inner">
                             <div class="review">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ipsa consequuntur exercitationem non voluptatibus iste in ipsam, dolorem dignissimos, temporibus sapiente mollitia, recusandae possimus totam autem quia beatae! Quae, voluptates?
+                                <?php the_content(); ?>
                             </div>
                             <div class="client">
-                                <h4 class="name">Elharony</h4>
-                                <h4 class="company">Udacity</h4>
+                                <h4 class="name"><?php the_field('client'); ?></h4>
+                                <div class="company">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <div class="review">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ipsa consequuntur exercitationem non voluptatibus iste in ipsam, dolorem dignissimos, temporibus sapiente mollitia, recusandae possimus totam autem quia beatae! Quae, voluptates?
-                            </div>
-                            <div class="client">
-                                <h4 class="name">Elharony</h4>
-                                <h4 class="company">Udacity</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <div class="review">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ipsa consequuntur exercitationem non voluptatibus iste in ipsam, dolorem dignissimos, temporibus sapiente mollitia, recusandae possimus totam autem quia beatae! Quae, voluptates?
-                            </div>
-                            <div class="client">
-                                <h4 class="name">Elharony</h4>
-                                <h4 class="company">Udacity</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+<?php
+    endwhile;
+    wp_reset_postdata();
+?>
+
+
+                  </div>
+
+<?php
+else :
+  esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
+endif;
+?>
+                
+
+
             </div>
     </section>
+
+
+
+
+
+
+
+
+
 
 </main>
 
