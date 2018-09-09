@@ -338,15 +338,13 @@ header {
             border-right-color: transparent;
             border-left-color: transparent;
             border-bottom-color: transparent; }
-        .testimonials .swiper-container .swiper-slide .inner .client {
-          text-align: center; }
-          .testimonials .swiper-container .swiper-slide .inner .client .name, .testimonials .swiper-container .swiper-slide .inner .client .company {
-            line-height: 1.75rem; }
-          .testimonials .swiper-container .swiper-slide .inner .client .name {
-            font-family: "Audiowide";
-            font-style: italic; }
-          .testimonials .swiper-container .swiper-slide .inner .client .company {
-            font-weight: normal; }
+        .testimonials .swiper-container .swiper-slide .inner .client .name {
+          font-family: "Audiowide";
+          line-height: 1.75rem;
+          margin-bottom: 0.25rem; }
+        .testimonials .swiper-container .swiper-slide .inner .client .company img {
+          max-width: 200px;
+          height: auto; }
     .testimonials .swiper-container .swiper-slide-active {
       background: transparent; }
       .testimonials .swiper-container .swiper-slide-active .inner {
