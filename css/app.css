@@ -306,7 +306,7 @@ header {
 /* Testimonials */
 .testimonials {
   position: relative;
-  padding: 4rem 0;
+  padding: 4rem 0 1rem;
   background: #f1f7f8;
   z-index: 0; }
   .testimonials .section-title {
