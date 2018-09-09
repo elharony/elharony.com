@@ -26,6 +26,7 @@
 * Swiper Slider
 */
 var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
@@ -33,12 +34,9 @@ var swiper = new Swiper('.swiper-container', {
     stretch: 0,
     depth: 100,
     modifier: 1,
-    slideShadows : true,
-    },
-    pagination: {
-    el: '.swiper-pagination',
-    },
-});           
+    slideShadows : false,
+    }
+});      
 </script>
 
     </body>
