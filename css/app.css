@@ -233,7 +233,7 @@ header {
       top: 17.5%; } }
 .page-home .about {
   position: relative;
-  background: #fff;
+  background: #fcfcfc;
   padding: 6rem 0; }
   .page-home .about .section-title {
     margin: 2rem 0 4rem; }
@@ -265,7 +265,7 @@ header {
 .blog {
   position: relative;
   padding: 4rem 0;
-  background: #fcfcfc;
+  background: #fff;
   z-index: 0; }
   .blog .masonry {
     column-count: 1;
@@ -306,7 +306,7 @@ header {
 .testimonials {
   position: relative;
   padding: 4rem 0 1rem;
-  background: #f1f7f8;
+  background: #fcfcfc;
   z-index: 0; }
   .testimonials .section-title {
     margin-bottom: 2rem; }
@@ -327,7 +327,7 @@ header {
           margin: 2rem 0;
           padding: 2rem;
           border-radius: 1rem;
-          background-color: #ddecf6;
+          background-color: #e6eaed;
           transition: all 0.3s ease-out; }
           .testimonials .swiper-container .swiper-slide .inner .review:after {
             position: absolute;
