@@ -35,8 +35,8 @@
                 </div>
                 <div class="info">
                     <p class="details">Yahya isn't a coder. He is a unique mixture; A Developer, Volunteer, Leader, Young Entrepreneur, Photography, and Blockchain enthusiastic. <br>He is always looking for new skills to be acquired, people to be helped and challenges to be accepted!</p>
-                    <a href="https://www.elharony.com/resume.pdf" class="resume btn">Download Resume</a>
-                    <a href="<?php echo get_template_directory_uri(); ?>/contact" class="hire btn-reversed">Hire Me</a>
+                    <!-- <a href="https://www.elharony.com/resume.pdf" class="resume btn">Download Resume</a> -->
+                    <a href="<?php echo get_template_directory_uri(); ?>/contact" class="hire btn">Hire Me</a>
                 </div>
             </div>
             
@@ -80,6 +80,56 @@ if ( have_posts() ) {
             </div>
         </div>
     </section>
+
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">
+                People say
+                <span class="watermark">Testimonials</span>
+            </h2>
+
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <div class="review">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ipsa consequuntur exercitationem non voluptatibus iste in ipsam, dolorem dignissimos, temporibus sapiente mollitia, recusandae possimus totam autem quia beatae! Quae, voluptates?
+                            </div>
+                            <div class="client">
+                                <h4 class="name">Elharony</h4>
+                                <h4 class="company">Udacity</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <div class="review">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ipsa consequuntur exercitationem non voluptatibus iste in ipsam, dolorem dignissimos, temporibus sapiente mollitia, recusandae possimus totam autem quia beatae! Quae, voluptates?
+                            </div>
+                            <div class="client">
+                                <h4 class="name">Elharony</h4>
+                                <h4 class="company">Udacity</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <div class="review">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ipsa consequuntur exercitationem non voluptatibus iste in ipsam, dolorem dignissimos, temporibus sapiente mollitia, recusandae possimus totam autem quia beatae! Quae, voluptates?
+                            </div>
+                            <div class="client">
+                                <h4 class="name">Elharony</h4>
+                                <h4 class="company">Udacity</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 </main>
 
 
