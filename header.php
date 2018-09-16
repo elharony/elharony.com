@@ -17,6 +17,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-16x16.png">
 
+    <!-- Social Media Sharing Details -->
+    <meta property="og:title" content="<?php bloginfo("name"); ?>"/>
+    <meta property="og:description" content="<?php bloginfo('description'); ?>"/>
+    <meta property="og:url" content="https://www.elharony.com"/>
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony-Social-Media-Post-Image.jpg"/>
+
     <?php wp_head(); ?>
 </head>
 <body>
