@@ -36,6 +36,7 @@ the_post();
 
     <section class="comments">
         <div class="container">
+        <h3 class="section-title">Let's DISQUS!</h3>
         <?php
         // If comments are open or we have at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) :
