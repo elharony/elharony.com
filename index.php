@@ -39,10 +39,10 @@
                             💡 Morning Entrepreneur && Night Coder! 💻
                         </p>
                         <p>
-                            <strong>Coder:</strong> I am a Self-taught Developer who has done +25 cool projects for clients in +5 countries as an Individual Freelancer and all of them are 100% satisfied with my work.
+                            <strong>Coder:</strong> I am a Self-taught Developer who has done +25 cool projects for clients in +5 countries as an Individual Freelancer and all of them are 100% satisfied with my work
                         </p>
                         <p>
-                            <strong>Entrepreneur:</strong> The other part of me likes Turning Ideas Into Products, Planning, Doing Market Research, and Scaling the businesses
+                            <strong>Entrepreneur:</strong> The other part of me likes Turning Ideas Into Products, Planning, Doing Market Research, and Scaling the business
                         </p>
                         <p>
                             <strong>Why me?</strong> I believe what keeps me stand out is my persistence; I play the long game and I am not in a hurry. Maybe, I am slow but steady!
