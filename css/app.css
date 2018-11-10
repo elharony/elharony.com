@@ -663,6 +663,10 @@ header nav .menu-links a:hover {
   margin: 1rem auto;
 }
 
+.single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p, .single-article .content blockquote, .single-article .content li {
+  color: rgba(0, 0, 0, 0.84);
+}
+
 .single-article .content h3, .single-article .content h4, .single-article .content h5 {
   margin-top: 2rem;
 }
@@ -670,8 +674,7 @@ header nav .menu-links a:hover {
 .single-article .content h2 {
   position: -webkit-sticky;
   position: sticky;
-  padding: 2rem 0 2rem 1rem;
-  border-left: 5px solid #000;
+  padding: 2rem 0;
   margin: 0 auto;
   top: 85px;
   background: #fff;
@@ -688,10 +691,8 @@ header nav .menu-links a:hover {
 .single-article .content blockquote {
   font-style: italic;
   margin: 2rem auto;
-  padding: 0.5rem;
-  border: 1px solid #e4e4e4;
-  -webkit-box-shadow: 0 0 10px 1px #e4e4e4;
-          box-shadow: 0 0 10px 1px #e4e4e4;
+  padding: 0.1rem 0.5rem 0.1rem 1.5rem;
+  border-left: 3px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -713,6 +714,25 @@ header nav .menu-links a:hover {
 
 .single-article .content ul ul, .single-article .content ol ol {
   width: 100%;
+}
+
+.single-article .content p img {
+  width: 100%;
+  height: auto;
+}
+
+.single-article .content hr {
+  position: relative;
+  margin: 30px auto 15px;
+  width: 200px;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.84);
+}
+
+.single-article .content a {
+  color: rgba(0, 0, 0, 0.84);
+  text-decoration: underline;
 }
 
 .single-article .content .EnlighterJSWrapper {
@@ -748,12 +768,6 @@ header nav .menu-links a:hover {
 .single-article .content .EnlighterJSWrapper li span {
   font-family: Courier New;
   font-size: 1.1rem;
-}
-
-.single-article .content p img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
 }
 
 @media all and (min-width: 667px) {

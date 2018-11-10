@@ -4,6 +4,7 @@ $color-secondary: #fff
 $color-black: #000
 $color-white: #fff
 
+$text-color: rgba(0,0,0,.84)
 		
 *
 	padding: 0
@@ -516,6 +517,10 @@ header
 			width: 72.5%
 			margin: 1rem auto
 
+		// Content Color
+		h2, h3, h4, h5, h6, p, blockquote, li
+			color: $text-color
+
 		h3, h4, h5
 			margin-top: 2rem
 
@@ -523,8 +528,7 @@ header
 		h2
 			position: -webkit-sticky
 			position: sticky
-			padding: 2rem 0 2rem 1rem
-			border-left: 5px solid $color-black
+			padding: 2rem 0
 			margin: 0 auto
 			top: 85px
 			background: $color-white
@@ -540,9 +544,8 @@ header
 		blockquote
 			font-style: italic
 			margin: 2rem auto
-			padding: 0.5rem
-			border: 1px solid #e4e4e4
-			box-shadow: 0 0 10px 1px #e4e4e4
+			padding: 0.1rem 0.5rem 0.1rem 1.5rem
+			border-left: 3px solid $color-black
 			box-sizing: border-box
 
 			p
@@ -560,6 +563,25 @@ header
 		// Nested Lists
 		ul ul, ol ol
 			width: 100%
+
+		// Image
+		p img
+			width: 100%
+			height: auto
+
+		// Horizontal Line
+		hr
+			position: relative
+			margin: 30px auto 15px
+			width: 200px
+			height: 0
+			border: 0
+			border-bottom: 1px solid $text-color
+
+		// Links
+		a
+			color: $text-color
+			text-decoration: underline
 
 		// Code Highlighter
 		.EnlighterJSWrapper
@@ -589,12 +611,6 @@ header
 				span
 					font-family: Courier New
 					font-size: 1.1rem
-
-		// Image
-		p img
-			width: 100%
-			height: auto
-			max-height: 500px
 
 		@media all and (min-width: 667px)
 			h2, h3, h4, h5, h6, p, blockquote, ul, ol, .EnlighterJSWrapper
