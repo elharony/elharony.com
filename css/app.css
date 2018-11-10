@@ -368,6 +368,11 @@ header nav .menu-links a:hover {
 .page-home .about .info .details {
   width: 90%;
   margin: 0 auto;
+  text-align: left;
+}
+
+.page-home .about .info .details p {
+  margin: 10px 0;
   font-size: 1.3rem;
   line-height: 1.7rem;
 }
@@ -376,21 +381,15 @@ header nav .menu-links a:hover {
   margin-top: 2rem;
 }
 
-@media all and (min-width: 667px) {
+@media all and (min-width: 859px) {
   .page-home .about .info, .page-home .about .image {
     width: 50%;
   }
 }
 
-@media all and (min-width: 860px) {
-  .page-home .about .info .details {
-    padding-top: 3rem;
-  }
-}
-
 @media all and (min-width: 1200px) {
   .page-home .about .info .details {
-    padding-top: 6rem;
+    padding-top: 1rem;
   }
 }
 
