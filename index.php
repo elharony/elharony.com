@@ -34,7 +34,21 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony-About.jpg" alt="Yahya Elharony">
                 </div>
                 <div class="info">
-                    <p class="details">Yahya isn't a coder. He is a unique mixture; A Developer, Volunteer, Leader, Young Entrepreneur, Photography, and Blockchain enthusiastic. <br>He is always looking for new skills to be acquired, people to be helped and challenges to be accepted!</p>
+                    <div class="details">
+                        <p>
+                            💡 Morning Entrepreneur && Night Coder! 💻
+                        </p>
+                        <p>
+                            <strong>Coder:</strong> I am a Self-taught Developer who has done +25 cool projects for clients in +5 countries as an Individual Freelancer and all of them are 100% satisfied with my work.
+                        </p>
+                        <p>
+                            <strong>Entrepreneur:</strong> The other part of me likes Turning Ideas Into Products, Planning, Doing Market Research, and Scaling the businesses
+                        </p>
+                        <p>
+                            <strong>Why me?</strong> I believe what keeps me stand out is my persistence; I play the long game and I am not in a hurry. Maybe, I am slow but steady!
+                        </p>
+                    </div>
+
                     <!-- <a href="https://www.elharony.com/resume.pdf" class="resume btn">Download Resume</a> -->
                     <a href="<?php echo get_template_directory_uri(); ?>/contact" class="hire btn">Hire Me</a>
                 </div>
