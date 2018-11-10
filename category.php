@@ -4,7 +4,7 @@ get_header(); ?>
 <main>
 <section class="hero">
     <div class="container">
-        <h1 class="title">View All <?php echo single_cat_title( '', false ); ?> Articles</h1>
+        <h1 class="title">"<?php echo single_cat_title( '', false ); ?>" Articles</h1>
     </div>
 </section>
 <section class="blog">
@@ -41,10 +41,10 @@ if ( ! empty( $categories ) ) {
                 
                 <article>
                     <div class="inner">
-                        <div class="info"><span class="category"><?php echo trim( $output, $separator ) ?></span> @ <time><?php the_time('F j, Y'); ?></time></div>
-                        <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                        <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
-                    </div>
+						<div class="info"></i>Published on: <time><?php the_time('F j, Y'); ?></time></div>
+						<h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						<div class="info"></i>In: <span class="category"><?php the_category(' - '); ?></span></div>
+					</div>
                 </article>
 
             <?php
