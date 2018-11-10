@@ -594,56 +594,12 @@ header nav .menu-links a:hover {
   z-index: 2;
 }
 
-.single-article .article-controls .reading-mode .auto-scrolling-on, .single-article .article-controls .reading-mode .auto-scrolling-off {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  padding: 0.45rem;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  z-index: 99;
-}
-
-.single-article .article-controls .reading-mode .hide {
-  left: -10%;
-  opacity: 0;
-}
-
-.single-article .article-controls .reading-mode .show {
-  left: 0;
-  opacity: 1;
-}
-
-@media all and (max-width: 480px) {
-  .single-article .article-controls .auto-scrolling-on, .single-article .article-controls .auto-scrolling-off {
-    width: 25px !important;
-    height: 25px !important;
-    font-size: 0.7rem !important;
-    line-height: 0 !important;
-  }
-  .single-article .article-controls .auto-scrolling-on i, .single-article .article-controls .auto-scrolling-off i {
-    margin: -1px 0 0 -3px;
-  }
-}
-
-@media all and (min-width: 1050px) {
-  .single-article .article-controls {
-    left: 10%;
-  }
-}
-
-@media all and (min-width: 1400px) {
-  .single-article .article-controls {
-    left: 15%;
-  }
-}
-
 .single-article .content {
   position: relative;
 }
 
 .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p, .single-article .content blockquote, .single-article .content ul, .single-article .content ol {
-  width: 72.5%;
+  width: 90%;
   margin: 1rem auto;
 }
 
