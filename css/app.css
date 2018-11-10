@@ -716,9 +716,16 @@ header nav .menu-links a:hover {
   }
 }
 
+.single-article .comments {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
 .single-article .related-articles {
   margin-top: 2rem;
-  border: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 /*
