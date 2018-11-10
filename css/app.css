@@ -424,8 +424,8 @@ header nav .menu-links a:hover {
 }
 
 .blog .masonry article .inner .info {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.84);
 }
 
 .blog .masonry article .inner .info .category a {
@@ -435,7 +435,7 @@ header nav .menu-links a:hover {
 }
 
 .blog .masonry article .inner .title {
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .blog .masonry article .inner .title a {
