@@ -12,8 +12,8 @@ the_post();
         <div class="container">
             <h1 class="title"><?php the_title(); ?></h1>
             <ul class="article-info">
-                <li><?php the_category(' - '); ?></li>
-                <li><time><?php the_time('F j, Y'); ?></time></li>
+                <li>Published On: <time><?php the_time('F j, Y'); ?></time></li>
+                <li>In: <?php the_category(' - '); ?></li>
             </ul>
         </div>
     </section>

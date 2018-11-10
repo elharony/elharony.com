@@ -151,8 +151,8 @@ body {
 }
 
 .hero .title {
-  font-size: 2.3rem;
-  line-height: 2.75rem;
+  font-size: 1.9rem;
+  line-height: 2.5rem;
 }
 
 .hero .article-info {
@@ -163,31 +163,16 @@ body {
 
 .hero .article-info li {
   position: relative;
-  display: inline-block;
-  font-size: 1.1rem;
+  display: block;
+  font-size: 0.9rem;
   list-style: none;
-  margin: 0 1rem;
+  margin: 0.5rem 0;
   text-transform: none;
 }
 
 .hero .article-info li a {
   color: #000;
   text-decoration: underline;
-}
-
-.hero .article-info li:before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  left: -1.1rem;
-  top: 0.25rem;
-  border-radius: 50%;
-  background: #333333;
-}
-
-.hero .article-info li:first-of-type:before {
-  display: none;
 }
 
 /*
