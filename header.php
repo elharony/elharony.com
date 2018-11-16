@@ -25,7 +25,7 @@ if(host != "localhost")
 
     <!-- SEO Essentials -->
     <title>
-        <?php is_front_page() ? bloginfo("name") : wp_title("&raquo;", true, "right") . bloginfo("name") ?>
+        <?php is_front_page() ? bloginfo("name") : wp_title("&raquo;", true, "right")?>
     </title>
 
 <?php
