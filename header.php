@@ -27,6 +27,10 @@ if(host != "localhost")
     <title>
         <?php is_front_page() ? bloginfo("name") : wp_title("&raquo;", true, "right") . bloginfo("name") ?>
     </title>
+
+<?php
+if(is_front_page()) {
+?>
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="keywords" content="Yahya Elharony, Front End Developer, Freelancer Web Developer, Developer in Egypt">
 
@@ -40,6 +44,9 @@ if(host != "localhost")
     <meta property="og:description" content="<?php bloginfo('description'); ?>"/>
     <meta property="og:url" content="https://www.elharony.com"/>
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony-Social-Media-Post-Image.jpg"/>
+<?php
+}
+?>
 
     <?php wp_head(); ?>
 </head>
