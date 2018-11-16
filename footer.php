@@ -9,6 +9,7 @@
                         <a href="https://www.linkedin.com/in/elharony/"><i class="fab fa-linkedin-in fa-fw"></i></a>
                         <a href="https://github.com/elharony"><i class="fab fa-github fa-fw"></i></a>
                         <a href="https://www.facebook.com/elharony"><i class="fab fa-facebook fa-fw"></i></a>
+                        <a href="https://twitter.com/Yahya_Elharony"><i class="fab fa-twitter fa-fw"></i></a>
                         <a href="https://stackoverflow.com/users/5560399/elharony"><i class="fab fa-stack-overflow fa-fw"></i></a>
                         <a href="https://medium.com/@elharony"><i class="fab fa-medium fa-fw"></i></a>
                     </li>
