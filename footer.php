@@ -1,7 +1,7 @@
         <footer>
             <div class="container">
-                <h2 class="section-title">Reach me
-                    <span class="watermark">Contact</span>
+                <h2 class="section-title">Find Me
+                    <span class="watermark">Connect</span>
                 </h2>
                 <ul class="contact-links">
                     <li>
