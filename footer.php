@@ -4,7 +4,6 @@
                     <span class="watermark">Contact</span>
                 </h2>
                 <ul class="contact-links">
-                    <li><a href="mailto:yahya@elharony.com">yahya@elharony.com</a></li>
                     <li>
                         <a href="https://www.youtube.com/channel/UCcWSbBe_s-T_gZRnqFbtyIA"><i class="fab fa-youtube fa-fw"></i></a>
                         <a href="https://www.linkedin.com/in/elharony/"><i class="fab fa-linkedin-in fa-fw"></i></a>
