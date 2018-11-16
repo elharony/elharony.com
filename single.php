@@ -82,6 +82,11 @@ the_post();
             
             <?php
             }
+        } else {
+
+?>
+            <div class="no-articles">⚠️ Hmmmm.. We couldn't find any articles! ⚠️</div>
+<?php
         }
         wp_reset_query();
     }
