@@ -24,10 +24,10 @@
     <section class="about" id="about">
         <div class="container">
 
-            <h2 class="section-title">
+            <h1 class="section-title">
                 About
                 <span class="watermark">Elharony</span>
-            </h2>
+            </h1>
 
             <div class="flex-container">
                 <div class="image">
