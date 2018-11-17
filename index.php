@@ -141,7 +141,7 @@ if( $testimonials->have_posts() ) :
                                 <?php the_content(); ?>
                             </div>
                             <div class="client">
-                                <h4 class="name"><?php the_field('client'); ?></h4>
+                                <div class="name"><?php the_field('client'); ?></div>
                                 <div class="company">
                                     <?php the_post_thumbnail(); ?>
                                 </div>
