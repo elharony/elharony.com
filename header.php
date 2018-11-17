@@ -56,7 +56,7 @@ if(is_front_page()) {
             <div class="container">
                 <nav>
                     <a href="<?php bloginfo("url"); ?>" class="logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="Yahya Elharony - Logo">
                     </a>
                     <div class="toggle-menu">
                         <span class="open-menu"><i class="fas fa-bars"></i></span>
