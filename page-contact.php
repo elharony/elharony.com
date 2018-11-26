@@ -4,7 +4,7 @@ get_header(); ?>
 <main class="page-contact">
     <section class="hero">
         <div class="container">
-            <h1 class="title">Contact Me</h1>
+            <h1 class="title">Reach Me</h1>
         </div>
     </section>
 
