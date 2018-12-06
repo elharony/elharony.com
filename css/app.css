@@ -274,11 +274,10 @@ header nav .menu-links a:hover {
 .page-home .hero {
   margin-bottom: 0;
   position: relative;
-  height: 500px;
+  height: 400px;
   background-image: url(../img/Yahya-Elharony-Banner.jpg);
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
   z-index: 0;
 }
 
@@ -288,7 +287,7 @@ header nav .menu-links a:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.82);
 }
 
 .page-home .hero .inner {
@@ -503,8 +502,9 @@ header nav .menu-links a:hover {
 
 .testimonials .swiper-container .swiper-slide .inner .client .name {
   font-family: "Audiowide";
+  font-size: 1.3rem;
   line-height: 1.75rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .testimonials .swiper-container .swiper-slide .inner .client .company img {
@@ -657,7 +657,8 @@ header nav .menu-links a:hover {
 }
 
 .single-article .content p img {
-  width: 100%;
+  margin: 0 auto;
+  display: block;
   height: auto;
 }
 
@@ -728,36 +729,94 @@ header nav .menu-links a:hover {
   border-bottom: 1px solid #eee;
 }
 
+.single-article .related-articles .no-articles {
+  position: absolute;
+  width: 100%;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 /*
  * Footer
  */
 footer {
   padding-top: 4rem;
+}
+
+footer .footer-content {
   background: #fff;
 }
 
-footer .contact-links {
+footer .footer-content .section-title {
+  margin-bottom: 2rem;
+}
+
+footer .footer-content .contact-links {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-footer .contact-links li {
-  list-style: none;
+footer .footer-content .contact-links li {
   display: block;
   font-size: 1.5rem;
+  list-style: none;
 }
 
-footer .contact-links li a {
+footer .footer-content .contact-links li a {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 0.3rem;
   color: #000;
+  overflow: hidden;
 }
 
-footer .contact-links li a i {
-  margin: 0.5rem;
+footer .footer-content .contact-links li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: #000;
+  z-index: -1;
+  -webkit-transition: all 500ms cubic-bezier(0.55, 0.38, 0.36, 1.45);
+  transition: all 500ms cubic-bezier(0.55, 0.38, 0.36, 1.45);
 }
 
-footer .copyrights {
+footer .footer-content .contact-links li a:hover:before, footer .footer-content .contact-links li a:focus:before {
+  top: 0;
+  z-index: 0;
+}
+
+footer .footer-content .contact-links li a:hover i, footer .footer-content .contact-links li a:focus i {
+  color: #fff;
+  z-index: 1;
+}
+
+footer .footer-content .contact-links li a:focus {
+  outline: 0;
+}
+
+footer .footer-content .contact-links li a i {
+  position: relative;
+  line-height: 40px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+footer .footer-content .copyrights {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
   font-family: 'Audiowide';
   text-align: center;
-  padding: 1rem 0;
+}
+
+footer .disclaimer {
+  padding: 1rem;
+  text-align: center;
+  background: #000;
+  color: #fff;
 }
 /*# sourceMappingURL=app.css.map */
