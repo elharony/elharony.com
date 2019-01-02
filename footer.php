@@ -15,7 +15,7 @@
                             <a href="https://medium.com/@elharony" title="Yahya Elharony on Medium"><i class="fab fa-medium fa-fw"></i></a>
                         </li>
                     </ul>
-                    <p class="copyrights">Beta Version - All copyrights reserved &copy; 2018</p>
+                    <p class="copyrights">Beta Version - All copyrights reserved &copy; 2019</p>
                 </div>
             </div>
                 
