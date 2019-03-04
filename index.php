@@ -49,8 +49,8 @@
                         </p>
                     </div>
 
-                    <a href="https://www.elharony.com/Yahya-Elharony--Resume.pdf" class="resume btn">Download Resume</a>
-                    <a href="<?php echo get_template_directory_uri(); ?>/contact" class="hire btn">Hire Me</a>
+                    <a href="https://www.elharony.com/Yahya-Elharony--Resume.pdf" class="btn">Download Resume</a>
+                    <a href="<?php echo get_template_directory_uri(); ?>/contact" class="btn">Hire Me</a>
                 </div>
             </div>
             
