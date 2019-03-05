@@ -497,7 +497,7 @@ header
 		position: relative
 
 		// Center all content
-		h2, h3, h4, h5, h6, p, blockquote, ul, ol
+		h2, h3, h4, h5, h6, p, blockquote, ul, ol, figure
 			width: 90%
 			margin: 1rem auto
 
@@ -509,15 +509,19 @@ header
 			margin-top: 2rem
 
 		// Sticky Header
+		// h2
+		// 	position: -webkit-sticky
+		// 	position: sticky
+		// 	padding: 2rem 0
+		// 	margin: 0 auto
+		// 	top: 85px
+		// 	background: $color-white
+		// 	box-sizing: border-box
+		// 	z-index: 99
+
+		// Normal Heading
 		h2
-			position: -webkit-sticky
-			position: sticky
 			padding: 2rem 0
-			margin: 0 auto
-			top: 85px
-			background: $color-white
-			box-sizing: border-box
-			z-index: 99
 
 		// Normal Text
 		p, li
@@ -547,9 +551,9 @@ header
 		// Nested Lists
 		ul ul, ol ol
 			width: 100%
-
+			
 		// Image
-		p img
+		p img, figure img
 			margin: 0 auto
 			display: block
 			height: auto

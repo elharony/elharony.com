@@ -598,7 +598,7 @@ header nav .menu-links a:hover {
   position: relative;
 }
 
-.single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p, .single-article .content blockquote, .single-article .content ul, .single-article .content ol {
+.single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5, .single-article .content h6, .single-article .content p, .single-article .content blockquote, .single-article .content ul, .single-article .content ol, .single-article .content figure {
   width: 90%;
   margin: 1rem auto;
 }
@@ -612,15 +612,7 @@ header nav .menu-links a:hover {
 }
 
 .single-article .content h2 {
-  position: -webkit-sticky;
-  position: sticky;
   padding: 2rem 0;
-  margin: 0 auto;
-  top: 85px;
-  background: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  z-index: 99;
 }
 
 .single-article .content p, .single-article .content li {
@@ -656,7 +648,7 @@ header nav .menu-links a:hover {
   width: 100%;
 }
 
-.single-article .content p img {
+.single-article .content p img, .single-article .content figure img {
   margin: 0 auto;
   display: block;
   height: auto;
