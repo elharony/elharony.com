@@ -45,11 +45,7 @@ the_post();
         </div>
     </section>
 
-    <!-- Related Articles -->
-    <section class="related-articles blog">
-        <div class="container">
-            <h3 class="section-title">Related Articles</h3>
-            <div class="masonry">
+
     
 <?php
     //for use in the loop, list 5 post titles related to first tag on current post
@@ -68,6 +64,16 @@ the_post();
         $my_query = new WP_Query($args);
 
         if( $my_query->have_posts() ) {
+
+?>
+
+    <!-- Related Articles -->
+    <section class="related-articles blog">
+        <div class="container">
+            <h3 class="section-title">Related Articles</h3>
+            <div class="masonry">
+
+<?php
             while ($my_query->have_posts()) {
                 $my_query->the_post();
 ?>
@@ -83,19 +89,19 @@ the_post();
             
             <?php
             }
-        } else {
-
-?>
-            <div class="no-articles">⚠️ Hmmmm.. We couldn't find any articles! ⚠️</div>
-<?php
-        }
-        wp_reset_query();
-    }
 ?>
 
             </div>
         </div>
     </section>
+
+<?php
+        } else {
+
+        }
+        wp_reset_query();
+    }
+?>
 
 </main>
 
