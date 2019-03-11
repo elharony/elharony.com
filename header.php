@@ -32,7 +32,7 @@ if(host != "localhost")
 if(is_front_page()) {
 ?>
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <meta name="keywords" content="Yahya Elharony, Web Developer, Freelance Developer, Remote Web Developer, Full Stack Developer, JavaScript Developer, WordPress Developer, Front End Developer, Software Engineer, Software Developer, Morning Entrepreneur Night Coder, يحيى الحارونى, Hire A Web Developer, Top-Notch Developer, Web Developer in Egypt">
+    <meta name="keywords" content="Elharony, Yahya Elharony, Affordable Web Designer/Developer, Front End Developer In Egypt, Freelance Front End Developer, Someone to build my website, Web Developer, Freelance Developer, Remote Web Developer, Full Stack Developer, JavaScript Developer, WordPress Developer, Front End Developer, Software Engineer, Software Developer, Morning Entrepreneur Night Coder, يحيى الحارونى, الحارونى, Hire A Web Developer, Top-Notch Developer, Web Developer in Egypt">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-32x32.png">
