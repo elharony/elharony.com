@@ -21,7 +21,7 @@
                 
             <div class="disclaimer">
                 <div class="container">
-                    <strong>DISCALIMER:</strong> Yahya Elharony is a Freelance Web Developer, he is not taking responsibility for any website he built for a client locally and/or globally. You are solely responsible for your own moves and decisions to use any website mentioned on this site, those websites aren't under the control of Yahya Elharony, including and without limitation: The nature of each site, Content, Payments, and the availability of their service!
+                    <strong>DISCLAIMER:</strong> Yahya Elharony is a Freelance Web Developer, he is not taking responsibility for any website he built for a client locally and/or globally. You are solely responsible for your own moves and decisions to use any website mentioned on this site, those websites aren't under the control of Yahya Elharony, including and without limitation: The nature of each site, Content, Payments, and the availability of their service!
                 </div>
             </div>
             
