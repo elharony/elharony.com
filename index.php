@@ -39,13 +39,13 @@
                             💡 Morning Entrepreneur && Night Coder! 💻
                         </p>
                         <p>
-                            <strong>Coder:</strong> I am a Self-taught Developer who has done +25 projects for clients in +5 countries as an Individual Freelancer and all of them are 100% satisfied with my work
+                            <strong>Coder:</strong> I am a Self-taught Web Developer who has done +25 projects for clients in +5 countries as an Individual Freelancer and they are 100% satisfied with my work
                         </p>
                         <p>
                             <strong>Entrepreneur:</strong> The other part of me likes Turning Ideas Into Products, Planning, Doing Market Research, and Scaling the business
                         </p>
                         <p>
-                            <strong>Why me?</strong> I believe what keeps me stand out is my persistence; I play the long game and I am not in a hurry. Maybe, I am slow but steady!
+                            <strong>Why me?</strong> I am playing the long game, and my first priority is Building Trust with my clients, that's why I am known for my Transparency, Integrity and Fairness!
                         </p>
                     </div>
 
@@ -59,6 +59,8 @@
         </div>
     </section>
 
+
+    
     <!-- blog -->
     <section class="blog">
         <div class="container">
@@ -95,11 +97,6 @@ if ( have_posts() ) {
             </div>
         </div>
     </section>
-
-
-
-
-
 
 
     <!-- Testimonials -->
@@ -159,7 +156,7 @@ if( $testimonials->have_posts() ) :
 
 <?php
 else :
-  esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
+    echo "<h4>Sorry, no testimonials available.</h4>";
 endif;
 ?>
                 

@@ -328,8 +328,8 @@ header nav .menu-links a:hover {
 
 .page-home .about {
   position: relative;
-  background: #fcfcfc;
-  padding: 6rem 0;
+  background: #fff;
+  padding: 4rem 0;
 }
 
 .page-home .about .section-title {
@@ -453,7 +453,7 @@ header nav .menu-links a:hover {
 .testimonials {
   position: relative;
   padding: 4rem 0 1rem;
-  background: #fcfcfc;
+  background: #fff;
   z-index: 0;
 }
 
