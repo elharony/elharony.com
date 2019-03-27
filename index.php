@@ -31,7 +31,7 @@
 
             <div class="flex-container">
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony-About.jpg" alt="Yahya Elharony">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony--Personal-Picture.png" alt="Yahya Elharony Personal Picture">
                 </div>
                 <div class="info">
                     <div class="details">
