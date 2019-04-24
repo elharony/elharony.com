@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<main>
+<main class="archive">
 <section class="hero">
     <div class="container">
         <h1 class="title">"<?php echo single_cat_title( '', false ); ?>" Articles</h1>
