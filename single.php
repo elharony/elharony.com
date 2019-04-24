@@ -10,11 +10,20 @@ the_post();
 <main class="single-article">
     <section class="hero">
         <div class="container">
-            <h1 class="title"><?php the_title(); ?></h1>
-            <ul class="article-info">
+            <div class="flex-container">
+                <ul class="article-date">
+                    <li class="day"><?php the_time('j'); ?></li>
+                    <li class="month"><?php the_time('F'); ?></li>
+                </ul>
+                <div class="article-meta">
+                    <h1 class="title"><?php the_title(); ?></h1>
+                    <span class="category"><?php the_category(' - '); ?></span>
+                </div>
+            </div>
+            <!-- <ul class="article-info">
                 <li>Published On: <time><?php the_time('F j, Y'); ?></time></li>
                 <li>In: <?php the_category(' - '); ?></li>
-            </ul>
+            </ul> -->
         </div>
     </section>
 

@@ -107,38 +107,66 @@ body
     
 
 // The `hero` applies for each `single` page
-.hero
-	padding: 3rem 0
-	margin-bottom: 2rem
-	font-family: 'Audiowide'
-	background: #fcfcfc
-	text-align: center
-	text-transform: uppercase
-	// box-shadow: 0px 1px 8px 1px #eaeaea
+.single-article
+	.hero
+		padding: 2rem
 
-	// Article Title
-	.title
-		font-size: 1.9rem
-		line-height: 2.5rem
-		
-	// Article Info
-	.article-info
-		margin: 1.5rem auto 0
-		width: 100%
-		text-align: center
+		.flex-container
+			.article-date, .article-meta
+				width: 100%
+				padding: 1rem 0
+				box-sizing: border-box
 
-		li
-			position: relative
-			display: block
-			font-size: 0.9rem
-			list-style: none
-			margin: 0.5rem 0
-			text-transform: none
+			.article-date
+				display: flex
+				list-style: none
+				border-bottom: 1px solid $color-black
+				justify-content: center
+				flex-direction: column
+				text-align: center
+				
+				.day
+					font-size: 2rem
+					font-weight: 700 !important
+					-webkit-text-stroke: 1px $color-black
+					text-stroke: 1px $color-black
+					-webkit-text-fill-color: transparent
+					text-fill-color: transparent
 
-			a
-				color: $color-black
-				text-decoration: underline
+				.month
+					font-size: 1.2rem
+					letter-spacing: 0.3rem
 
+			.article-meta
+				.title
+					margin-bottom: 0.5rem
+
+				.category a
+					font-size: 1.2rem
+					color: $color-black
+					letter-spacing: 0.3rem
+
+			@media (min-width: 667px)
+				.article-date, .article-meta
+					padding: 1rem
+				.article-date
+					width: 30%
+					border-bottom: 0
+					border-right: 1px solid $color-black
+				.article-meta
+					width: 70%
+
+			@media (min-width: 890px)
+				.article-date
+					width: 20%
+				.article-meta
+					width: 80%
+
+			@media (min-width: 1200px)
+				.article-date
+					width: 15%
+				.article-meta
+					width: 85%
 
 /* 
  * Header

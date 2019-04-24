@@ -141,38 +141,87 @@ body {
   color: #fff;
 }
 
-.hero {
-  padding: 3rem 0;
-  margin-bottom: 2rem;
-  font-family: 'Audiowide';
-  background: #fcfcfc;
-  text-align: center;
-  text-transform: uppercase;
+.single-article .hero {
+  padding: 2rem;
 }
 
-.hero .title {
-  font-size: 1.9rem;
-  line-height: 2.5rem;
-}
-
-.hero .article-info {
-  margin: 1.5rem auto 0;
+.single-article .hero .flex-container .article-date, .single-article .hero .flex-container .article-meta {
   width: 100%;
+  padding: 1rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.single-article .hero .flex-container .article-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
-.hero .article-info li {
-  position: relative;
-  display: block;
-  font-size: 0.9rem;
-  list-style: none;
-  margin: 0.5rem 0;
-  text-transform: none;
+.single-article .hero .flex-container .article-date .day {
+  font-size: 2rem;
+  font-weight: 700 !important;
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
-.hero .article-info li a {
+.single-article .hero .flex-container .article-date .month {
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+}
+
+.single-article .hero .flex-container .article-meta .title {
+  margin-bottom: 0.5rem;
+}
+
+.single-article .hero .flex-container .article-meta .category a {
+  font-size: 1.2rem;
   color: #000;
-  text-decoration: underline;
+  letter-spacing: 0.3rem;
+}
+
+@media (min-width: 667px) {
+  .single-article .hero .flex-container .article-date, .single-article .hero .flex-container .article-meta {
+    padding: 1rem;
+  }
+  .single-article .hero .flex-container .article-date {
+    width: 30%;
+    border-bottom: 0;
+    border-right: 1px solid #000;
+  }
+  .single-article .hero .flex-container .article-meta {
+    width: 70%;
+  }
+}
+
+@media (min-width: 890px) {
+  .single-article .hero .flex-container .article-date {
+    width: 20%;
+  }
+  .single-article .hero .flex-container .article-meta {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .single-article .hero .flex-container .article-date {
+    width: 15%;
+  }
+  .single-article .hero .flex-container .article-meta {
+    width: 85%;
+  }
 }
 
 /*
