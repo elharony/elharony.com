@@ -43,29 +43,32 @@ img
 	width: 100%
 	font-size: 2.5rem
 	line-height: 2.5rem
-	font-family: 'Audiowide'
-	text-align: center
+	font-family: 'Quicksand', sans-serif
 	margin-bottom: 4rem
-	text-transform: uppercase
+
 	.watermark
-		font-size: 3.5rem
-		font-family: 'Audiowide'
+		width: 100%
+		font-size: 2.25rem
+		font-family: 'Quicksand', sans-serif
 		font-weight: bold
 		opacity: 0.05
 		position: absolute
-		transform: translateX(-50%)
-		left: 50%
-		text-transform: uppercase
+		top: -40px
+		left: 15px
 	
-	@media all and (max-width: 600px)
-		font-size: 2rem
+	@media all and (min-width: 600px)
+		font-size: 3.5rem
+		text-align: center
 		.watermark
-			font-size: 2.5rem
-		
+			font-size: 2.75rem
+			top: -45px
+			left: 50%
+			transform: translateX(-50%)
 
 .container
 	position: relative
 	margin: 0 auto
+	padding: 0 15px
 	@media all and (min-width: 670px)
 		width: 650px
 	@media all and (min-width: 860px)
@@ -84,7 +87,8 @@ body
 	background: $color-black
 	border: 2px solid $color-black
 	font-size: 0.8rem
-	font-family: 'Audiowide'
+	font-family: 'Quicksand', sans-serif
+	font-weight: bold
 	padding: 1rem
 	margin: 0 1rem
 	display: inline-block
@@ -220,7 +224,8 @@ header
 			a
 				display: block
 				font-size: 1.2rem
-				font-family: 'Audiowide'
+				font-family: 'Quicksand', sans-serif
+				font-weight: bold
 				color: $color-black
 				border-bottom: 2px solid transparent
 				transition: all 300ms ease
@@ -302,7 +307,7 @@ header
 		padding: 4rem 0
 
 		.section-title
-			margin: 2rem 0 4rem
+			margin: 2rem 0
 
 		.info, .image
 			width: 100%
@@ -314,7 +319,6 @@ header
 		.info
 			text-align: center
 			.details
-				width: 90%
 				margin: 0 auto
 				text-align: left
 				p
@@ -325,6 +329,10 @@ header
 			.btn
 				margin-top: 2rem
 	
+		@media all and (min-width: 600px)
+			.flex-container
+				flex-direction: row-reverse
+
 		@media all and (min-width: 859px)
 			.info, .image
 				width: 50%

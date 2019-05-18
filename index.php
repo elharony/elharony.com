@@ -3,30 +3,13 @@
 
 <main class="page-home">
 
-    <!-- hero -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="inner">
-            <h2 class="hello-text">
-            Hello in Hieroglyphic!
-            </h2>
-            <h2 class="hello-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/H.png" title="'H' Letter in Hieroglyphic" alt="H Letter in Hieroglyphic">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/E.png" title="'E' Letter in Hieroglyphic" alt="E Letter in Hieroglyphic">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="'L' Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="'L' Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/hieroglyphic/O.png" title="'O' Letter in Hieroglyphic" alt="O Letter in Hieroglyphic">
-            </h2>
-        </div>
-    </section>
-
     <!-- about -->
     <section class="about" id="about">
         <div class="container">
 
             <h1 class="section-title">
-                About
-                <span class="watermark">Elharony</span>
+                Yahya Elharony
+                <span class="watermark">Hi, I am</span>
             </h1>
 
             <div class="flex-container">
@@ -53,12 +36,26 @@
                     <a href="<?php echo get_template_directory_uri(); ?>/contact" class="btn">Hire Me</a>
                 </div>
             </div>
-            
-            
-            
+                             
         </div>
     </section>
 
+    <!-- hero -->
+    <!-- <section class="hero">
+        <div class="overlay"></div>
+        <div class="inner">
+            <h2 class="hello-text">
+            Hello in Hieroglyphic!
+            </h2>
+            <h2 class="hello-img">
+                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/H.png" title="'H' Letter in Hieroglyphic" alt="H Letter in Hieroglyphic">
+                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/E.png" title="'E' Letter in Hieroglyphic" alt="E Letter in Hieroglyphic">
+                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="'L' Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
+                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="'L' Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
+                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/O.png" title="'O' Letter in Hieroglyphic" alt="O Letter in Hieroglyphic">
+            </h2>
+        </div>
+    </section> -->
 
     
     <!-- blog -->
@@ -66,10 +63,10 @@
         <div class="container">
             <h2 class="section-title">
             Blog
-            <span class="watermark">Articles</span>
+            <span class="watermark">Personal & Technical</span>
             </h2>
             <div class="masonry">
-        
+
 
 <?php
 // The Loop
@@ -103,8 +100,8 @@ if ( have_posts() ) {
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">
-                People say
-                <span class="watermark">Testimonials</span>
+                Testimonials
+                <span class="watermark">Previous Clients</span>
             </h2>
 
             <!-- Swiper -->
@@ -151,28 +148,16 @@ if( $testimonials->have_posts() ) :
     wp_reset_postdata();
 ?>
 
-
                   </div>
-
 <?php
 else :
     echo "<h4>Sorry, no testimonials available.</h4>";
 endif;
 ?>
-                
 
 
             </div>
     </section>
-
-
-
-
-
-
-
-
-
 
 </main>
 

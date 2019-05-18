@@ -1,8 +1,8 @@
         <footer>
             <div class="footer-content">
                 <div class="container">
-                    <h2 class="section-title">Find Me
-                        <span class="watermark">Connect</span>
+                    <h2 class="section-title">Other Platforms
+                        <span class="watermark">Find me on</span>
                     </h2>
                     <ul class="contact-links">
                         <li>
@@ -20,11 +20,8 @@
             </div>
                 
             <div class="disclaimer">
-                <div class="container">
-                    <strong>DISCLAIMER:</strong> Yahya Elharony is a Freelance Web Developer, he is not taking responsibility for any website he built for a client locally and/or globally. You are solely responsible for your own moves and decisions to use any website mentioned on this site, those websites aren't under the control of Yahya Elharony, including and without limitation: The nature of each site, Content, Payments, and the availability of their service!
-                </div>
+                <strong>DISCLAIMER:</strong> Yahya Elharony is a Freelance Web Developer, he is not taking responsibility for any website he built for a client locally and/or globally. You are solely responsible for your own moves and decisions to use any website mentioned on this site, those websites aren't under the control of Yahya Elharony, including and without limitation: The nature of each site, Content, Payments, and the availability of their service!
             </div>
-            
         </footer>
 
         
