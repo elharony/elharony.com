@@ -2,7 +2,7 @@
             <div class="footer-content">
                 <div class="container">
                     <h2 class="section-title">Other Platforms
-                        <span class="watermark">Find me on</span>
+                        <span class="watermark">Reach via</span>
                     </h2>
                     <ul class="contact-links">
                         <li>

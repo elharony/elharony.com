@@ -33,7 +33,7 @@
                     </div>
 
                     <a href="https://www.elharony.com/Yahya-Elharony--Resume.pdf" class="btn btn-reversed">Download Resume</a>
-                    <a href="<?php echo get_template_directory_uri(); ?>/contact" class="btn">Hire Me</a>
+                    <a href="./contact" class="btn">Hire Me</a>
                 </div>
             </div>
                              
