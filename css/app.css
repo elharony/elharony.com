@@ -49,36 +49,39 @@ img {
   width: 100%;
   font-size: 2.5rem;
   line-height: 2.5rem;
-  font-family: 'Audiowide';
-  text-align: center;
+  font-family: 'Quicksand', sans-serif;
   margin-bottom: 4rem;
-  text-transform: uppercase;
 }
 
 .section-title .watermark {
-  font-size: 3.5rem;
-  font-family: 'Audiowide';
+  width: 100%;
+  font-size: 2.25rem;
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   opacity: 0.05;
   position: absolute;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  left: 50%;
-  text-transform: uppercase;
+  top: -40px;
+  left: 15px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (min-width: 600px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
   }
   .section-title .watermark {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+    top: -45px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
 .container {
   position: relative;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 @media all and (min-width: 670px) {
@@ -115,7 +118,8 @@ body {
   background: #000;
   border: 2px solid #000;
   font-size: 0.8rem;
-  font-family: 'Audiowide';
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   padding: 1rem;
   margin: 0 1rem;
   display: inline-block;
@@ -139,6 +143,15 @@ body {
 .btn-reversed:hover {
   background: #000;
   color: #fff;
+}
+
+.archive .hero {
+  padding: 2rem;
+  text-align: center;
+}
+
+.archive .blog {
+  padding: 0;
 }
 
 .single-article .hero {
@@ -276,7 +289,8 @@ header nav .menu-links li {
 header nav .menu-links a {
   display: block;
   font-size: 1.2rem;
-  font-family: 'Audiowide';
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   color: #000;
   border-bottom: 2px solid transparent;
   -webkit-transition: all 300ms ease;
@@ -382,7 +396,7 @@ header nav .menu-links a:hover {
 }
 
 .page-home .about .section-title {
-  margin: 2rem 0 4rem;
+  margin: 2rem 0;
 }
 
 .page-home .about .info, .page-home .about .image {
@@ -399,7 +413,6 @@ header nav .menu-links a:hover {
 }
 
 .page-home .about .info .details {
-  width: 90%;
   margin: 0 auto;
   text-align: left;
 }
@@ -412,6 +425,15 @@ header nav .menu-links a:hover {
 
 .page-home .about .info .btn, .page-home .about .info .btn-reversed {
   margin-top: 2rem;
+}
+
+@media all and (min-width: 600px) {
+  .page-home .about .flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 @media all and (min-width: 859px) {
@@ -437,12 +459,12 @@ header nav .menu-links a:hover {
 .blog .masonry {
   -webkit-column-count: 1;
           column-count: 1;
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
+  -webkit-column-gap: 0;
+          column-gap: 0;
 }
 
 .blog .masonry article {
-  margin: 0 0 1em;
+  margin: 0 0 30px;
   -webkit-column-break-inside: avoid;
   break-inside: avoid;
 }
@@ -582,34 +604,26 @@ header nav .menu-links a:hover {
 }
 
 /*
- * Blog Page
- */
-.page-blog .blog {
-  padding-top: 0;
-}
-
-/*
  * Contact Page
  */
-.contact-form {
-  padding: 15px;
+.page-contact .contact-form {
   margin-bottom: 2em;
 }
 
-.contact-form .nf-before-form-content .nf-form-fields-required {
+.page-contact .contact-form .nf-before-form-content .nf-form-fields-required {
   display: none;
 }
 
-.contact-form .nf-error .ninja-forms-field {
+.page-contact .contact-form .nf-error .ninja-forms-field {
   border: 0;
   border-bottom: 2px solid #e80000;
 }
 
-.contact-form label {
+.page-contact .contact-form label {
   font-size: 1.1em;
 }
 
-.contact-form input:not([type="button"]), .contact-form select, .contact-form textarea {
+.page-contact .contact-form input:not([type="button"]), .page-contact .contact-form select, .page-contact .contact-form textarea {
   font-size: 17px;
   padding: 0.2em;
   color: #666666;
@@ -617,18 +631,18 @@ header nav .menu-links a:hover {
   border-bottom: 2px solid #e7e7e7;
 }
 
-.contact-form input:not([type="button"]):focus, .contact-form input:not([type="button"]):active, .contact-form select:focus, .contact-form select:active, .contact-form textarea:focus, .contact-form textarea:active {
+.page-contact .contact-form input:not([type="button"]):focus, .page-contact .contact-form input:not([type="button"]):active, .page-contact .contact-form select:focus, .page-contact .contact-form select:active, .page-contact .contact-form textarea:focus, .page-contact .contact-form textarea:active {
   outline: 0;
   border-bottom: 2px dotted #444444;
 }
 
-.contact-form textarea {
+.page-contact .contact-form textarea {
   height: 100px !important;
   resize: vertical;
 }
 
 @media all and (max-width: 667px) {
-  .contact-form .one-half {
+  .page-contact .contact-form .one-half {
     width: 100% !important;
     margin-left: 0 !important;
   }
@@ -774,6 +788,17 @@ header nav .menu-links a:hover {
   width: 100%;
   font-size: 1.3rem;
   text-align: center;
+}
+
+/*
+ * Single Page
+ */
+.single .hero {
+  padding: 4rem 0 0;
+}
+
+.single .hero .section-title {
+  margin-bottom: 3rem;
 }
 
 /*

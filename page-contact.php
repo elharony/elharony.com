@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<main class="page-contact">
+<main class="page-contact single">
     <section class="hero">
         <div class="container">
             <h1 class="section-title">

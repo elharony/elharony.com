@@ -1,10 +1,13 @@
 <?php
 get_header(); ?>
 
-<main class="page-blog archive">
+<main class="archive single">
     <section class="hero">
         <div class="container">
-            <h1 class="title">All Articles</h1>
+            <h1 class="section-title">
+                Blog
+                <span class="watermark">Read My</span>
+            </h1>
         </div>
     </section>
 

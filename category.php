@@ -1,11 +1,14 @@
 <?php
 get_header(); ?>
 
-<main class="archive">
+<main class="archive single">
 <section class="hero">
-    <div class="container">
-        <h1 class="title">"<?php echo single_cat_title( '', false ); ?>" Articles</h1>
-    </div>
+	<div class="container">
+		<h1 class="section-title">
+			"<?php echo single_cat_title( '', false ); ?>" Articles
+			<span class="watermark">Show All</span>
+		</h1>
+	</div>
 </section>
 <section class="blog">
 	<div class="container">
