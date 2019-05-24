@@ -1,9 +1,6 @@
         <footer>
             <div class="footer-content">
                 <div class="container">
-                    <h2 class="section-title">Other Platforms
-                        <span class="watermark">Reach via</span>
-                    </h2>
                     <ul class="contact-links">
                         <li>
                             <a href="https://www.youtube.com/channel/UCcWSbBe_s-T_gZRnqFbtyIA" title="Yahya Elharony on YouTube"><i class="fab fa-youtube fa-fw"></i></a>
