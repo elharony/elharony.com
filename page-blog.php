@@ -17,7 +17,7 @@ get_header(); ?>
             <div class="masonry">
 <?php
 $posts_args = array(
-'posts_per_page' => 10,
+'posts_per_page' => 20,
 'orderby' => 'most_recent'
 );
 
