@@ -43,17 +43,18 @@ the_post();
         </div>
     </article>
 
+<!--
     <section class="comments">
         <div class="container">
         <?php
         // If comments are open or we have at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
+        // if ( comments_open() || get_comments_number() ) :
+        //     comments_template();
+        // endif;
         ?>
         </div>
     </section>
-
+-->
 
     
 <?php
@@ -113,5 +114,14 @@ the_post();
 ?>
 
 </main>
+
+<!-- Google Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6494125512418454",
+          enable_page_level_ads: true
+     });
+</script>
 
 <?php get_footer(); ?>
