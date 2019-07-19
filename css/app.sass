@@ -194,10 +194,13 @@ header
 	box-shadow: 0px 1px 8px 1px #eaeaea
 
 	nav
+		display: flex
 		margin: 1rem auto
 		text-align: center
 		
 		.logo
+			flex: 0.5
+			text-align: left
 
 		.toggle-menu
 			position: absolute
@@ -234,11 +237,6 @@ header
 					border-color: $color-black
 
 		@media all and (min-width: 667px)
-			display: flex
-			.logo
-				flex: 0.5
-				text-align: left
-
 			.toggle-menu
 				display: none
 
