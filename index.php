@@ -32,7 +32,7 @@
                         </p>
                     </div>
 
-                    <a href="https://www.elharony.com/Yahya-Elharony--CV.pdf" class="btn btn-reversed">Download CV</a>
+                    <a href="https://www.elharony.com/Yahya-Elharony--Resume.pdf" class="btn btn-reversed">Download Resume</a>
                     <a href="./contact" class="btn">Hire Me</a>
                 </div>
             </div>
