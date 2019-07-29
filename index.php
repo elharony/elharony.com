@@ -40,6 +40,36 @@
         </div>
     </section>
 
+    <section class="clients">
+        <div class="container">
+            <h2 class="section-title">Clients</h2>
+        </div>
+        <div class="container">
+            <div class="clients-list">
+                <div class="client">
+                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/mezatacademy--logo.jpg" alt="">
+                </div>
+                <div class="client">
+                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/p-codes--logo.png" alt="">
+                </div>
+                <div class="client">
+                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/pensofexperts--logo.jpg" alt="">
+                </div>
+                <div class="client">
+                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/tarassultec--logo.png" alt="">
+                </div>
+                <div class="client">
+                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/sustainable-recycling--logo.png" alt="">
+                </div>
+                
+                <div class="client">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <!-- hero -->
     <!-- <section class="hero">
         <div class="overlay"></div>

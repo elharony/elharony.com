@@ -10,7 +10,8 @@ add_theme_support("post-thumbnails");
  * add_styles
  */
 function add_styles() {
-  wp_enqueue_style("main-css", get_template_directory_uri() . "/css/app.css");
+  wp_enqueue_style("app-css", get_template_directory_uri() . "/css/app.css");
+  wp_enqueue_style("main-css", get_template_directory_uri() . "/css/main.css");
   wp_enqueue_style("fontawesome", "https://use.fontawesome.com/releases/v5.0.13/css/all.css");
   wp_enqueue_style("fonts", "https://fonts.googleapis.com/css?family=Audiowide|Quicksand");
   wp_enqueue_style("swiper-css", "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css");
