@@ -165,10 +165,7 @@ wp_reset_postdata();
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">
-                Testimonials
-                <span class="watermark">Previous Clients</span>
-            </h2>
+            <h2 class="section-title">Testimonials</h2>
 
             <!-- Swiper -->
             <div class="swiper-container">
