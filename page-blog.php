@@ -4,17 +4,14 @@ get_header(); ?>
 <main class="archive single">
     <section class="hero">
         <div class="container">
-            <h1 class="section-title">
-                Blog
-                <span class="watermark">Read My</span>
-            </h1>
+            <h1 class="section-title">Blog</h1>
         </div>
     </section>
 
     <!-- blog -->
     <section class="blog">
         <div class="container">
-            <div class="masonry">
+            <div class="blog-list">
 <?php
 $posts_args = array(
 'posts_per_page' => 20,
@@ -29,9 +26,19 @@ if ( have_posts() ) {
 ?>
         <article>
             <div class="inner">
-                <div class="info"></i>Published on: <time><?php the_time('F j, Y'); ?></time></div>
-                <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                <div class="info"></i>In: <span class="category"><?php the_category(' - '); ?></span></div>
+                <div class="thumbnail">
+                    <?php the_field('category_image'); ?>
+                    <?php the_post_thumbnail('medium'); ?>
+                </div>
+                <div class="content">
+                    <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                    <div class="brief"><?php the_excerpt() ?></div>
+                    <?php the_category(''); ?>
+                    <ul class="date">                    
+                        <li class="day"><?php the_time('j'); ?></li>
+                        <li class="month"><?php the_time('M'); ?></li>
+                    </ul>
+                </div>
             </div>
         </article>
 

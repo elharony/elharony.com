@@ -156,36 +156,6 @@ wp_reset_postdata();
 
 ?>
 
-
-
-
-            <div class="masonry">
-
-
-<?php
-// The Loop
-// if ( have_posts() ) {
-//   while (have_posts()) {
-//     the_post();
-?>
-            <!-- <article>
-                <div class="inner">
-                    <div class="info"></i>Published on: <time><?php the_time('F j, Y'); ?></time></div>
-                    <?php the_post_thumbnail('post-thumbnail'); ?>
-                    <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                    <div class="info"></i>In: <span class="category"><?php the_category(' - '); ?></span></div>
-                    <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
-                </div>
-            </article> 
-
-<?php
-   
-// } // end post loop
-
-//     } else {
-//     echo "<h4>Sorry, no posts available.</h4>";
-//     } // end post condition
-?>
             </div>
         </div>
     </section>

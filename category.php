@@ -4,33 +4,18 @@ get_header(); ?>
 <main class="archive single">
 <section class="hero">
 	<div class="container">
-		<h1 class="section-title">
-			"<?php echo single_cat_title( '', false ); ?>" Articles
-			<span class="watermark">Show All</span>
-		</h1>
+		<h1 class="section-title">"<?php echo single_cat_title( '', false ); ?>" Articles</h1>
 	</div>
 </section>
 <section class="blog">
 	<div class="container">
-		<div class="masonry">
+		<div class="blog-list">
 			<?php if ( have_posts() ) : ?>
 
-			<!-- <header class="archive-header">
-				<h1 class="archive-title"><?php // printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
-
-				<?php
-					// Show an optional term description.
-				// 	$term_description = term_description();
-				// if ( ! empty( $term_description ) ) :
-				// 	printf( '<div class="taxonomy-description">%s</div>', $term_description );
-				// 	endif;
-				?>
-			</header>.archive-header -->
-
 			<?php
-					// Start the Loop.
-			while ( have_posts() ) :
-				the_post();
+// Start the Loop.
+while ( have_posts() ) :
+the_post();
 
 // Get Categories as Links
 $categories = get_the_category();
@@ -42,13 +27,23 @@ if ( ! empty( $categories ) ) {
     }
             ?>
                 
-                <article>
-                    <div class="inner">
-						<div class="info"></i>Published on: <time><?php the_time('F j, Y'); ?></time></div>
-						<h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-						<div class="info"></i>In: <span class="category"><?php the_category(' - '); ?></span></div>
+			<article>
+				<div class="inner">
+					<div class="thumbnail">
+						<?php the_field('category_image'); ?>
+						<?php the_post_thumbnail('medium'); ?>
 					</div>
-                </article>
+					<div class="content">
+						<h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						<div class="brief"><?php the_excerpt() ?></div>
+						<?php the_category(''); ?>
+						<ul class="date">                    
+							<li class="day"><?php the_time('j'); ?></li>
+							<li class="month"><?php the_time('M'); ?></li>
+						</ul>
+					</div>
+				</div>
+			</article>
 
             <?php
 			} // end categories condition

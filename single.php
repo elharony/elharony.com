@@ -37,7 +37,7 @@ the_post();
     </div> -->
     
 
-    <article class="content">
+    <article class="article-body">
         <div class="container">
             <?php the_content(); ?>
         </div>
@@ -79,7 +79,7 @@ the_post();
     <section class="related-articles blog">
         <div class="container">
             <h3 class="section-title">Related Articles</h3>
-            <div class="masonry">
+            <div class="blog-list">
 
 <?php
             while ($my_query->have_posts()) {
@@ -89,9 +89,19 @@ the_post();
                 <!-- Related Post -->
                 <article>
                     <div class="inner">
-                        <div class="info"></i>Published on: <time><?php the_time('F j, Y'); ?></time></div>
-                        <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                        <div class="info"></i>In: <span class="category"><?php the_category(' - '); ?></span></div>
+                        <div class="thumbnail">
+                            <?php the_field('category_image'); ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                        </div>
+                        <div class="content">
+                            <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="brief"><?php the_excerpt() ?></div>
+                            <?php the_category(''); ?>
+                            <ul class="date">                    
+                                <li class="day"><?php the_time('j'); ?></li>
+                                <li class="month"><?php the_time('M'); ?></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
             

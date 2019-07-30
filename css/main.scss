@@ -161,6 +161,7 @@ section {
                         .month {
                             font-size: 1rem;
                             text-transform: uppercase;
+                            margin-top: -5px;
                         }
                     }
                 }
@@ -189,5 +190,18 @@ section {
         }
 
 
+    }
+}
+
+/** Single/Archive **/
+.hero {
+    .section-title {
+        margin-bottom: 0;
+    }
+}
+
+.archive {
+    .blog {
+        padding: 1rem 0;
     }
 }
