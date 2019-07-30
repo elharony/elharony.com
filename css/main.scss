@@ -199,6 +199,7 @@ section {
 
 /** [Page] Single/Archive **/
 .hero {
+    padding: 2rem 0;
     .section-title {
         margin-bottom: 0;
     }
@@ -234,4 +235,9 @@ section {
             margin: 1rem 0 2rem;
         }
     }
+}
+
+/** [Page] Contact */
+.contact-form {
+    padding: 1rem 0;
 }

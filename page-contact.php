@@ -4,10 +4,7 @@ get_header(); ?>
 <main class="page-contact single">
     <section class="hero">
         <div class="container">
-            <h1 class="section-title">
-                Drop me a message
-                <span class="watermark">Have a project?</span>
-            </h1>
+            <h1 class="section-title">Reach me out</h1>
         </div>
     </section>
 
