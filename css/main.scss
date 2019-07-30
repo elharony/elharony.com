@@ -197,7 +197,7 @@ section {
     }
 }
 
-/** Single/Archive **/
+/** [Page] Single/Archive **/
 .hero {
     .section-title {
         margin-bottom: 0;
@@ -207,5 +207,31 @@ section {
 .archive {
     .blog {
         padding: 1rem 0;
+    }
+}
+
+/** [Page] 404 */
+.page-404 {
+    .hero {
+        margin: 4rem 0;
+        text-align: center;
+
+        .section-title {
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 1.5rem auto;
+            width: 70%;
+        }
+    }
+    .blog {
+        padding: 2rem 0;
+
+        .section-title {
+            margin-bottom: 0;
+            margin: 1rem 0 2rem;
+        }
     }
 }
