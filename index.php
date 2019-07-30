@@ -99,35 +99,92 @@ endif;
     <!-- blog -->
     <section class="blog">
         <div class="container">
-            <h2 class="section-title">
-            Blog
-            <span class="watermark">Personal & Technical</span>
-            </h2>
+            <h2 class="section-title">Blog</h2>
+
+            <div class="blog-list">
+
+
+
+<?php
+
+$posts_args = array(
+    'post_type'   => 'Post',
+    'post_status' => 'publish',
+    'orderby' => 'date',
+    'posts_per_page' => 3
+);
+  
+// Custom query.
+$posts = new WP_Query( $posts_args );
+
+// Check that we have query results.
+if ( $posts->have_posts() ) {
+
+    // Start looping over the query results.
+    while ( $posts->have_posts() ) {
+
+        $posts->the_post();
+?>
+
+        <article>
+            <div class="inner">
+                <div class="thumbnail">
+                    <?php the_field('category_image'); ?>
+                    <?php the_post_thumbnail('medium'); ?>
+                </div>
+                <div class="content">
+                    <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                    <div class="brief"><?php the_excerpt() ?></div>
+                    <?php the_category(''); ?>
+                    <ul class="date">                    
+                        <li class="day"><?php the_time('j'); ?></li>
+                        <li class="month"><?php the_time('M'); ?></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+<?php
+    }
+
+} else {
+    echo "<h4>Sorry, no posts available.</h4>";
+}
+
+// Restore original post data.
+wp_reset_postdata();
+
+?>
+
+
+
+
             <div class="masonry">
 
 
 <?php
 // The Loop
-if ( have_posts() ) {
-  while (have_posts()) {
-    the_post();
+// if ( have_posts() ) {
+//   while (have_posts()) {
+//     the_post();
 ?>
-            <article>
+            <!-- <article>
                 <div class="inner">
                     <div class="info"></i>Published on: <time><?php the_time('F j, Y'); ?></time></div>
+                    <?php the_post_thumbnail('post-thumbnail'); ?>
                     <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
                     <div class="info"></i>In: <span class="category"><?php the_category(' - '); ?></span></div>
                     <!-- <div class="brief"><?php // the_excerpt() ?></div> -->
                 </div>
-            </article>
+            </article> 
 
 <?php
    
-} // end post loop
+// } // end post loop
 
-    } else {
-    echo "<h4>Sorry, no posts available.</h4>";
-    } // end post condition
+//     } else {
+//     echo "<h4>Sorry, no posts available.</h4>";
+//     } // end post condition
 ?>
             </div>
         </div>

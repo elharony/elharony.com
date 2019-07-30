@@ -139,7 +139,7 @@ $labels = array(
 */
 
 function change_excerpt_length($length) {
-  return 60;
+  return 30;
 }
 
 function change_excerpt_more($more) {
