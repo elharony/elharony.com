@@ -97,6 +97,10 @@ section {
                         height: 200px;
                         clip-path: polygon(50% 0, 100% 55%, 100% 100%, 0 100%, 0 0);
                     }
+
+                    &:hover img {
+                        opacity: 0.8;
+                    }
                 }
 
                 .content {

@@ -129,8 +129,9 @@ if ( $posts->have_posts() ) {
         <article>
             <div class="inner">
                 <div class="thumbnail">
-                    <?php the_field('category_image'); ?>
-                    <?php the_post_thumbnail('medium'); ?>
+                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                        <?php the_post_thumbnail('medium'); ?>
+                    </a>
                 </div>
                 <div class="content">
                     <h3 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
