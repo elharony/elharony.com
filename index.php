@@ -51,7 +51,7 @@
 $args = array(
   'post_type'   => 'clients',
   'post_status' => 'publish',
-  'orderby' => 'date',
+  'orderby' => 'rand',
   'posts_per_page' => -1
 );
  
