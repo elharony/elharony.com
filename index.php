@@ -46,28 +46,36 @@
         </div>
         <div class="container">
             <div class="clients-list">
-                <div class="client">
-                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/mezatacademy--logo.jpg" alt="">
-                </div>
-                <div class="client">
-                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/p-codes--logo.png" alt="">
-                </div>
-                <div class="client">
-                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/pensofexperts--logo.jpg" alt="">
-                </div>
-                <div class="client">
-                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/tarassultec--logo.png" alt="">
-                </div>
-                <div class="client">
-                    <img src="<?php echo get_template_directory_uri(); ?>/PORTFOLIO/2016/sustainable-recycling--logo.png" alt="">
-                </div>
-                
-                <div class="client">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="">
-                </div>
-            </div>
+
+<?php
+$args = array(
+  'post_type'   => 'clients',
+  'post_status' => 'publish',
+  'orderby' => 'date',
+  'posts_per_page' => -1
+);
+ 
+$clients = new WP_Query( $args );
+if( $clients->have_posts() ) :
+    while( $clients->have_posts() ) :
+    $clients->the_post();
+?>
+
+        <div class="client">
+            <a href="<?php the_field('client_url'); ?>" title="<?php the_title_attribute(); ?>">
+                <?php the_post_thumbnail('medium'); ?>
+            </a>
         </div>
 
+<?php
+    endwhile;
+    wp_reset_postdata();
+else :
+    echo "<h4>Sorry, no clients available.</h4>";
+endif;
+?>
+            </div>
+        </div>
     </section>
 
     <!-- hero -->

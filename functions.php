@@ -15,7 +15,6 @@ function add_styles() {
   wp_enqueue_style("fontawesome", "https://use.fontawesome.com/releases/v5.0.13/css/all.css");
   wp_enqueue_style("fonts", "https://fonts.googleapis.com/css?family=Audiowide|Quicksand");
   wp_enqueue_style("swiper-css", "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css");
-
 }
 
 
@@ -95,7 +94,43 @@ function custom_post_type_testimonials() {
  ) );
 }
 
+/*
+ * custom_post_type_clients
+ *
+ * Create new Custom Post Type for the "Clients"
+ *
+ * @params: NO
+ * @return: NO
+ */
+function custom_post_type_clients() {
 
+// Labels
+$labels = array(
+  'name' => "Clients",
+  'singular_name' => "clients",
+  'menu_name' => 'Clients',
+  'add_new' => "Add Client",
+  'add_new_item' => "Add New Client",
+  'edit_item' => "Edit Client",
+  'new_item' => "New Client",
+  'view_item' => "View Client",
+  'all_items' => "View all",
+  'search_items' => __("Search Clients"),
+  'not_found' =>  __("No Clients Found"),
+  'not_found_in_trash' => __("No Clients Found in Trash"),
+  'parent_item_colon' => ''
+);
+
+// Register post type
+  register_post_type('clients' , array(
+    'labels' => $labels,
+    'public' => true,
+    'has_archive' => false,
+    'menu_icon' => 'dashicons-groups',
+    'rewrite' => false,
+    'supports' => array('title', 'thumbnail')
+  ) );
+}
 
 
 /*
@@ -122,6 +157,7 @@ add_action("wp_enqueue_scripts", "add_styles");
 add_action("wp_enqueue_scripts", "add_scripts");
 add_action("init", "add_custom_menu");
 add_action( 'init', 'custom_post_type_testimonials', 0 );
+add_action( 'init', 'custom_post_type_clients', 0 );
 add_filter("excerpt_length", "change_excerpt_length");
 
 
