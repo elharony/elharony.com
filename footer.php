@@ -25,26 +25,6 @@
      
      <?php wp_footer(); ?>
 
-<script>
-        
-/*
-* Swiper Slider
-*/
-var swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows : false,
-    }
-});      
-</script>
-
 <!-- Tidio Livechat -->
 <!-- <script src="//code.tidio.co/p3rqljn7k0thhq4wbagbtttf2upb98pf.js"></script> -->
 

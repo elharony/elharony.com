@@ -161,15 +161,13 @@ wp_reset_postdata();
         </div>
     </section>
 
-
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Testimonials</h2>
+            
+            <div class="testimonials-list">
 
-            <!-- Swiper -->
-            <div class="swiper-container">
-                
 
 <?php
 $args = array(
@@ -182,44 +180,30 @@ $args = array(
 $testimonials = new WP_Query( $args );
 if( $testimonials->have_posts() ) :
 
-?>
-                <div class="swiper-wrapper">
-
-
-<?php
     while( $testimonials->have_posts() ) :
     $testimonials->the_post();
 ?>
-        
-        
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <div class="review">
-                                <?php the_content(); ?>
-                            </div>
-                            <div class="client">
-                                <div class="name"><?php the_field('client'); ?></div>
-                                <div class="company">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
-                            </div>
-                        </div>
+            <div class="testimonial">
+                <div class="inner">
+                    <div class="info">
+                        <span class="client"><?php the_field('client'); ?></span>, 
+                        <span class="company"><?php the_field('job_title'); ?></span>
                     </div>
+                    <div class="review">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            </div>
 
 <?php
     endwhile;
     wp_reset_postdata();
-?>
-
-                  </div>
-<?php
 else :
     echo "<h4>Sorry, no testimonials available.</h4>";
 endif;
 ?>
-
-
             </div>
+        </div>
     </section>
 
 </main>

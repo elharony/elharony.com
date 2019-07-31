@@ -14,7 +14,6 @@ function add_styles() {
   wp_enqueue_style("main-css", get_template_directory_uri() . "/css/main.css");
   wp_enqueue_style("fontawesome", "https://use.fontawesome.com/releases/v5.0.13/css/all.css");
   wp_enqueue_style("fonts", "https://fonts.googleapis.com/css?family=Audiowide|Quicksand");
-  wp_enqueue_style("swiper-css", "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css");
 }
 
 
@@ -22,7 +21,6 @@ function add_scripts() {
 
   wp_enqueue_script("jquery");
   wp_enqueue_script("main-script", get_template_directory_uri() . "/js/app.js", array(), "", true);
-  wp_enqueue_script("swiper-script", "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js", array(), "", true);
 
 
   // // Conditional Scripts [ Web Compatibility ]
