@@ -12,7 +12,7 @@
                 <span class="watermark">Hi, I am</span>
             </h1>
 
-            <div class="flex-container">
+            <div class="intro flex-container">
                 <div class="image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya_Elharony-Transparent-Picture.png" alt="Yahya Elharony Personal Picture">
                 </div>
@@ -33,7 +33,8 @@
                     <a href="./contact" class="btn">Hire Me</a>
                 </div>
             </div>
-                             
+            
+
         </div>
     </section>
 
