@@ -6,12 +6,10 @@
     <!-- about -->
     <section class="about" id="about">
         <div class="container">
-
             <h1 class="section-title">
                 Yahya Elharony
                 <span class="watermark">Hi, I am</span>
             </h1>
-
             <div class="intro flex-container">
                 <div class="image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya_Elharony-Transparent-Picture.png" alt="Yahya Elharony Personal Picture">
@@ -33,8 +31,23 @@
                     <a href="./contact" class="btn">Hire Me</a>
                 </div>
             </div>
-            
 
+            <div class="featured">
+                <div class="featured-list">
+                    <p>Big Names Funded my journey</p>
+                    <div class="logos">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/google.png" alt="Google Logo" title="Google">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/facebook.png" alt="Facebook Logo" title="Facebook">
+                    </div>
+                </div>
+                <div class="featured-list schools">
+                    <p>Certified Front End Developer by</p>
+                    <div class="logos">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/udacity.png" alt="Udacity Logo" title="Udacity">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/openclassrooms.png" alt="OpenClassrooms Logo" title="OpenClassrooms">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
