@@ -1,3 +1,9 @@
+$color-main: #000;
+$color-secondary: #fff;
+$color-black: #000;
+$color-white: #fff;
+$text-color: rgba(0,0,0,.84);
+
 section {
     .section-title {
         margin-bottom: 3rem;
@@ -21,6 +27,94 @@ section {
         }
     }
 }
+
+
+/*
+ * Homepage
+ */
+ .page-home {
+    
+    .about {
+
+        position: relative;
+        background: $color-white;
+        padding: 4rem 0;
+    
+        .section-title {
+            margin: 2rem 0;
+        }
+    
+        .info, .image {
+            width: 100%;
+        }
+    
+        .image {
+            max-height: 300px;
+            margin-bottom: 1rem;
+            text-align: center;
+
+            img {
+                height: 100%;
+            }
+        }
+    
+        .info {
+            text-align: center;
+
+            .details {
+                margin: 0 auto;
+                text-align: left;
+                
+                p {
+                    margin: 10px 0;
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+
+                    a {
+                        color: $color-black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+    
+            .btn {
+                margin-top: 2rem;
+            }
+        }
+    
+        @media (min-width: 600px) {
+            .flex-container {
+                flex-direction: row-reverse;
+            }
+
+            .image {
+                max-height: 425px;
+            }
+        }
+    
+        @media (min-width: 859px) {
+
+            .info, .image {
+                width: 50%;
+            }
+    
+            .image {
+                margin-top: -80px;
+            }
+        }
+    
+        @media (min-width: 1200px) {
+            .info {
+                .details {
+                    padding-top: 1rem;
+                }
+            }
+        }   
+    }
+ }
+
+
+
 
 .clients {
     padding: 4rem 0;

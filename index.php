@@ -14,21 +14,18 @@
 
             <div class="flex-container">
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya-Elharony--Personal-Picture.png" alt="Yahya Elharony Personal Picture">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya_Elharony-Transparent-Picture.png" alt="Yahya Elharony Personal Picture">
                 </div>
                 <div class="info">
                     <div class="details">
                         <p>
-                            💡 Morning Entrepreneur && Night Coder! 💻
+                            <strong>I build websites for non-tech entrepreneurs</strong> that really works for them, and make the whole process of creating a website painless!
                         </p>
                         <p>
-                            <strong>Coder:</strong> I am a Self-taught Web Developer who has done +25 projects for clients in +5 countries as an Individual Freelancer and they are 100% satisfied with my work
+                            <strong>I help web development agencies</strong> who outsourced their work to me, to get the job done in a fraction of time.
                         </p>
                         <p>
-                            <strong>Entrepreneur:</strong> The other part of me likes Turning Ideas Into Products, Planning, Doing Market Research, and Scaling the business
-                        </p>
-                        <p>
-                            <strong>Why me?</strong> I am playing the long game, and my first priority is Building Trust with my clients, that's why I am known for my Transparency, Integrity and Fairness!
+                            When I am not working; <strong>I <a href="/blog/">write articles</a>, create <a href="https://www.youtube.com/channel/UCcWSbBe_s-T_gZRnqFbtyIA" target="_blank">youTube tutorials</a>, and build <a href="https://github.com/elharony" target="_blank">open source projects</a>.</strong>
                         </p>
                     </div>
 
