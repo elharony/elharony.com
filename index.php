@@ -73,7 +73,7 @@ if( $clients->have_posts() ) :
 ?>
 
         <div class="client">
-            <a href="<?php the_field('client_url'); ?>" title="<?php the_title_attribute(); ?>">
+            <a href="<?php the_field('client_url'); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
                 <?php the_post_thumbnail('medium'); ?>
             </a>
         </div>
