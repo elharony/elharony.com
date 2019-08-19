@@ -122,7 +122,7 @@ $posts_args = array(
     'post_type'   => 'Post',
     'post_status' => 'publish',
     'orderby' => 'date',
-    'posts_per_page' => 3
+    'posts_per_page' => 6
 );
   
 // Custom query.
@@ -169,6 +169,9 @@ wp_reset_postdata();
 ?>
 
             </div>
+
+            <a href="/blog/" class="btn">Show All</a>
+
         </div>
     </section>
 
