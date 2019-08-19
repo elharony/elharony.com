@@ -28,7 +28,7 @@
                     </div>
 
                     <a href="https://www.elharony.com/Yahya-Elharony--Resume.pdf" class="btn btn-reversed">Download Resume</a>
-                    <a href="./contact" class="btn">Hire Me</a>
+                    <a href="./contact" class="btn">Let's Work Together</a>
                 </div>
             </div>
 
