@@ -176,7 +176,7 @@ wp_reset_postdata();
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <h2 class="section-title">Testimonials</h2>
             
