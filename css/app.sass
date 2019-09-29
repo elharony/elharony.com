@@ -462,7 +462,7 @@ header
 
 		// Normal Heading
 		h2
-			padding: 2rem 0
+			padding: 1rem 0
 
 		// Normal Text
 		p, li
@@ -514,36 +514,15 @@ header
 			text-decoration: underline
 
 		// Code Highlighter
-		.EnlighterJSWrapper
+		.crayon-syntax
 			width: 90%
 			margin: 0 auto
 
-			ol
-				width: 100%
-				padding-left: 0.5rem
-
-				li
-					padding: 0.3rem 0.5rem
-
-			.EnlighterJSToolbar
-				top: 1px
-				right: 1px
-
-				.EnlighterJSInfoButton
-					display: none
-
-			li
-				font-family: Courier New
-				font-size: 1.1rem
-				padding: 0.3rem
-				margin-left: 3rem
-
-				span
-					font-family: Courier New
-					font-size: 1.1rem
+			.crayon-table td, .crayon-table tr
+				padding: 20px 0 5px !important
 
 		@media all and (min-width: 667px)
-			h2, h3, h4, h5, h6, p, blockquote, ul, ol, .EnlighterJSWrapper
+			h2, h3, h4, h5, h6, p, blockquote, ul, ol, .crayon-syntax
 				width: 70%
 
 	.comments
