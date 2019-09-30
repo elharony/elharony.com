@@ -217,24 +217,23 @@ section {
     background: #f9f9f9;
 
     .blog-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 2rem;
 
         article {
             width: 100%;
 
             .inner {
                 position: relative;
-                margin: 0 0 1rem;
                 padding-bottom: 0.5rem;
                 background: #fff;
 
                 .thumbnail {
                     img {
                         width: 100%;
-                        height: 200px;
-                        clip-path: polygon(65% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+                        height: auto;
+                        max-height: 250px;
                     }
 
                     &:hover img {
@@ -273,13 +272,13 @@ section {
                             margin: 0.25rem;
 
                             a {
-                                font-size: .66rem;
+                                font-size: .6rem;
                                 font-weight: 700;
                                 color: #000;
                                 text-transform: uppercase;
                                 border: 2px solid #f9f9f9;
                                 border-radius: 2rem;
-                                padding: .2rem .85rem .25rem;
+                                padding: .2rem .5rem .2rem;
 
                                 &:hover {
                                     border-color: #444;
@@ -291,10 +290,12 @@ section {
                     .date {
                         position: absolute;
                         top: 0;
-                        right: 0;
+                        left: 0;
                         list-style-type: none;
-                        text-align: right;
-                        padding: 0.5rem;
+                        text-align: left;
+                        padding: .5rem;
+                        background: #000;
+                        color: #fff;
 
                         .day {
                             font-size: 1.7rem;
@@ -309,39 +310,6 @@ section {
                     }
                 }
                 
-            }
-        }
-        
-        @media (min-width: 450px) {
-            article {
-                width: 50%;
-
-                .inner {
-                    margin: 1rem;
-
-                    .thumbnail {
-                        img {
-                            height: 200px;
-                            clip-path: polygon(50% 0, 100% 55%, 100% 100%, 0 100%, 0 0);
-                        }
-                    }
-                }
-            }
-        }
-
-        @media (min-width: 950px) {
-            article {
-                width: calc(100%/3);
-            }
-        }
-
-        @media (min-width: 1200px) {
-            article {
-                .inner .thumbnail {
-                    img {
-                        clip-path: polygon(66% 0, 100% 48%, 100% 100%, 0 100%, 0 0);
-                    }
-                }    
             }
         }
     }
