@@ -1,0 +1,44 @@
+.testimonials {
+    position: relative;
+    padding-bottom: 2rem;
+    background: #f9f9f9;
+    z-index: 0;
+
+    .testimonials-list {
+        column-count: 1;
+        column-gap: 0;
+
+        .testimonial {
+            margin: 0 0 30px;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+
+            .inner {
+                background: #fff;
+                padding: 1rem;
+                margin: 0 4% 4%;
+                border: 1px solid #f1f2f4;
+                transition: all 300ms ease-in-out;
+
+                .info {
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                
+                .review {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        @media all and (min-width: 860px) {
+            column-count: 2;
+        }
+
+        @media all and (min-width: 1200px) {
+            column-count: 3;
+        }
+    }
+}

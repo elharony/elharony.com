@@ -1,0 +1,123 @@
+.about {
+    position: relative;
+    background: $color-white;
+    padding: 4rem 0 0;
+
+    .section-title {
+        margin: 2rem 0;
+    }
+
+    .intro {
+        margin-bottom: 1rem;
+
+        .info, .image {
+            width: 100%;
+        }
+
+        .image {
+            max-height: 300px;
+            margin-bottom: 1rem;
+            text-align: center;
+
+            img {
+                height: 100%;
+            }
+        }
+    
+        .info {
+            text-align: center;
+
+            .details {
+                margin: 0 auto;
+                text-align: left;
+                
+                p {
+                    margin: 10px 0;
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+
+                    a {
+                        color: $color-black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+    
+            .btn {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .featured {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem 0;
+        text-align: center;
+
+        .featured-list {
+            margin: 0 0 2rem;
+
+            p {
+                margin-bottom: 2rem;
+                font-size: 0.8rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .logos {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-height: 75px;
+                    margin: 0 1rem;
+                }
+            }
+        }
+
+        .featured-list:last-child {
+            margin: 0;
+        }
+
+        @media (min-width: 550px) {
+            .featured-list, .featured-list:last-child {
+                margin: 0 1rem;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        .intro {
+            flex-direction: row-reverse;
+
+            .image {
+                max-height: 425px;
+            }
+        }
+    }
+
+    @media (min-width: 859px) {
+
+        .intro {
+            .info, .image {
+                width: 50%;
+            }
+    
+            .image {
+                margin-top: -80px;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .intro {
+            .info {
+                .details {
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }   
+}
