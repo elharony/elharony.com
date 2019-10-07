@@ -12,7 +12,7 @@
 			.article-date {
 				display: flex;
 				list-style: none;
-				border-bottom: 1px solid $color-black;
+				border-bottom: 1px solid $color-white;
 				justify-content: center;
 				flex-direction: column;
 				text-align: center;
@@ -20,8 +20,8 @@
 				.day {
 					font-size: 2rem;
 					font-weight: 700 !important;
-					-webkit-text-stroke: 1px $color-black;
-					text-stroke: 1px $color-black;
+					-webkit-text-stroke: 1px $color-white;
+					text-stroke: 1px $color-white;
 					-webkit-text-fill-color: transparent;
 					text-fill-color: transparent;
 				}
@@ -29,17 +29,19 @@
 				.month {
 					font-size: 1.2rem;
 					letter-spacing: 0.3rem;
+					color: $color-white;
 				}
 			}
 
 			.article-meta {
 				.title {
 					margin-bottom: 0.5rem;
+					color: $color-white;
 				}
 
 				.category a {
 					font-size: 1.2rem;
-					color: $color-black;
+					color: $color-white;
 					letter-spacing: 0.3rem;
 				}
 			}
@@ -52,7 +54,7 @@
 				.article-date {
 					width: 30%;
 					border-bottom: 0;
-					border-right: 1px solid $color-black;
+					border-right: 1px solid $color-white;
 				}
 
 				.article-meta {
