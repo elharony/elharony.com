@@ -12,7 +12,7 @@ add_theme_support("post-thumbnails");
 function add_styles() {
   wp_enqueue_style("main-css", get_template_directory_uri() . "/css/main.css");
   wp_enqueue_style("fontawesome", "https://use.fontawesome.com/releases/v5.0.13/css/all.css");
-  wp_enqueue_style("fonts", "https://fonts.googleapis.com/css?family=Audiowide|Quicksand");
+  wp_enqueue_style("fonts", "https://indestructibletype.com/fonts/Jost.css");
 }
 
 

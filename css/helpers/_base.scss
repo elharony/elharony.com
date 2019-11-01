@@ -4,7 +4,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, div, span, li, label, input, textarea {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Jost', sans-serif;
 }
 a, a:link, a:hover, a:active {
 	text-decoration: none;
@@ -32,6 +32,9 @@ h5 {
 h6 {
 	font-size: 0.75rem;
 	line-height: 1rem;
+}
+strong {
+	font-weight: 600;
 }
 img {
 	max-width: 100%;

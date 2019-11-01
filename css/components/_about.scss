@@ -1,10 +1,11 @@
 .about {
     position: relative;
     background: $color-white;
-    padding: 4rem 0 0;
+    padding: 4.25rem 0 0;
 
     .section-title {
         margin: 2rem 0;
+        font-weight: 500;
     }
 
     .intro {
@@ -34,7 +35,7 @@
                 p {
                     margin: 10px 0;
                     font-size: 1.3rem;
-                    line-height: 1.7rem;
+                    line-height: 2rem;
 
                     a {
                         color: $color-black;
@@ -62,7 +63,7 @@
             p {
                 margin-bottom: 2rem;
                 font-size: 0.8rem;
-                font-weight: bold;
+                font-weight: 500;
                 text-transform: uppercase;
             }
 
@@ -109,15 +110,5 @@
                 margin-top: -80px;
             }
         }
-    }
-
-    @media (min-width: 1200px) {
-        .intro {
-            .info {
-                .details {
-                    padding-top: 1rem;
-                }
-            }
-        }
-    }   
+    } 
 }
