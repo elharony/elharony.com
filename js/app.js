@@ -1,22 +1,37 @@
 /*
  * Responsive Menu
  */
- const openMenu = document.querySelector(".open-menu");
- const closeMenu = document.querySelector(".close-menu");
+ const openMenuIcon = document.querySelector(".open-menu");
+ const closeMenuIcon = document.querySelector(".close-menu");
  const menu = document.querySelector(".menu-links"); 
 
- // Toggle Menu
- openMenu.addEventListener("click", () => {
-    menu.style.left = 0;
-    openMenu.style.display = "none";
-    closeMenu.style.display = "block";
- });
+ function openMenu() {
+   menu.style.left = 0;
+   openMenuIcon.style.display = "none";
+   closeMenuIcon.style.display = "block";
+ }
 
- closeMenu.addEventListener("click", () => {
-    menu.style.left = "-100%";
-    closeMenu.style.display = "none";
-    openMenu.style.display = "block";
- });
+ function closeMenu() {
+   menu.style.left = "-100%";
+   closeMenuIcon.style.display = "none";
+   openMenuIcon.style.display = "block";
+ }
+
+ openMenuIcon.addEventListener("click", () => {
+    openMenu();
+ })
+
+ closeMenuIcon.addEventListener("click", () => {
+    closeMenu();
+ })
+
+ // Hide menu after clicking on a link
+ const menuLinks = document.querySelectorAll(".menu-item");
+ for(let i = 0; i < menuLinks.length; i++) {
+   menuLinks[i].addEventListener('click', function () {
+      closeMenu();
+   })
+ }
 
 
 
