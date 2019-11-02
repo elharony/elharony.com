@@ -1,15 +1,17 @@
 .clients {
     padding: 2rem 0 1rem;
-    
+
     .clients-list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         .client {
             display: flex;
             align-items: center;
-            width: 100%;
-            margin: 2% 1%;
+            width: calc(92%/2);
+            margin: 2% 2%;
+            padding: 1%;
             box-sizing: border-box;
 
             a {
@@ -34,18 +36,12 @@
             }
 
             @media (min-width: 500px) {
-                width: calc(96%/2);
-                padding: 3%;
-                margin: 1% 1%;
-            }
-
-            @media (min-width: 667px) {
-                width: calc(94%/3);
-                padding: 2%;
+                width: calc(88%/3);
+                padding: 0;
             }
 
             @media (min-width: 860px) {
-                padding: 1%;
+                width: calc(80%/5);
             }
         }
     }
