@@ -122,7 +122,7 @@ $posts_args = array(
     'post_type'   => 'Post',
     'post_status' => 'publish',
     'orderby' => 'date',
-    'posts_per_page' => 8
+    'posts_per_page' => 4
 );
   
 // Custom query.
