@@ -17,7 +17,7 @@
                 <div class="info">
                     <div class="details">
                         <p>
-                            <strong>I help non-technical entrepreneurs</strong> to build their online business website or improve an existing one ⚡️
+                            <strong>I help non-technical entrepreneurs</strong> to build their online business website or improve an existing one 🚀
                         </p>
                         <p>
                             <strong>I help web development agencies</strong> to get the job done in a fraction of time 👌
