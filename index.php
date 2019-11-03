@@ -17,13 +17,13 @@
                 <div class="info">
                     <div class="details">
                         <p>
-                            <strong>I build websites for non-tech entrepreneurs</strong> that really works for them, and make the whole process of creating a website painless!
+                            <strong>I help non-technical entrepreneurs</strong> to build their online business website or improve an existing one ⚡️
                         </p>
                         <p>
-                            <strong>I help web development agencies</strong> who outsourced their work to me, to get the job done in a fraction of time.
+                            <strong>I help web development agencies</strong> to get the job done in a fraction of time 👌
                         </p>
                         <p>
-                            When I am not working; <strong>I <a href="/blog/">write articles</a>, create <a href="https://www.youtube.com/channel/UCcWSbBe_s-T_gZRnqFbtyIA" target="_blank">youtube tutorials</a>, and build <a href="https://github.com/elharony" target="_blank">open source projects</a>.</strong>
+                            When I am not working; <strong>I <a href="/blog/">write articles</a>, create <a href="https://www.youtube.com/channel/UCcWSbBe_s-T_gZRnqFbtyIA" target="_blank">youtube tutorials</a>, and build <a href="https://github.com/elharony" target="_blank">open-source projects</a> 💻</strong>
                         </p>
                     </div>
 
