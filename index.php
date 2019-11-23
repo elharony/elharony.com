@@ -36,15 +36,15 @@
                 <div class="featured-list">
                     <p>Big Names Funded my journey</p>
                     <div class="logos">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/google.png" alt="Google Logo" title="Google">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/facebook.png" alt="Facebook Logo" title="Facebook">
+                        <span class="img img-google" title="Google"></span>
+                        <span class="img img-facebook" title="Facebook"></span>
                     </div>
                 </div>
                 <div class="featured-list schools">
                     <p>Certified Front End Developer by</p>
                     <div class="logos">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/udacity.png" alt="Udacity Logo" title="Udacity">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/companies/openclassrooms.png" alt="OpenClassrooms Logo" title="OpenClassrooms">
+                        <span class="img img-udacity" title="Udacity"></span>
+                        <span class="img img-openclassrooms" title="OpenClassrooms"></span>
                     </div>
                 </div>
             </div>

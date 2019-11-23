@@ -71,9 +71,26 @@
                 display: flex;
                 justify-content: center;
 
-                img {
-                    max-height: 75px;
+                .img {
+                    width: 75px;
+                    height: 75px;
                     margin: 0 1rem;
+                }
+
+                .img-google {
+                    background: url(../img/companies-sprite.png) 0 0;
+                }
+
+                .img-facebook {
+                    background: url(../img/companies-sprite.png) 75px 0;
+                }
+
+                .img-udacity {
+                    background: url(../img/companies-sprite.png) 0 75px;
+                }
+
+                .img-openclassrooms {
+                    background: url(../img/companies-sprite.png) 75px 75px;
                 }
             }
         }
