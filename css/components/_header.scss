@@ -22,12 +22,20 @@ header {
 			display: flex;
 			height: 100%;
 			right: 70px;
+			width: 35px;
             align-items: center;
         
 			.open-menu, .close-menu {
-				font-size: 2rem;
+				width: 100%;
+    			height: 100%;
 				display: flex;
+				font-size: 2rem;
 				cursor: pointer;
+
+				svg {
+					width: 100%;
+					height: 100%;
+				}
 			}
 			
 			.close-menu {
