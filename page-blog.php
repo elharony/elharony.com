@@ -28,7 +28,7 @@ if ( have_posts() ) {
             <div class="inner">
                 <div class="thumbnail">
                     <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('medium_large'); ?>
                     </a>
                 </div>
                 <div class="content">
