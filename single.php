@@ -65,7 +65,7 @@ the_post();
         $args=array (
         'category__in' => array($first_category),
         'post__not_in' => array($post->ID),
-        'posts_per_page'=>4,
+        'posts_per_page'=>6,
         'caller_get_posts'=>1
         );
 
@@ -123,14 +123,5 @@ the_post();
 ?>
 
 </main>
-
-<!-- Google Ads -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-6494125512418454",
-          enable_page_level_ads: true
-     });
-</script>
 
 <?php get_footer(); ?>
