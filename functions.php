@@ -11,13 +11,12 @@ add_theme_support("post-thumbnails");
  */
 function add_styles() {
   wp_enqueue_style("main-css", get_template_directory_uri() . "/css/main.css");
-  wp_enqueue_style("fonts", "https://indestructibletype.com/fonts/Jost.css");
+  wp_enqueue_style("fonts", "https://fonts.googleapis.com/css?family=Work+Sans");
 }
-
 
 function add_scripts() {
 
-  wp_enqueue_script("jquery");
+  // wp_enqueue_script("jquery");
   wp_enqueue_script("main-script", get_template_directory_uri() . "/js/app.js", array(), "", true);
 
 
