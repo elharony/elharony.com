@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="featured-list schools">
-                    <p>Certified Front End Developer by</p>
+                    <p>Certified FrontEnd Developer by</p>
                     <div class="logos">
                         <span class="img img-udacity" title="Udacity"></span>
                         <span class="img img-openclassrooms" title="OpenClassrooms"></span>
