@@ -1,5 +1,5 @@
 .sass-cache
 css/.sass-cache
-css/main.css.map
-css/main.css
+/css/**/*.css
+/css/**/*.css.map
 PORTFOLIO

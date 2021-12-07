@@ -21,7 +21,7 @@ header {
 			position: absolute;
 			display: flex;
 			height: 100%;
-			right: 70px;
+			right: 15px;
 			width: 35px;
             align-items: center;
         
@@ -48,7 +48,7 @@ header {
 			width: 100%;
 			position: fixed;
 			background: #fefefe;
-			top: 63px;
+			top: 55px;
 			left: -100%;
 			transition: all 300ms ease;
 
@@ -61,6 +61,7 @@ header {
 				display: block;
 				font-size: 1rem;
 				font-weight: bold;
+				letter-spacing: 1px;
 				text-transform: uppercase;
 				color: $color-black;
 				transition: all 300ms ease;
@@ -98,7 +99,6 @@ header {
 				// Other Screen Styles
 				flex: 1;
 				text-align: right;
-				margin-right: 1rem;
 
 				li {
 					display: inline-block;

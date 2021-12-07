@@ -1,7 +1,11 @@
 .about {
     position: relative;
     background: $color-white;
-    padding: 2.5rem 0 0;
+    padding: 2rem 0 2rem;
+
+    @media (min-width: 480px) {
+        padding: 2.5rem 0 2rem;
+    }
 
     .section-title {
         margin: 2rem 0;
@@ -11,31 +15,63 @@
     .intro {
         margin-bottom: 1rem;
 
-        .info, .image {
-            width: 100%;
-        }
-
-        .image {
-            max-height: 300px;
-            margin-bottom: 1rem;
-            text-align: center;
-
-            img {
-                height: 100%;
-            }
-        }
-    
         .info {
-            text-align: center;
-
             .details {
                 margin: 0 auto;
-                text-align: left;
                 
                 p {
                     margin: 10px 0;
-                    font-size: 1.5rem;
-                    line-height: 2rem;
+                    font-size: 22px;
+                    line-height: 1.6;
+
+                    a {
+                        position: relative;
+                        color: $color-black;
+                        // text-decoration: underline;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -2px;
+                            width: 100%;
+                            height: 1px;
+                            background: #000;
+                            transition: all 200ms cubic-bezier(0.03, 0, 1, 1.02)
+                        }
+
+                        &:hover:after {
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+    
+            .btn {
+                margin-top: 1rem;
+                margin-left: 0;
+            }
+        }
+
+        .empty {
+            display: none;
+        }
+
+        @media (min-width: 830px) {
+            .info {
+                width: 60%;
+            }
+            .empty {
+                display: flex;
+                align-items: center;
+                width: 40%;
+                padding: 2rem;
+                text-align: center;
+                background: #eeeeee1f;
+                box-sizing: border-box;
+
+                p {
+                    width: 100%;
 
                     a {
                         color: $color-black;
@@ -43,89 +79,6 @@
                     }
                 }
             }
-    
-            .btn {
-                margin-top: 2rem;
-            }
         }
     }
-
-    .featured {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 2rem 0;
-        text-align: center;
-
-        .featured-list {
-            margin: 0 0 2rem;
-
-            p {
-                margin-bottom: 2rem;
-                font-size: 0.8rem;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-
-            .logos {
-                display: flex;
-                justify-content: center;
-
-                .img {
-                    width: 75px;
-                    height: 75px;
-                    margin: 0 1rem;
-                }
-
-                .img-google {
-                    background: url(../img/companies-sprite.png) 0 0;
-                }
-
-                .img-facebook {
-                    background: url(../img/companies-sprite.png) 75px 0;
-                }
-
-                .img-udacity {
-                    background: url(../img/companies-sprite.png) 0 75px;
-                }
-
-                .img-openclassrooms {
-                    background: url(../img/companies-sprite.png) 75px 75px;
-                }
-            }
-        }
-
-        .featured-list:last-child {
-            margin: 0;
-        }
-
-        @media (min-width: 550px) {
-            .featured-list, .featured-list:last-child {
-                margin: 0 1rem;
-            }
-        }
-    }
-
-    @media (min-width: 600px) {
-        .intro {
-            flex-direction: row-reverse;
-
-            .image {
-                max-height: 425px;
-            }
-        }
-    }
-
-    @media (min-width: 859px) {
-
-        .intro {
-            .info, .image {
-                width: 50%;
-            }
-    
-            .image {
-                margin-top: -80px;
-            }
-        }
-    } 
 }

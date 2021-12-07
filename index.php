@@ -8,104 +8,33 @@
         <div class="container">
             <h1 class="section-title">
                 Yahya Elharony
-                <span class="watermark">Hi, I am</span>
+                <span class="watermark">Hey, it's me</span>
             </h1>
             <div class="intro flex-container">
-                <div class="image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/Yahya_Elharony-Transparent-Picture.png" alt="Yahya Elharony Personal Picture">
-                </div>
                 <div class="info">
                     <div class="details">
                         <p>
-                            <strong>I help non-technical entrepreneurs</strong> to build their online business website or improve an existing one 🚀
+                            <strong>Frontend Lead</strong> @ <a href="https://www.webkeyz.com/">webkeyz</a> 🇪🇬
                         </p>
                         <p>
-                            <strong>I help web development agencies</strong> to get the job done in a fraction of time 👌
+                            <strong>Web Development Mentor</strong> @ <a href="https://openclassrooms.com">OpenClassrooms</a> 🇫🇷
                         </p>
                         <p>
-                            When I am not working; <strong>I <a href="/blog/">write articles</a>, create <a href="https://www.youtube.com/channel/UCcWSbBe_s-T_gZRnqFbtyIA" target="_blank">youtube tutorials</a>, and build <a href="https://github.com/elharony" target="_blank">open-source projects</a> 💻</strong>
+                            I <a href="/blog/">write articles</a>, build online products like; <a href="https://imeicheck.co" target="_blank">IMEICheck.co</a>, <a href="https://iphoneimeicheck.info" target="_blank">iPhoneIMEICheck.info</a>, <a href="https://emojicopypaste.co/" target="_blank">EmojiCopyPaste.co</a>, <a href="https://findfb.id/" target="_blank">FindFB.id</a>, and more!
                         </p>
                     </div>
 
                     <a href="https://www.elharony.com/Yahya-Elharony--Resume.pdf" class="btn btn-reversed">Download Resume</a>
-                    <a href="./contact" class="btn">Let's Work Together</a>
+                    <a href="/contact" class="btn">Let's Work Together</a>
+                </div>
+                <div class="empty">
+                    <p>I used to put my picture here. <br>But I don't like it anymore, <br>Any ideas? <a href="/contact">Let me know</a></p>
                 </div>
             </div>
 
-            <div class="featured">
-                <div class="featured-list">
-                    <p>Big Names Funded my journey</p>
-                    <div class="logos">
-                        <span class="img img-google" title="Google"></span>
-                        <span class="img img-facebook" title="Facebook"></span>
-                    </div>
-                </div>
-                <div class="featured-list schools">
-                    <p>Certified FrontEnd Developer by</p>
-                    <div class="logos">
-                        <span class="img img-udacity" title="Udacity"></span>
-                        <span class="img img-openclassrooms" title="OpenClassrooms"></span>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
-
-    <section class="clients">
-        <div class="container">
-            <h2 class="section-title">Clients</h2>
-        </div>
-        <div class="container">
-            <div class="clients-list">
-
-<?php
-$args = array(
-  'post_type'   => 'clients',
-  'post_status' => 'publish',
-  'orderby' => 'rand',
-  'posts_per_page' => -1
-);
- 
-$clients = new WP_Query( $args );
-if( $clients->have_posts() ) :
-    while( $clients->have_posts() ) :
-    $clients->the_post();
-?>
-
-        <div class="client">
-            <a href="<?php the_field('client_url'); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
-                <?php the_post_thumbnail('medium'); ?>
-            </a>
-        </div>
-
-<?php
-    endwhile;
-    wp_reset_postdata();
-else :
-    echo "<h4>Sorry, no clients available.</h4>";
-endif;
-?>
-            </div>
-        </div>
-    </section>
-
-    <!-- hero -->
-    <!-- <section class="hero">
-        <div class="overlay"></div>
-        <div class="inner">
-            <h2 class="hello-text">
-            Hello in Hieroglyphic!
-            </h2>
-            <h2 class="hello-img">
-                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/H.png" title="'H' Letter in Hieroglyphic" alt="H Letter in Hieroglyphic">
-                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/E.png" title="'E' Letter in Hieroglyphic" alt="E Letter in Hieroglyphic">
-                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="'L' Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
-                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/L.png" title="'L' Letter in Hieroglyphic" alt="L Letter in Hieroglyphic">
-                <img src="<?php // echo get_template_directory_uri(); ?>/img/hieroglyphic/O.png" title="'O' Letter in Hieroglyphic" alt="O Letter in Hieroglyphic">
-            </h2>
-        </div>
-    </section> -->
-
     
     <!-- blog -->
     <section class="blog">

@@ -3,8 +3,14 @@
 	margin: 0;
 }
 
+@font-face {
+	font-family: 'Brandon Text';
+	src: url("./fonts/BrandonText-Regular.otf") format("opentype");
+	font-display: swap;
+}
+
 h1, h2, h3, h4, h5, h6, p, div, span, li, label, input, textarea {
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Brandon Text', sans-serif;
 }
 a, a:link, a:hover, a:active {
 	text-decoration: none;
