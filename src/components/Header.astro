@@ -28,9 +28,11 @@
         <a href="/contact" class="nav-link text-[#d2d2d2] hover:text-[#3212d3] transition-colors duration-200 font-medium">
           Contact
         </a>
-        <a href="/contact" class="btn-primary bg-[#3212d3] hover:bg-[#1e1b69] text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200">
+        <button 
+          class="btn-primary bg-[#3212d3] hover:bg-[#1e1b69] text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 open-booking-modal"
+        >
           Free Consultation
-        </a>
+        </button>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -43,19 +45,21 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="md:hidden mt-4 pb-4 pt-4 border-t border-[#d2d2d2]/20 hidden">
-      <div class="flex flex-col sum">
-          Contact
-        </a>
-        <a href="/contact" class="btn-primary bg-[#3212d3] hover:bg-[#1e1b69] text-white px-6 py-2 rounded-lg fontpace-y-4">
+      <div class="flex flex-col space-y-4">
         <a href="/" class="nav-link text-[#d2d2d2] hover:text-[#3212d3] transition-colors duration-200 font-medium">
           Home
         </a>
         <a href="/blog" class="nav-link text-[#d2d2d2] hover:text-[#3212d3] transition-colors duration-200 font-medium">
           Blog
         </a>
-        <a href="/contact" class="nav-link text-[#d2d2d2] hover:text-[#3212d3] transition-colors duration-200 font-medi-semibold transition-all duration-200 inline-block text-center">
-          Free Consultation
+        <a href="/contact" class="nav-link text-[#d2d2d2] hover:text-[#3212d3] transition-colors duration-200 font-medium">
+          Contact
         </a>
+        <button 
+          class="btn-primary bg-[#3212d3] hover:bg-[#1e1b69] text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 inline-block text-center open-booking-modal"
+        >
+          Free Consultation
+        </button>
       </div>
     </div>
   </nav>
@@ -134,6 +138,22 @@
     
     // Call once on load
     updateHeaderOnScroll();
+
+    // Modal functionality for header buttons
+    const headerModalButtons = document.querySelectorAll('.open-booking-modal');
+    headerModalButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Trigger the modal on the homepage if it exists
+        const modal = document.getElementById('booking-modal');
+        if (modal) {
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        } else {
+          // Fallback to direct Cal.com link if modal doesn't exist
+          window.open('https://cal.com/elharony/free-consultation', '_blank');
+        }
+      });
+    });
   });
 </script>
 

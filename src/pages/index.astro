@@ -91,12 +91,15 @@ const recentPosts = posts
             
             <div class="space-y-6">
               <div class="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" class="btn-primary bg-[#10b981] hover:bg-[#059669] text-white px-8 py-4 rounded-lg font-semibold text-lg group">
+                <button 
+                  id="open-booking-modal"
+                  class="btn-primary bg-[#10b981] hover:bg-[#059669] text-white px-8 py-4 rounded-lg font-semibold text-lg group"
+                >
                   Start a Conversation
                   <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
-                </a>
+                </button>
               </div>
               
               <!-- Social Proof -->
@@ -593,4 +596,168 @@ const recentPosts = posts
   </section>
   
   <Footer slot="footer" />
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="rounded-2xl w-full max-w-5xl h-auto max-h-[90vh] relative shadow-2xl border border-gray-800" style="background-color: rgb(23, 23, 23);">
+      <!-- Close Button (floating) -->
+      <button id="close-booking-modal" class="absolute top-4 right-4 z-10 w-10 h-10 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200 shadow-lg border border-gray-700" style="background-color: rgb(15, 15, 15);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      
+      <!-- Cal.com Embed -->
+      <div class="rounded-2xl overflow-hidden" style="height: auto; padding-top: 4.5rem;">
+        <div style="width:100%;height:100%;overflow:hidden" id="my-cal-inline-free-consultation"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cal inline embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "free-consultation", {origin:"https://app.cal.com"});
+
+    Cal.ns["free-consultation"]("inline", {
+      elementOrSelector:"#my-cal-inline-free-consultation",
+      config: {"layout":"month_view"},
+      calLink: "elharony/free-consultation",
+    });
+
+    Cal.ns["free-consultation"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('booking-modal');
+      const openButton = document.getElementById('open-booking-modal');
+      const closeButton = document.getElementById('close-booking-modal');
+
+      // Open modal with animation
+      openButton.addEventListener('click', function() {
+        modal.classList.remove('hidden');
+        modal.classList.add('modal-opening');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+        
+        // Remove animation class after animation completes
+        setTimeout(() => {
+          modal.classList.remove('modal-opening');
+        }, 300);
+      });
+
+      // Close modal with animation
+      function closeModal() {
+        modal.classList.add('modal-closing');
+        
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('modal-closing');
+          document.body.style.overflow = ''; // Restore background scroll
+        }, 300);
+      }
+
+      closeButton.addEventListener('click', closeModal);
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+  <!-- Cal inline embed code ends -->
+
+  <style>
+    /* Modal animations */
+    #booking-modal {
+      transition: all 0.3s ease-in-out;
+    }
+
+    #booking-modal.modal-opening {
+      animation: modalFadeIn 0.3s ease-out forwards;
+    }
+
+    #booking-modal.modal-closing {
+      animation: modalFadeOut 0.3s ease-in forwards;
+    }
+
+    #booking-modal > div {
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    #booking-modal.modal-opening > div {
+      animation: modalSlideIn 0.3s ease-out forwards;
+    }
+
+    #booking-modal.modal-closing > div {
+      animation: modalSlideOut 0.3s ease-in forwards;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+      }
+      to {
+        opacity: 1;
+        backdrop-filter: blur(4px);
+      }
+    }
+
+    @keyframes modalFadeOut {
+      from {
+        opacity: 1;
+        backdrop-filter: blur(4px);
+      }
+      to {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+      }
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        transform: scale(0.95) translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes modalSlideOut {
+      from {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: scale(0.95) translateY(20px);
+        opacity: 0;
+      }
+    }
+
+    /* Ensure Cal.com embed integrates seamlessly */
+    #my-cal-inline-free-consultation {
+      border-radius: 16px;
+    }
+
+    /* Hide scrollbars but keep functionality */
+    #my-cal-inline-free-consultation::-webkit-scrollbar {
+      display: none;
+    }
+    
+    #my-cal-inline-free-consultation {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </BaseLayout>
