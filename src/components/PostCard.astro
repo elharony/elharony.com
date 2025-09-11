@@ -1,0 +1,60 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  tags?: string[];
+  slug: string;
+}
+
+const { title, description, pubDate, tags, slug } = Astro.props;
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+// Function to strip HTML tags and clean up text
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]*>/g, '') // Remove HTML tags
+    .replace(/&nbsp;/g, ' ') // Replace non-breaking spaces
+    .replace(/&amp;/g, '&') // Fix ampersands
+    .replace(/&lt;/g, '<') // Fix less than
+    .replace(/&gt;/g, '>') // Fix greater than
+    .replace(/&quot;/g, '"') // Fix quotes
+    .replace(/&#8217;/g, "'") // Fix apostrophes
+    .replace(/&#8220;/g, '"') // Fix left double quotes
+    .replace(/&#8221;/g, '"') // Fix right double quotes
+    .replace(/&#8230;/g, '...') // Fix ellipsis
+    .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+    .trim();
+}
+
+// Clean the description
+const cleanDescription = stripHtml(description);
+---
+
+<article class="card group hover:shadow-lg transition-all duration-300">
+  <a href={`/blog/${slug}`} class="block">
+    <div class="flex items-start justify-between mb-3">
+      <time datetime={pubDate.toISOString()} class="text-sm text-[#6b7280] font-medium">
+        {formatDate(pubDate)}
+      </time>
+      <svg class="w-5 h-5 text-[#6b7280] group-hover:text-[#3212d3] transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+      </svg>
+    </div>
+    
+    <h3 class="text-xl font-semibold text-[#1a1a1a] mb-3 group-hover:text-[#3212d3] transition-colors duration-200 line-clamp-2">
+      {title}
+    </h3>
+    
+    <p class="text-[#6b7280] mb-4 line-clamp-3 leading-relaxed">
+      {cleanDescription}
+    </p>
+  </a>
+</article>

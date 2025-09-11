@@ -1,0 +1,88 @@
+---
+// Reading progress bar component
+---
+
+<div id="reading-progress" class="fixed top-0 left-0 w-full h-1 bg-[#e5e7eb] z-50">
+  <div id="progress-bar" class="h-full bg-[#3212d3] transition-all duration-150 ease-out" style="width: 0%"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.getElementById('progress-bar');
+    const article = document.querySelector('article');
+    
+    if (!progressBar || !article) return;
+    
+    let hasCompleted = false;
+    
+    function updateProgress() {
+      const articleTop = article.offsetTop;
+      const articleHeight = article.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.pageYOffset;
+      
+      // Only start progress when we reach the article
+      if (scrollTop < articleTop) {
+        progressBar.style.width = '0%';
+        progressBar.className = 'h-full bg-[#3212d3] transition-all duration-150 ease-out';
+        hasCompleted = false;
+        return;
+      }
+      
+      // Calculate when the article is fully read (when bottom is visible)
+      const articleEnd = articleTop + articleHeight - windowHeight;
+      
+      // Total scrollable distance for reading the article
+      const totalScrollableDistance = articleEnd - articleTop;
+      
+      // Current scroll position relative to article start
+      const currentScrollPosition = scrollTop - articleTop;
+      
+      // Calculate progress percentage (0-100)
+      let progress = (currentScrollPosition / totalScrollableDistance) * 100;
+      
+      // Clamp between 0 and 100
+      progress = Math.max(0, Math.min(100, progress));
+      
+      progressBar.style.width = progress + '%';
+      
+      // Check if we've reached 100% and haven't completed yet
+      if (progress >= 100 && !hasCompleted) {
+        hasCompleted = true;
+        
+        // Add completion animation
+        progressBar.className = 'h-full bg-[#10b981] transition-all duration-500 ease-out';
+        
+        // Add a subtle pulse effect
+        setTimeout(() => {
+          progressBar.style.transform = 'scaleY(1.5)';
+          setTimeout(() => {
+            progressBar.style.transform = 'scaleY(1)';
+          }, 200);
+        }, 100);
+        
+        // Optional: Add a subtle glow effect
+        progressBar.style.boxShadow = '0 0 10px rgba(16, 185, 129, 0.5)';
+        setTimeout(() => {
+          progressBar.style.boxShadow = 'none';
+        }, 1000);
+      }
+    }
+    
+    // Update progress on scroll with throttling
+    let ticking = false;
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+        setTimeout(() => { ticking = false; }, 16); // ~60fps
+      }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+    window.addEventListener('resize', requestTick);
+    
+    // Initial update
+    updateProgress();
+  });
+</script>

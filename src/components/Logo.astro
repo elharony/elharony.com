@@ -1,0 +1,24 @@
+---
+export interface Props {
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+}
+
+const { size = 'md' } = Astro.props;
+
+const sizeClasses = {
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16',
+  xl: 'w-20 h-20',
+  '2xl': 'w-24 h-24'
+};
+---
+
+<div class="logo">
+  <!-- Logo Image -->
+  <img 
+    src="/images/logos/Yahya-Elharony-Logo.jpg" 
+    alt="Yahya Elharony Logo" 
+    class={`${sizeClasses[size]} object-contain drop-shadow-sm`}
+  />
+</div>

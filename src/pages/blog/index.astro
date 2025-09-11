@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+// Get all published posts
+const posts = await getCollection('posts', ({ data }) => {
+  return !data.draft;
+});
+
+// Sort by publication date (newest first)
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout 
+  title="Blog - Yahya Elharony" 
+  description="Technical insights and engineering leadership articles by Yahya Elharony. Learn about scalable systems, team management, and strategic technology decisions."
+>
+  <Header slot="header" />
+  
+  <div class="container mx-auto px-6 py-16">
+    <!-- Hero Section -->
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6">
+        Engineering Insights
+        <span class="block text-[#3212d3]">& Technical Leadership</span>
+      </h1>
+      <p class="text-xl text-[#6b7280] leading-relaxed">
+        Sharing knowledge and experiences from the front lines of 
+        engineering leadership and technical innovation.
+      </p>
+    </div>
+    
+    {sortedPosts.length > 0 ? (
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedPosts.map((post) => (
+            <PostCard
+              title={post.data.title}
+              description={post.data.description}
+              pubDate={post.data.pubDate}
+              tags={post.data.tags}
+              slug={post.slug}
+            />
+          ))}
+        </div>
+      </div>
+    ) : (
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="w-24 h-24 bg-[#f8f9ff] rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <svg class="w-12 h-12 text-[#3212d3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-semibold text-[#1a1a1a] mb-4">
+          Technical Articles Coming Soon
+        </h2>
+        <p class="text-[#6b7280] mb-8">
+          I'm working on sharing insights about engineering leadership, 
+          system architecture, and technical strategy. Check back soon for 
+          valuable content that will help you grow as an engineering leader.
+        </p>
+        <a href="/contact" class="btn-primary">
+          Get Notified When I Publish
+        </a>
+      </div>
+    )}
+  </div>
+  
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary-color: #3212d3;
+  --primary-light: #4c2ddb;
+  --primary-dark: #2a0fb8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b7280;
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --border-color: #e5e7eb;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+/* Custom Components */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-[#3212d3] border border-transparent rounded-lg transition-all duration-200 hover:bg-[#2a0fb8] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#3212d3] focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-[#3212d3] bg-white border border-[#3212d3] rounded-lg transition-all duration-200 hover:bg-[#3212d3] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#3212d3] focus:ring-offset-2;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-[#3212d3] bg-transparent border border-transparent rounded-lg transition-all duration-200 hover:bg-[#f8f9ff] focus:outline-none focus:ring-2 focus:ring-[#3212d3] focus:ring-offset-2;
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-[#4a4a4a] hover:text-[#3212d3] transition-colors duration-200 font-medium;
+}
+
+.nav-link.active {
+  @apply text-[#3212d3];
+}
+
+/* Cards */
+.card {
+  @apply bg-white border border-[#e5e7eb] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+
+.card-elevated {
+  @apply bg-white border border-[#e5e7eb] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+/* Form Elements */
+.form-input {
+  @apply w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3212d3] focus:border-transparent transition-all duration-200 bg-white text-[#1a1a1a];
+}
+
+.form-textarea {
+  @apply w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3212d3] focus:border-transparent transition-all duration-200 resize-none bg-white text-[#1a1a1a];
+}
+
+/* Logo Styles */
+.logo {
+  @apply flex items-center space-x-3;
+}
+
+.logo-icon {
+  @apply w-10 h-10 bg-[#3212d3] rounded-lg flex items-center justify-center text-white font-bold text-lg;
+}
+
+.logo-text {
+  @apply flex flex-col;
+}
+
+.logo-text-primary {
+  @apply text-xl font-bold text-[#1a1a1a] leading-tight;
+}
+
+.logo-text-secondary {
+  @apply text-sm text-[#6b7280] tracking-wider;
+}
+
+/* Hero Section */
+.hero-gradient {
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply py-20;
+}
+
+.section-padding-sm {
+  @apply py-12;
+}
+
+/* Code Blocks */
+pre[class*="language-"] {
+  @apply relative rounded-xl p-6 overflow-x-auto bg-[#1a1a1a] text-gray-100;
+}
+
+pre[class*="language-"]::before {
+  content: attr(data-language);
+  @apply absolute top-3 right-3 text-xs bg-[#3212d3] text-white px-2 py-1 rounded;
+  text-transform: uppercase;
+}
+
+.copy-code {
+  @apply absolute top-3 right-16 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs cursor-pointer transition-colors duration-200;
+}
+
+/* Prose Styling */
+.prose {
+  @apply text-[#4a4a4a] leading-relaxed;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply text-[#1a1a1a] font-semibold;
+}
+
+.prose a {
+  @apply text-[#3212d3] hover:text-[#2a0fb8] transition-colors duration-200;
+}
+
+.prose code {
+  @apply bg-[#f8f9ff] text-[#3212d3] px-2 py-1 rounded text-sm font-medium;
+}
+
+.prose pre {
+  @apply bg-[#1a1a1a] text-gray-100;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-gray-100;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .section-padding {
+    @apply py-12;
+  }
+}
+
+/* Fix any remaining dark mode issues */
+.dark {
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --border-color: #374151;
+}
+
+.dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.dark .card {
+  @apply bg-[#1f2937] border-[#374151];
+}
+
+.dark .form-input, .dark .form-textarea {
+  @apply bg-[#1f2937] border-[#374151] text-white;
+}

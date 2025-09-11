@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Contact - Yahya Elharony" 
+  description="Get in touch with Yahya Elharony for engineering leadership consulting, technical strategy guidance, or collaboration opportunities."
+>
+  <Header slot="header" />
+  
+  <div class="container mx-auto px-6 py-16">
+    <!-- Hero Section -->
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6">
+        Let's Build Something
+        <span class="block text-[#3212d3]">Exceptional Together</span>
+      </h1>
+      <p class="text-xl text-[#6b7280] leading-relaxed">
+        Ready to elevate your engineering team or need strategic technical guidance? 
+        I'm here to help you achieve your goals.
+      </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="card-elevated">
+          <h2 class="text-2xl font-semibold text-[#1a1a1a] mb-6">
+            Send a Message
+          </h2>
+          
+          <form id="contactForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                  First Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName" 
+                  required
+                  class="form-input"
+                />
+              </div>
+              
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                  Last Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName" 
+                  required
+                  class="form-input"
+                />
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                  Email *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="form-input"
+                />
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                  Phone
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  class="form-input"
+                />
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-[#1a1a1a] mb-3">
+                How can I help you? *
+              </label>
+              <div class="space-y-3">
+                <label class="flex items-center">
+                  <input type="radio" name="helpType" value="build-new-website" required class="mr-3 text-[#3212d3] focus:ring-[#3212d3]" />
+                  <span class="text-[#6b7280]">I want to build a website for my business</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="helpType" value="improve-existing-website" required class="mr-3 text-[#3212d3] focus:ring-[#3212d3]" />
+                  <span class="text-[#6b7280]">Already have a website, but want to upgrade/renew it</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="helpType" value="outsource-work" required class="mr-3 text-[#3212d3] focus:ring-[#3212d3]" />
+                  <span class="text-[#6b7280]">We are a company, and want to outsource work to you</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="helpType" value="opportunity" required class="mr-3 text-[#3212d3] focus:ring-[#3212d3]" />
+                  <span class="text-[#6b7280]">I have an opportunity for you</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="helpType" value="other" required class="mr-3 text-[#3212d3] focus:ring-[#3212d3]" />
+                  <span class="text-[#6b7280]">Something else!</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="urgency" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                  How urgent is that? *
+                </label>
+                <select 
+                  id="urgency" 
+                  name="urgency" 
+                  required
+                  class="form-input"
+                >
+                  <option value="">Select urgency</option>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+                <p class="text-xs text-[#6b7280] mt-1">This will never affect the response rate</p>
+              </div>
+              
+              <div>
+                <label for="budget" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                  Estimated Budget *
+                </label>
+                <select 
+                  id="budget" 
+                  name="budget" 
+                  required
+                  class="form-input"
+                >
+                  <option value="">Select budget</option>
+                  <option value="extra_small_project">0 - 250$</option>
+                  <option value="small_project">250$ - 1000$</option>
+                  <option value="medium_project">1000$ - 5000$</option>
+                  <option value="big_project">+5000$</option>
+                </select>
+                <p class="text-xs text-[#6b7280] mt-1">Accepted payments in USD/EURO/GBP/AUD/NZD</p>
+              </div>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-[#1a1a1a] mb-2">
+                Message *
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4" 
+                required
+                placeholder="Please keep your message as detailed as possible"
+                class="form-textarea"
+              ></textarea>
+            </div>
+            
+            <div>
+              <label class="flex items-center">
+                <input type="checkbox" name="receiveOffers" class="mr-3 text-[#3212d3] focus:ring-[#3212d3]" />
+                <span class="text-[#6b7280]">
+                  Wants to receive offers, discounts and updates? (No Spam, I promise!)
+                </span>
+              </label>
+            </div>
+            
+            <div id="formMessage" class="hidden p-4 rounded-lg"></div>
+            
+            <button 
+              type="submit" 
+              class="btn-primary w-full"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <div class="card">
+            <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">
+              Direct Contact
+            </h3>
+            <div class="space-y-4">
+              <a 
+                href="mailto:hello@elharony.com" 
+                class="flex items-center space-x-3 text-[#6b7280] hover:text-[#3212d3] transition-colors duration-200"
+              >
+                <div class="w-10 h-10 bg-[#f8f9ff] rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#3212d3]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                  </svg>
+                </div>
+                <span>hello@elharony.com</span>
+              </a>
+              
+              <a 
+                href="https://linkedin.com/in/elharony" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center space-x-3 text-[#6b7280] hover:text-[#3212d3] transition-colors duration-200"
+              >
+                <div class="w-10 h-10 bg-[#f8f9ff] rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#3212d3]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span>LinkedIn</span>
+              </a>
+              
+              <a 
+                href="https://github.com/elharony" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center space-x-3 text-[#6b7280] hover:text-[#3212d3] transition-colors duration-200"
+              >
+                <div class="w-10 h-10 bg-[#f8f9ff] rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#3212d3]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">
+              Response Times
+            </h3>
+            <p class="text-[#6b7280] mb-4">
+              I typically respond to inquiries within 24-48 hours. For urgent matters, 
+              LinkedIn messaging is usually the fastest way to reach me.
+            </p>
+            
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="text-[#6b7280]">Time Zone:</span>
+                <span class="font-medium text-[#1a1a1a]">GMT+2 (Cairo, Egypt)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#6b7280]">Availability:</span>
+                <span class="font-medium text-[#1a1a1a]">Monday - Friday</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">
+              What to Expect
+            </h3>
+            <ul class="space-y-2 text-[#6b7280]">
+              <li class="flex items-start space-x-2">
+                <svg class="w-4 h-4 text-[#3212d3] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Detailed response within 24-48 hours</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-4 h-4 text-[#3212d3] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Initial consultation to understand your needs</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-4 h-4 text-[#3212d3] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Tailored proposal based on your requirements</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <Footer slot="footer" />
+  
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const messageDiv = document.getElementById('formMessage') as HTMLDivElement;
+      
+      // Show loading state
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+      messageDiv.className = 'hidden';
+      
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          messageDiv.className = 'p-4 rounded-lg bg-green-50 text-green-800 border border-green-200';
+          messageDiv.textContent = result.message;
+          form.reset();
+        } else {
+          messageDiv.className = 'p-4 rounded-lg bg-red-50 text-red-800 border border-red-200';
+          messageDiv.textContent = result.error;
+        }
+      } catch (error) {
+        messageDiv.className = 'p-4 rounded-lg bg-red-50 text-red-800 border border-red-200';
+        messageDiv.textContent = 'Sorry, there was an error sending your message. Please try again later.';
+      } finally {
+        submitButton.textContent = 'Send Message';
+        submitButton.disabled = false;
+        messageDiv.classList.remove('hidden');
+      }
+    });
+  </script>
+</BaseLayout>

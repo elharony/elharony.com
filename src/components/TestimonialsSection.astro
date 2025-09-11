@@ -1,0 +1,358 @@
+---
+// Testimonials section component
+---
+
+<section class="section-padding bg-white">
+  <div class="container mx-auto px-6 mb-20">
+    <div class="text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6">
+        Not Convinced? See What Others Say
+      </h2>
+      <p class="text-xl text-[#6b7280] max-w-3xl mx-auto leading-relaxed">
+        Real feedback from mentees, clients, and colleagues who have worked with me
+      </p>
+    </div>
+  </div>
+  
+  <!-- Mobile Slider (hidden on tablet+) -->
+  <div class="md:hidden px-4">
+    <div class="testimonials-slider overflow-hidden">
+      <div class="testimonials-track flex transition-transform duration-300 ease-in-out" id="mobile-slider">
+        <!-- Mobile testimonials will be populated by JavaScript -->
+      </div>
+    </div>
+    <!-- Slider controls -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <button id="prev-btn" class="w-10 h-10 bg-[#3212d3] text-white rounded-full flex items-center justify-center hover:bg-[#1e1b69] transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button id="next-btn" class="w-10 h-10 bg-[#3212d3] text-white rounded-full flex items-center justify-center hover:bg-[#1e1b69] transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Desktop/Tablet Columns (hidden on mobile) -->
+  <div class="testimonials hidden md:block">
+    <div class="testimonials-list px-6">
+      <!-- All testimonials will be populated by JavaScript -->
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* Global testimonial styles - highest priority */
+  article.testimonial {
+    margin-bottom: 1rem !important;
+    break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  
+  .testimonial {
+    margin-bottom: 1rem !important;
+    break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  /* Desktop/Tablet Columns */
+  .testimonials .testimonials-list {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .testimonials .testimonials-list {
+      column-count: 3;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .testimonials .testimonials-list {
+      column-count: 4;
+    }
+  }
+
+  /* Testimonial cards - multiple selectors for dynamic content */
+  .testimonials .testimonials-list .testimonial,
+  .testimonials .testimonials-list article.testimonial,
+  .testimonials-list .testimonial,
+  .testimonials-list article.testimonial,
+  .testimonials-list article {
+    margin: 0 0 1rem !important;
+    break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .testimonial {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .testimonial:hover {
+  
+  /* Force column break styles with high specificity */
+  .testimonials-list article.testimonial,
+  .testimonials-list .testimonial {
+    margin-bottom: 1rem !important;
+    break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  
+  /* Additional targeting for dynamically created elements */
+  .testimonials .testimonials-list > article,
+  .testimonials .testimonials-list > .testimonial {
+    margin-bottom: 1rem !important;
+    break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  /* Mobile Slider */
+  .testimonials-slider {
+    width: 100%;
+  }
+  
+  .testimonials-track {
+    display: flex;
+    width: calc(100% * 22); /* 22 testimonials */
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const testimonials = [
+      {
+        text: "Great session with Eng. Yehia He shared some <strong>excellent tips and tricks</strong> for improving my job search strategy, enhancing my resume, and optimizing my LinkedIn profile. Really appreciate the <strong>guidance and insights</strong>.",
+        author: "Ahmed Ehab",
+        role: "Backend Engineer, SpaceMatch"
+      },
+      {
+        text: "I honestly found it <strong>super helpful and really enjoyable</strong>. I truly appreciated all your comments and feedback, they gave me <strong>clear direction and opened up new ways of thinking</strong>. It felt like such a comfortable and insightful session.",
+        author: "Aya Mohamed Nafed",
+        role: "Full Stack .Net & Angular Developer"
+      },
+      {
+        text: "Had a really <strong>valuable session</strong> recently. The person was <strong>respectful, insightful</strong>, and really helped me understand how to work on my personal branding and present my work in a clearer and more impactful way. <strong>Highly recommend</strong> doing sessions like this if you're looking to level up your professional presence.",
+        author: "Belal Salah",
+        role: "Frontend Engineer, Misr University"
+      },
+      {
+        text: "All I want to say is that I felt like I was talking to someone who <strong>genuinely cared about my best interests</strong>. When he noticed that I had some misconceptions, he was <strong>very patient with me</strong>, taking the time to thoroughly explain the situation until everything became clear.",
+        author: "Abdelrahman Alaa",
+        role: "Student, Zagazig University"
+      },
+      {
+        text: "My second project with Yahya and just as impressed. I'm not even bothering to open new projects up to bids, <strong>I will be hiring him straight away</strong>. I <strong>highly recommend his work ethic, skills and communication</strong>.",
+        author: "Awmalloy",
+        role: "Founder of BetweenCoffees.com"
+      },
+      {
+        text: "Really great working with yahyaelharony. <strong>Great communication and work</strong>. Would <strong>definitely recommend</strong>.",
+        author: "Simon R",
+        role: "Freelancer.com"
+      },
+      {
+        text: "He is definitely <strong>one of the BEST freelancers</strong> I've worked with. <strong>Fantastic work with excellent communication</strong> and best of all, he is <strong>totally reliable and cares about resolving issues</strong> and providing the best support. He optimized the site speed and the User Experience score was 98. But Nooooo, he decided he wanted to reach 100 and so he did it. <strong>You will not regret if you choose him for your project</strong>. I will definitely hire him again for my next project.",
+        author: "Tyler W",
+        role: "Freelancer.com"
+      },
+      {
+        text: "I am privileged to have met Yahya and for having the chance to get <strong>beyond-expected support</strong> in turning my fact-showing websites into <strong>trendy, professional-looking and feature-packed platforms</strong>, not only showing static info but actually working for me: <strong>Automating many processes, adding multiple integrations</strong>, creating a pleasant experience for the visitors while capturing interested leads to my sales funnel. I will definitely continue working with Yahya in the future, as he provides not only <strong>high-quality of work</strong>, but a <strong>very structured co-development process</strong> and all done in a fraction of time, offering <strong>incredible speed of making things happen</strong>.",
+        author: "Katerina Klezlova",
+        role: "Founder of FortunyConsulting.com"
+      },
+      {
+        text: "<strong>Absolute legend</strong>. Would <strong>rehire again (and have already)</strong> – he <strong>stuck to the deadline</strong> which was a tight one and <strong>turned around feedback fast</strong>. I <strong>strongly recommend</strong>!",
+        author: "Alex M",
+        role: "Freelancer.com"
+      },
+      {
+        text: "Very helpful Freelancer! Found a <strong>solution to a very stubborn issue</strong> and <strong>resolved the matter promptly</strong>. <strong>Highly professional and always willing to help</strong>!",
+        author: "Manpreet Singh",
+        role: "Upwork.com"
+      },
+      {
+        text: "Great, <strong>fast work</strong>, yet again. <strong>Swift at doing the work and quick at replying to messages</strong>. <strong>Recommended</strong> ⭐⭐⭐",
+        author: "Pete Walton",
+        role: "Upwork.com"
+      },
+      {
+        text: "Not only was his work <strong>fantastic</strong>, he <strong>guided me and advised me</strong> on further improving my site. I <strong>cannot recommend yahyaelharony high enough</strong>. He will be my <strong>go to person for any further work</strong>. <strong>10/10</strong>",
+        author: "Joelmolloy86",
+        role: "Freelancer.com"
+      },
+      {
+        text: "Yahya has a very <strong>efficient and effective way</strong> of driving his clients through website building projects. I had never built a website before meeting Yahya and am very far away from being comfortable with the technical parts. With his <strong>great process and only 2 FaceTime meetings</strong>, we did everything else via email which was <strong>greatly efficient</strong>. Yahya would send me very <strong>easy and detailed enough instructions</strong> of what I had to do/provide and he <strong>implemented everything in record time</strong> in parallel. Also after go live of the site he was <strong>very keen to support</strong> for any issue or question. I can <strong>highly recommend Yahya</strong>!",
+        author: "Valerie Trocmé",
+        role: "Founder of Valfoodie.com"
+      },
+      {
+        text: "Yahya Elharony proved to be the person I needed for my project and more, he was <strong>professional and delivered more than I requested</strong> as well as <strong>offered tips on how to further improve my product</strong> which was extremely welcome coming from an expert who knows what is what. Thank you Yahya!",
+        author: "Andyzro",
+        role: "Freelancer.com"
+      },
+      {
+        text: "This Freelancer Rocks… If you are looking for a <strong>reliable and trusty freelancer</strong>, <strong>look no further</strong>, this is your guy. Thank you very much for your help. <strong>We will hire you again</strong>.",
+        author: "Pepino Studio",
+        role: "Freelancer.com"
+      },
+      {
+        text: "Yahya is an <strong>incredibly reliable and dynamic professional</strong>. I had the pleasure to work with him for three years. From the start, he <strong>volunteered to assist with last minute student needs</strong> and prepared <strong>fascinating webinars</strong> on topics like the history of Javascript frameworks. Yahya's knowledge is quite deep but what makes him an <strong>absolute delight in the workplace</strong> is his ability to <strong>phrase things in a way that is easy for people to understand</strong>. This was true for the students that he worked with but it was also true for me, a non technical person working with experts. At times it was a challenge for me to follow important technical issues but Yahya was <strong>always willing to explain things in a clear cut way</strong>. His ability to <strong>provide results while remaining accessible and flexible</strong> made Yahya one of my <strong>favorite mentors for collaborations</strong>.",
+        author: "Lesley Skousen",
+        role: "Student Success Manager at OpenClassrooms"
+      },
+      {
+        text: "Yahya has been an <strong>invaluable support</strong> for TANF for many years sharing his <strong>exceptional web development, coding, UX skills</strong>, and <strong>out-of-the-box interface thinking</strong> to make TANF not only have a website but assure the needed functionality any charity or NGO needs in today's interconnected world. Thanks to the new website, its new features and multiple integrations we are finally able to share our mission, <strong>raise funds effortlessly</strong> and give all our sponsors and volunteers an <strong>attractive and user-friendly way</strong> to access information about our impact, events and the multiple projects we are running.",
+        author: "Laud Akuffo",
+        role: "Founder of Tanfghana.org"
+      },
+      {
+        text: "Wow, <strong>best experience on freelancer.com</strong>. This guy is <strong>awesome and listen to your need</strong>.",
+        author: "Kevin Michaud",
+        role: "Freelancer.com"
+      },
+      {
+        text: "Yahya is one of the most <strong>disciplined and all-around brilliant professional</strong> I've had the pleasure to mentor. He is very <strong>thoughtful and mindful</strong> about how he invests his time, <strong>dedicated to the mission</strong> he contributes to and has a <strong>strong can-do attitude</strong>. <strong>No challenge is too big</strong> (if anything, that's probably where he thrives the most). And on top of all that, the cherry on top of the cake, he's a <strong>delight of a person</strong>. Yahya is a <strong>pleasure to mentor</strong> and I know he has an <strong>extremely bright future ahead of him</strong> – and I'll be in the tribunes, cheering him on!",
+        author: "Gustavo Imhof",
+        role: "Head of CX & Marketing at Quanta Law"
+      },
+      {
+        text: "<strong>One of the best frontend developers</strong> I've ever worked with and I had my fair share of those, <strong>true commitment, dedication and hard work</strong>. <strong>Exceptional understanding of frontend code organizations and quality</strong>, knowledge and practicality of core programming principles. <strong>Highly recommend him for anyone in the look for an exceptional team player</strong>.",
+        author: "Mohamad Elbialy",
+        role: "Chief Technology Officer"
+      }
+    ];
+
+    // Shuffle function to randomize testimonials order
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // Shuffle testimonials on each page load
+    const shuffledTestimonials = shuffleArray(testimonials);
+
+    const slider = document.getElementById('mobile-slider');
+    const desktopList = document.querySelector('.testimonials-list');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentSlide = 0;
+
+    function createTestimonialCard(testimonial, isMobile = false) {
+      const card = document.createElement('article');
+      card.className = isMobile ? "w-full flex-shrink-0 px-2" : "testimonial bg-white rounded-2xl p-8 border border-[#f0f0f0] hover:border-[#e0e0e0] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group";
+      
+      // Add inline styles for column break behavior
+      if (!isMobile) {
+        card.style.marginBottom = "1rem";
+        card.style.breakInside = "avoid";
+        card.style.webkitColumnBreakInside = "avoid";
+        card.style.pageBreakInside = "avoid";
+      }
+      
+      const cardContent = isMobile ? `
+        <article class="bg-white rounded-2xl p-6 border border-[#f0f0f0] hover:border-[#e0e0e0] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+          <div class="w-10 h-10 bg-[#f8f9ff] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#3212d3] transition-colors duration-300">
+            <svg class="w-5 h-5 text-[#3212d3] group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+          </div>
+          <blockquote class="text-[#1a1a1a] mb-6 leading-relaxed text-sm font-medium">
+            ${testimonial.text}
+          </blockquote>
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-[#3212d3] to-[#1e1b69] rounded-full flex items-center justify-center">
+              <span class="text-white font-semibold text-xs">${testimonial.author.split(' ').map(n => n[0]).join('').slice(0, 2)}</span>
+            </div>
+            <div>
+              <div class="font-semibold text-[#1a1a1a] text-sm">${testimonial.author}</div>
+              <div class="text-[#6b7280] text-xs">${testimonial.role}</div>
+            </div>
+          </div>
+        </article>
+      ` : `
+        <div class="w-12 h-12 bg-[#f8f9ff] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3212d3] transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#3212d3] group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+          </svg>
+        </div>
+        <blockquote class="text-[#1a1a1a] mb-8 leading-relaxed text-base font-medium">
+          ${testimonial.text}
+        </blockquote>
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#3212d3] to-[#1e1b69] rounded-full flex items-center justify-center">
+            <span class="text-white font-semibold text-sm">${testimonial.author.split(' ').map(n => n[0]).join('').slice(0, 2)}</span>
+          </div>
+          <div>
+            <div class="font-semibold text-[#1a1a1a] text-sm">${testimonial.author}</div>
+            <div class="text-[#6b7280] text-xs">${testimonial.role}</div>
+          </div>
+        </div>
+      `;
+      
+      card.innerHTML = cardContent;
+      return card;
+    }
+
+    function renderMobileSlider() {
+      if (!slider) return;
+      slider.innerHTML = '';
+      shuffledTestimonials.forEach((testimonial) => {
+        const card = createTestimonialCard(testimonial, true);
+        slider.appendChild(card);
+      });
+    }
+
+    function renderDesktopList() {
+      if (!desktopList) return;
+      desktopList.innerHTML = '';
+      shuffledTestimonials.forEach((testimonial) => {
+        const card = createTestimonialCard(testimonial, false);
+        desktopList.appendChild(card);
+      });
+    }
+
+    function updateSlider() {
+      if (!slider) return;
+      const translateX = -currentSlide * 100;
+      slider.style.transform = `translateX(${translateX}%)`;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % shuffledTestimonials.length;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + shuffledTestimonials.length) % shuffledTestimonials.length;
+      updateSlider();
+    }
+
+    // Initialize both mobile slider and desktop list
+    renderMobileSlider();
+    renderDesktopList();
+
+    // Event listeners for mobile slider
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Auto-play for mobile slider
+    if (slider) {
+      setInterval(nextSlide, 4000);
+    }
+  });
+</script>
