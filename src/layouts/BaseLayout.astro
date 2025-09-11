@@ -54,6 +54,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <slot />
       </main>
       <slot name="footer" />
+
+      <style>
+        /* Ensure content isn't overlapped by fixed header on non-home pages */
+        body:not(.home) main {
+          margin-top: 80px; /* approx header height */
+        }
+
+        @media (min-width: 768px) {
+          body:not(.home) main {
+            margin-top: 96px;
+          }
+        }
+      </style>
     </div>
   </body>
 </html>

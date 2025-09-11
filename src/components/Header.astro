@@ -2,7 +2,7 @@
 // Header component with scroll-based transparency
 ---
 
-<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out opacity-0 pointer-events-none">
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       
@@ -10,9 +10,9 @@
       <div class="flex items-center">
         <a href="/" class="flex items-center space-x-3">
           <img 
-            src="/images/logos/Yahya-Elharony-Logo.jpg" 
+            src="/images/logos/Yahya-Elharony-Logo.png" 
             alt="Yahya Elharony Logo" 
-            class="w-12 h-12 object-contain drop-shadow-sm"
+            class="w-32 h-12 object-contain drop-shadow-sm"
           />
         </a>
       </div>
@@ -130,14 +130,52 @@
       }
     }
 
-    // Initial state - transparent
-    header.classList.add('transparent');
-    
-    // Listen for scroll events
-    window.addEventListener('scroll', updateHeaderOnScroll);
-    
-    // Call once on load
-    updateHeaderOnScroll();
+    // Page-aware header behavior
+    const isHome = window.location.pathname === '/';
+    if (isHome) {
+      document.body.classList.add('home');
+    } else {
+      document.body.classList.remove('home');
+    }
+
+    // Show/Hide header around a specific threshold
+    const THRESHOLD = 150;
+
+    function toggleHeader() {
+      const scrolled = window.scrollY;
+      if (scrolled > THRESHOLD) {
+        header.classList.remove('opacity-0', 'pointer-events-none');
+        updateHeaderOnScroll();
+      } else {
+        header.classList.add('opacity-0', 'pointer-events-none');
+        // keep transparent style when hidden
+        header.classList.add('transparent');
+        header.classList.remove('scrolled');
+      }
+    }
+
+    if (isHome) {
+      // Home: hidden at load, reveal after threshold and apply scroll styling
+      header.classList.add('transparent');
+      window.addEventListener('scroll', toggleHeader);
+      window.addEventListener('scroll', updateHeaderOnScroll);
+      // Initial check on load
+      toggleHeader();
+    } else {
+      // Other pages: header visible and scrolled style by default
+      header.classList.remove('opacity-0', 'pointer-events-none');
+      header.classList.add('scrolled');
+      header.classList.remove('transparent');
+      // Ensure dark text styles for nav
+      navLinks.forEach(link => {
+        link.classList.remove('text-[#d2d2d2]', 'hover:text-[#3212d3]');
+        link.classList.add('text-[#1a1a1a]', 'hover:text-[#3212d3]');
+      });
+      mobileMenuButton.classList.remove('text-[#d2d2d2]', 'hover:text-[#3212d3]');
+      mobileMenuButton.classList.add('text-[#1a1a1a]', 'hover:text-[#3212d3]');
+      mobileMenu.classList.remove('border-[#d2d2d2]/20');
+      mobileMenu.classList.add('border-[#e5e7eb]');
+    }
 
     // Modal functionality for header buttons
     const headerModalButtons = document.querySelectorAll('.open-booking-modal');

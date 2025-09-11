@@ -11,7 +11,7 @@ public/
 ├── favicon.ico
 ├── images/
 │   └── logos/
-│       └── Yahya-Elharony-Logo.jpg
+│       └── Yahya-Elharony-Logo.png
 └── robots.txt
 ```
 
@@ -24,7 +24,7 @@ public/
 - **favicon-96x96.png** - 96x96 pixel favicon
 
 ### Logo Files
-- **Yahya-Elharony-Logo.jpg** - Your actual logo image used in:
+- **Yahya-Elharony-Logo.png** - Your actual logo image used in:
   - Header navigation
   - About page profile section
   - Blog post author bio section
