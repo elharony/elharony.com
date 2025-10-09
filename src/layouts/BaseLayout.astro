@@ -62,7 +62,7 @@ const isProd = import.meta.env.PROD;
       </>
     )}
   </head>
-  <body class="min-h-screen bg-white text-[#1a1a1a] antialiased">
+  <body class={`min-h-screen bg-white text-[#1a1a1a] antialiased ${Astro.url.pathname === '/' ? 'home' : ''}`}>
     <div class="flex flex-col min-h-screen">
       <slot name="header" />
       <main class="flex-grow">

@@ -130,13 +130,8 @@
       }
     }
 
-    // Page-aware header behavior
-    const isHome = window.location.pathname === '/';
-    if (isHome) {
-      document.body.classList.add('home');
-    } else {
-      document.body.classList.remove('home');
-    }
+    // Page-aware header behavior (body.home is set server-side in BaseLayout)
+    const isHome = document.body.classList.contains('home');
 
     // Show/Hide header around a specific threshold
     const THRESHOLD = 150;
