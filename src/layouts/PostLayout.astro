@@ -64,7 +64,7 @@ const jsonLd = {
       </div>
       
       {tags && tags.length > 0 && (
-        <div class="flex flex-wrap gap-2 mb-8">
+        <div class="flex flex-wrap gap-2 mb-8 sr-only" aria-hidden="true">
           {tags.map(tag => (
             <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[#f8f9ff] text-[#3212d3]">
               {tag}
