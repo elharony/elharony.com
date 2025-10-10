@@ -130,35 +130,39 @@
   // @ts-nocheck
   document.addEventListener('DOMContentLoaded', function() {
     /**
-     * @typedef {{ text: string; author: string; role: string; photo?: string }} Testimonial
+     * @typedef {{ text: string; author: string; role: string; photo?: string; linkedin?: string }} Testimonial
      */
     /** @type {Testimonial[]} */
     const testimonials = [
       {
         text: "Great session with Eng. Yehia He shared some <strong>excellent tips and tricks</strong> for improving my job search strategy, enhancing my resume, and optimizing my LinkedIn profile. Really appreciate the <strong>guidance and insights</strong>.",
         author: "Ahmed Ehab",
-        role: "Backend Engineer, SpaceMatch"
+        role: "Backend Engineer, SpaceMatch",
+        photo: "/images/testimonials/Ahmed-Ehab.jpg"
       },
       {
         text: "I honestly found it <strong>super helpful and really enjoyable</strong>. I truly appreciated all your comments and feedback, they gave me <strong>clear direction and opened up new ways of thinking</strong>. It felt like such a comfortable and insightful session.",
         author: "Aya Mohamed Nafed",
-        role: "Full Stack .Net & Angular Developer"
+        role: "Full Stack .Net & Angular Developer",
+        photo: "/images/testimonials/Aya-Mohamed.png"
       },
       {
         text: "Had a really <strong>valuable session</strong> recently. The person was <strong>respectful, insightful</strong>, and really helped me understand how to work on my personal branding and present my work in a clearer and more impactful way. <strong>Highly recommend</strong> doing sessions like this if you're looking to level up your professional presence.",
         author: "Belal Salah",
-        role: "Frontend Engineer, Misr University"
+        role: "Frontend Engineer",
+        photo: "/images/testimonials/Belal-Salah.png"
       },
       {
         text: "All I want to say is that I felt like I was talking to someone who <strong>genuinely cared about my best interests</strong>. When he noticed that I had some misconceptions, he was <strong>very patient with me</strong>, taking the time to thoroughly explain the situation until everything became clear.",
         author: "Abdelrahman Alaa",
-        role: "Student, Zagazig University",
+        role: "Frontend Developer",
         photo: "/images/testimonials/Abdelrahman-Alaa.jpg"
       },
       {
         text: "My second project with Yahya and just as impressed. I'm not even bothering to open new projects up to bids, <strong>I will be hiring him straight away</strong>. I <strong>highly recommend his work ethic, skills and communication</strong>.",
         author: "Awmalloy",
-        role: "Founder of BetweenCoffees.com"
+        role: "Founder of BetweenCoffees.com",
+        photo: "/images/testimonials/Anthony-Malloy.png",
       },
       {
         text: "Really great working with yahyaelharony. <strong>Great communication and work</strong>. Would <strong>definitely recommend</strong>.",
@@ -173,7 +177,9 @@
       {
         text: "I am privileged to have met Yahya and for having the chance to get <strong>beyond-expected support</strong> in turning my fact-showing websites into <strong>trendy, professional-looking and feature-packed platforms</strong>, not only showing static info but actually working for me: <strong>Automating many processes, adding multiple integrations</strong>, creating a pleasant experience for the visitors while capturing interested leads to my sales funnel. I will definitely continue working with Yahya in the future, as he provides not only <strong>high-quality of work</strong>, but a <strong>very structured co-development process</strong> and all done in a fraction of time, offering <strong>incredible speed of making things happen</strong>.",
         author: "Katerina Klezlova",
-        role: "Founder of FortunyConsulting.com"
+        role: "Founder of FortunyConsulting.com",
+        photo: "/images/testimonials/Katerina-Klezlova.jpg",
+        linkedin: "https://www.linkedin.com/in/klezlova/"
       },
       {
         text: "<strong>Absolute legend</strong>. Would <strong>rehire again (and have already)</strong> – he <strong>stuck to the deadline</strong> which was a tight one and <strong>turned around feedback fast</strong>. I <strong>strongly recommend</strong>!",
@@ -198,7 +204,10 @@
       {
         text: "Yahya has a very <strong>efficient and effective way</strong> of driving his clients through website building projects. I had never built a website before meeting Yahya and am very far away from being comfortable with the technical parts. With his <strong>great process and only 2 FaceTime meetings</strong>, we did everything else via email which was <strong>greatly efficient</strong>. Yahya would send me very <strong>easy and detailed enough instructions</strong> of what I had to do/provide and he <strong>implemented everything in record time</strong> in parallel. Also after go live of the site he was <strong>very keen to support</strong> for any issue or question. I can <strong>highly recommend Yahya</strong>!",
         author: "Valerie Trocmé",
-        role: "Founder of Valfoodie.com"
+        role: "Founder of Valfoodie.com",
+        photo: "/images/testimonials/Valerie-Trocme.jpg",
+        linkedin: "https://www.linkedin.com/in/val%C3%A9rie-trocme-delbeke-611b87229/"
+      
       },
       {
         text: "Yahya Elharony proved to be the person I needed for my project and more, he was <strong>professional and delivered more than I requested</strong> as well as <strong>offered tips on how to further improve my product</strong> which was extremely welcome coming from an expert who knows what is what. Thank you Yahya!",
