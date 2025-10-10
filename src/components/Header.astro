@@ -150,7 +150,7 @@
     }
 
     if (isHome) {
-      // Home: hidden at load, reveal after threshold and apply scroll styling
+      // Home: starts hidden, reveal after threshold and apply scroll styling
       header.classList.add('transparent');
       window.addEventListener('scroll', toggleHeader);
       window.addEventListener('scroll', updateHeaderOnScroll);
@@ -213,5 +213,11 @@
   
   #mobile-menu {
     transition: border-color 0.3s ease;
+  }
+  
+  /* Ensure header is visible on non-home pages immediately */
+  body:not(.home) #main-header {
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 </style>
