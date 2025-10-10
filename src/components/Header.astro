@@ -176,14 +176,17 @@
     const headerModalButtons = document.querySelectorAll('.open-booking-modal');
     headerModalButtons.forEach(button => {
       button.addEventListener('click', function() {
-        // Trigger the modal on the homepage if it exists
+        // Trigger the modal (now available on all pages)
         const modal = document.getElementById('booking-modal');
         if (modal) {
           modal.classList.remove('hidden');
+          modal.classList.add('modal-opening');
           document.body.style.overflow = 'hidden';
-        } else {
-          // Fallback to direct Cal.com link if modal doesn't exist
-          window.open('https://cal.com/elharony/free-consultation', '_blank');
+          
+          // Remove animation class after animation completes
+          setTimeout(() => {
+            modal.classList.remove('modal-opening');
+          }, 300);
         }
       });
     });
